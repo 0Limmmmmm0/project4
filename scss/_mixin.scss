@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+/*text*/
+@mixin text-style{
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 70px;
+}
+@mixin sub-text-style{
+    font-size: 1.3rem;
+    text-align: center;
+}
+/*box*/
+@mixin box-style{
+    width: $wid;
+    margin: 0 auto;
+    background: rgb(209, 209, 209);
+}
+@mixin full-box-style{
+    width: 100%;
+    background: rgb(126, 255, 165);
+}
+
+
+/*button*/
+@mixin button-style{
+    border: none;
+}
