@@ -1,18 +1,59 @@
 @charset "utf-8";
 
 /*slider*/
-#slider{
+#slider {
     width: $wid;
     background: olive;
     height: 800px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-}
-.box{
-    width: 100%;
-    height: auto;
-    background: lavender;
-    margin: 1%;
+
 }
 
+.box {
+    width: 100%;
+    height: auto;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+
+    h1 {
+        line-height: 50px;
+        font-weight: 800;
+    }
+
+    button {
+        width: 180px;
+        height: 45px;
+        background: rgb(202, 202, 202);
+        border-radius: 30px;
+        @include button-style;
+    }
+}
+
+.colorbox {
+    width: 230px;
+    height: 10px;
+    background: $mainColor;
+}
+
+.slider_book {
+    width: 501px;
+    height: 698px;
+    background: palegoldenrod;
+    position: relative;
+    left: 20%;
+
+    .slider_book_cover {
+        width: 440px;
+        height: 630px;
+        background: $mainColor;
+        position: absolute;
+        right: 23%;
+        top: 5%;
+
+    }
+}

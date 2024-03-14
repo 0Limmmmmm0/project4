@@ -7,6 +7,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 500;
 }
 
 ul,
@@ -24,7 +26,7 @@ a {
 header {
   width: 100%;
   height: auto;
-  background: rgb(219, 219, 219);
+  background: rgb(224, 224, 224);
 }
 
 #top {
@@ -91,6 +93,7 @@ footer {
 
 h2 {
   font-size: 2rem;
+  font-weight: 800;
 }
 
 p {
@@ -111,8 +114,43 @@ p {
 .box {
   width: 100%;
   height: auto;
-  background: lavender;
   margin: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.box h1 {
+  line-height: 50px;
+  font-weight: 800;
+}
+.box button {
+  width: 180px;
+  height: 45px;
+  background: rgb(202, 202, 202);
+  border-radius: 30px;
+  border: none;
+}
+
+.colorbox {
+  width: 230px;
+  height: 10px;
+  background: #09255d;
+}
+
+.slider_book {
+  width: 501px;
+  height: 698px;
+  background: palegoldenrod;
+  position: relative;
+  left: 20%;
+}
+.slider_book .slider_book_cover {
+  width: 440px;
+  height: 630px;
+  background: #09255d;
+  position: absolute;
+  right: 23%;
+  top: 5%;
 }
 
 /*text*/
@@ -129,10 +167,37 @@ p {
 }
 #advertisement .box {
   width: 100%;
-  background: hotpink;
+  background: rgb(186, 201, 105);
   height: 350px;
   margin: 0 auto;
   border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#advertisement .box .bannerbox {
+  width: 40%;
+  height: 350px;
+  display: flex;
+}
+#advertisement .box .banner_text_box {
+  width: 40%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+  position: relative;
+  left: 30px;
+  white-space: nowrap;
+}
+#advertisement .box .banner_text_box h2 {
+  font-size: 2.5em;
+}
+#advertisement .box .banner_text_box h3 {
+  font-weight: bold;
+  font-size: 2em;
+  color: #dddddd;
 }
 
 /*width*/
@@ -165,6 +230,11 @@ p {
 }
 #twobox h1 {
   line-height: 80px;
+}
+#twobox img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
 }
 
 .minicover {
@@ -206,9 +276,7 @@ p {
 .minibox2 {
   width: 345px;
   height: 264px;
-  background: yellow;
-  margin: -27px 5px;
-  border-radius: 30px;
+  margin: -32px 5px;
   margin-top: 10%;
   float: left;
 }
@@ -219,11 +287,49 @@ p {
   height: auto;
 }
 
+.bar {
+  width: 100%;
+  font-size: 1.3rem;
+  text-align: center;
+  height: 100px;
+  background: teal;
+  margin-top: 30px;
+}
+.bar .bartull {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 15%;
+  font-size: 1.58rem;
+  line-height: 90px;
+}
+
+/*page1*/
 #one {
   width: 1450px;
   margin: 0 auto;
   background: rgb(209, 209, 209);
   height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#box {
+  width: 465px;
+  height: 350px;
+  background: palevioletred;
+  margin: 1%;
+  position: relative;
+  border-radius: 0px 0px 20px 20px;
+}
+#box .subbox {
+  width: 100%;
+  height: 250px;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 0;
+  border-radius: 20px;
 }
 
 /*page2*/
@@ -238,6 +344,7 @@ h1 {
   font-size: 1.5rem;
   text-align: center;
   line-height: 70px;
+  font-weight: 800;
 }
 
 #best {
@@ -250,18 +357,34 @@ h1 {
   justify-content: center;
   align-items: center;
 }
-#best .box {
-  width: 300px;
-  background: wheat;
-  height: 400px;
-  margin: 2%;
-}
 #best button {
   width: 150px;
   height: 50px;
   background: rgb(255, 197, 255);
   margin: 1%;
   border: none;
+}
+
+.best_box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+}
+.best_box .box {
+  width: 290px;
+  background: wheat;
+  height: 450px;
+  margin: 1%;
+  padding: 10px;
+  line-height: 30px;
+  text-align: center;
+}
+.best_box .box img {
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 /*page4*/
@@ -274,25 +397,18 @@ h1 {
   flex-direction: column;
 }
 
-.bar {
-  width: 100%;
-  font-size: 1.3rem;
-  text-align: center;
-  height: 50px;
-  line-height: 60px;
-  background: teal;
-}
-
-#boxcover {
+.boxcover {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 30px;
+  text-align: center;
 }
-#boxcover .box {
+.boxcover .box {
   width: 250px;
   background: red;
-  height: 350px;
-  margin: 10px;
+  height: 400px;
+  margin: 15px;
 }
 
 /*page5*/
@@ -305,16 +421,20 @@ h1 {
   flex-direction: column;
 }
 
-#boxcover2 {
+.boxcover2 {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#boxcover2 .box {
+.boxcover2 .box {
   width: 100%;
-  background: red;
   height: 600px;
   margin: 10px;
+  border-radius: 50px;
+}
+.boxcover2 .box img {
+  width: 100%;
+  height: 100%;
   border-radius: 50px;
 }
 
@@ -334,7 +454,10 @@ h1 {
 }
 #boxcover3 .box {
   width: 429px;
-  background: rgb(255, 139, 139);
   height: 325px;
+}
+#boxcover3 img {
+  width: 100%;
+  height: 100%;
   border-radius: 30px;
 }

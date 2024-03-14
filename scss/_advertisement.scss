@@ -2,18 +2,50 @@
 
 @import 'variable';
 
-#advertisement{
+#advertisement {
     width: $wid;
     height: 500px;
     background: palegoldenrod;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    .box{
+
+    .box {
         width: 100%;
-        background: hotpink;
+        background: rgb(186, 201, 105);
         height: 350px;
         margin: 0 auto;
         border-radius: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .bannerbox {
+            width: 40%;
+            height: 350px;
+            // margin: 1%;
+            display: flex;
+        }
+        .banner_text_box {
+            width: 40%;
+            height: 350px;
+            // margin: 1%;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            justify-content: center;
+            position: relative;
+            left: 30px;
+            white-space: nowrap;
+            h2{
+                font-size: 2.5em;
+            }
+            h3{
+                font-weight: bold;
+                font-size: 2em;
+                color: $fontSub2Color;
+            }
+        }
     }
+
 }

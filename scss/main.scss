@@ -1,29 +1,71 @@
 @charset "utf-8";
 
-@import 'variable','common','slider','mixin','advertisement','page8';
+@import 'variable', 'common', 'slider', 'mixin', 'advertisement', 'page8';
 
 
 
-#wrap{
+#wrap {
     width: 100%;
     background: pink;
     height: auto;
 }
 
-#one{
+.bar {
+    width: 100%;
+    @include sub-text-style;
+    height: 100px;
+    background: teal;
+    margin-top: 30px;
+
+    .bartull {
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: 15%;
+        font-size: 1.58rem;
+        line-height: 90px;
+    }
+}
+
+/*page1*/
+#one {
     @include box-style;
     height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+#box {
+    width: 465px;
+    height: 350px;
+    background: palevioletred;
+    margin: 1%;
+    position: relative;
+    border-radius: 0px 0px 20px 20px;
+
+    .subbox {
+        width: 100%;
+        height: 250px;
+        background: rgb(255, 255, 255);
+        position: absolute;
+        bottom: 0;
+        border-radius: 20px;
+    }
+}
+
 /*page2*/
-#banner{
+#banner {
     width: 100%;
     height: 70px;
     background: $mainColor;
 }
-h1{
+
+h1 {
     @include text-style;
 }
-#best{
+
+#best {
     @include box-style;
     height: auto;
     display: flex;
@@ -31,13 +73,7 @@ h1{
     justify-content: center;
     align-items: center;
 
-    .box{
-        width: 300px;
-        background: wheat;
-        height: 400px;
-        margin: 2%;
-    }
-    button{
+    button {
         width: 150px;
         height: 50px;
         background: rgb(255, 197, 255);
@@ -47,68 +83,103 @@ h1{
     }
 }
 
+.best_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    .box {
+        width: 290px;
+        background: wheat;
+        height: 450px;
+        margin: 1%;
+        padding: 10px;
+        line-height: 30px;
+        text-align: center;
+    }
+    .box img{
+        box-shadow: 3px 3px 3px 3px rgb(0,0,0,0.3);
+    }
+}
+
 /*page4*/
-#new{
+#new {
     @include box-style;
     height: 600px;
     display: flex;
     flex-direction: column;
-    
+
 }
-.bar{
-        width: 100%;
-        @include sub-text-style;
-        height: 50px;
-        line-height: 60px;
-        background: teal;
-    }
-#boxcover{
+
+
+
+.boxcover {
     display: flex;
     align-items: center;
     justify-content: center;
-    .box{
+    margin-top: 30px;
+    text-align: center;
+
+    .box {
         width: 250px;
         background: red;
-        height: 350px;
-        margin: 10px;
+        height: 400px;
+        margin: 15px;
     }
 
 }
+
 /*page5*/
-#month{
+#month {
     @include box-style;
     height: 800px;
     display: flex;
     flex-direction: column;
 }
-#boxcover2{
+
+.boxcover2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    .box{
+
+    .box {
         width: 100%;
-        background: red;
         height: 600px;
         margin: 10px;
         border-radius: 50px;
     }
+    .box img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50px;
+    }
 }
+
 /*page6*/
-#comment{
+#comment {
     @include full-box-style;
     height: 600px;
     display: flex;
     flex-direction: column;
 }
-#boxcover3{
+
+#boxcover3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    .box{
+
+    .box {
         width: 429px;
-        background: rgb(255, 139, 139);
         height: 325px;
+    }
+    img{
+        width: 100%;
+        height: 100%;
         border-radius: 30px;
     }
 }
+
 
