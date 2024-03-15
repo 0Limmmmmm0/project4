@@ -8,7 +8,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Gothic A1", sans-serif;
-  font-weight: 500;
 }
 
 ul,
@@ -26,14 +25,13 @@ a {
 header {
   width: 100%;
   height: auto;
-  background: rgb(224, 224, 224);
+  background: rgb(240, 240, 240);
 }
 
 #top {
   width: 1450px;
   height: 100px;
   margin: 0 auto;
-  background: paleturquoise;
   display: flex;
   justify-content: space-between;
 }
@@ -41,7 +39,6 @@ header {
 .logo {
   width: 100px;
   height: auto;
-  background: red;
 }
 
 .logo img {
@@ -64,7 +61,7 @@ header ul li {
 footer {
   height: auto;
   width: 100%;
-  background: rgb(126, 255, 165);
+  background: rgb(238, 238, 238);
   background: #09255d;
   color: white;
 }
@@ -72,7 +69,6 @@ footer {
 #bottom {
   width: 1450px;
   margin: 0 auto;
-  background: rgb(209, 209, 209);
   height: 400px;
   display: flex;
   justify-content: space-between;
@@ -82,7 +78,6 @@ footer {
   width: 100%;
   height: auto;
   margin: 1%;
-  background: lightslategrey;
   display: flex;
   flex-direction: column;
 }
@@ -104,7 +99,6 @@ p {
 /*slider*/
 #slider {
   width: 1450px;
-  background: olive;
   height: 800px;
   margin: 0 auto;
   display: flex;
@@ -119,38 +113,56 @@ p {
   flex-direction: column;
   justify-content: center;
 }
-.box h1 {
-  line-height: 50px;
-  font-weight: 800;
-}
 .box button {
-  width: 180px;
+  width: 230px;
   height: 45px;
   background: rgb(202, 202, 202);
   border-radius: 30px;
   border: none;
+  position: relative;
+  bottom: 5%;
+  font-size: 1.5em;
 }
-
-.colorbox {
+.box .textbox {
+  margin-bottom: 20%;
+}
+.box .textbox h1 {
+  line-height: 50px;
+  font-weight: 800;
+}
+.box .textbox p {
+  line-height: 30px;
+  font-size: 0.9em;
+}
+.box .sub_textbox {
+  width: 480px;
+  height: 200px;
+  position: absolute;
+  left: 25%;
+  bottom: 12%;
+  color: rgb(87, 87, 87);
+  white-space: nowrap;
+}
+.box .colorbox {
   width: 230px;
   height: 10px;
-  background: #09255d;
+  background: black;
 }
-
-.slider_book {
+.box .slider_book {
   width: 501px;
   height: 698px;
-  background: palegoldenrod;
+  background: #09255d;
   position: relative;
   left: 20%;
 }
-.slider_book .slider_book_cover {
+.box .slider_book .slider_book_cover {
   width: 440px;
   height: 630px;
-  background: #09255d;
   position: absolute;
   right: 23%;
   top: 5%;
+  background-image: url(../img/slider_img.png);
+  background-size: cover;
 }
 
 /*text*/
@@ -160,7 +172,6 @@ p {
 #advertisement {
   width: 1450px;
   height: 500px;
-  background: palegoldenrod;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -208,7 +219,6 @@ p {
 #twobox {
   width: 1450px;
   margin: 0 auto;
-  background: rgb(209, 209, 209);
   height: 1000px;
   display: flex;
   justify-content: space-between;
@@ -281,9 +291,43 @@ p {
   float: left;
 }
 
+.swiper {
+  width: 1450px;
+  margin: 0 auto;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: gray 5px 5px 5px;
+}
+
+h3 {
+  margin-top: 30px;
+}
+
+.swiper-button-prev {
+  position: relative;
+  right: 90px;
+}
+
 #wrap {
   width: 100%;
-  background: pink;
   height: auto;
 }
 
@@ -292,7 +336,6 @@ p {
   font-size: 1.3rem;
   text-align: center;
   height: 100px;
-  background: teal;
   margin-top: 30px;
 }
 .bar .bartull {
@@ -308,7 +351,6 @@ p {
 #one {
   width: 1450px;
   margin: 0 auto;
-  background: rgb(209, 209, 209);
   height: 500px;
   display: flex;
   justify-content: center;
@@ -318,18 +360,35 @@ p {
 #box {
   width: 465px;
   height: 350px;
-  background: palevioletred;
   margin: 1%;
   position: relative;
+  background: rgb(240, 240, 240);
   border-radius: 0px 0px 20px 20px;
+  color: white;
 }
 #box .subbox {
   width: 100%;
   height: 250px;
-  background: rgb(255, 255, 255);
-  position: absolute;
   bottom: 0;
   border-radius: 20px;
+  position: absolute;
+}
+#box .subbox .tbox {
+  position: relative;
+  top: 15%;
+  left: 3%;
+}
+#box .subbox h5 {
+  line-height: 25px;
+}
+#box .subbox h3 {
+  font-size: 1.4em;
+}
+#box .bookbox {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
 }
 
 /*page2*/
@@ -347,10 +406,13 @@ h1 {
   font-weight: 800;
 }
 
+p {
+  font-size: 0.9em;
+}
+
 #best {
   width: 1450px;
   margin: 0 auto;
-  background: rgb(209, 209, 209);
   height: auto;
   display: flex;
   flex-wrap: wrap;
@@ -375,24 +437,27 @@ h1 {
   margin-top: 50px;
 }
 .best_box .box {
-  width: 290px;
-  background: wheat;
-  height: 450px;
-  margin: 1%;
-  padding: 10px;
+  width: 23.6%;
+  height: 520px;
+  margin: 10px;
+  padding: 0px 30px;
   line-height: 30px;
   text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
 }
 .best_box .box img {
-  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.3);
+}
+.best_box h3 {
+  padding-top: 20px;
 }
 
 /*page4*/
 #new {
   width: 1450px;
   margin: 0 auto;
-  background: rgb(209, 209, 209);
-  height: 600px;
+  height: 700px;
   display: flex;
   flex-direction: column;
 }
@@ -401,21 +466,28 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 60px;
   text-align: center;
 }
 .boxcover .box {
   width: 250px;
-  background: red;
   height: 400px;
   margin: 15px;
+}
+.boxcover img {
+  box-shadow: gray 5px 5px 5px;
+}
+.boxcover p {
+  font-size: 0.9em;
+}
+.boxcover h3 {
+  padding-top: 30px;
 }
 
 /*page5*/
 #month {
   width: 1450px;
   margin: 0 auto;
-  background: rgb(209, 209, 209);
   height: 800px;
   display: flex;
   flex-direction: column;
@@ -441,7 +513,7 @@ h1 {
 /*page6*/
 #comment {
   width: 100%;
-  background: rgb(126, 255, 165);
+  background: rgb(238, 238, 238);
   height: 600px;
   display: flex;
   flex-direction: column;
@@ -460,4 +532,69 @@ h1 {
   width: 100%;
   height: 100%;
   border-radius: 30px;
+}
+
+/*page7*/
+#recommend {
+  width: 1450px;
+  margin: 0 auto;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+}
+
+.boxcover4 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  text-align: center;
+}
+.boxcover4 .box_recommend {
+  width: 350px;
+  height: 500px;
+}
+.boxcover4 .box_recommend .box_book_tull {
+  width: 350px;
+  height: 420px;
+  background: rgb(240, 240, 240);
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+}
+.boxcover4 .box_recommend .box_book_tull img {
+  width: 100%;
+  height: 100%;
+  box-shadow: 5px 5px 5px gray;
+}
+.boxcover4 .box_recommend .box_book1 {
+  width: 230px;
+  background: palegreen;
+  height: 320px;
+}
+.boxcover4 .box_recommend .box_book2 {
+  width: 230px;
+  background: palegreen;
+  height: 320px;
+}
+.boxcover4 .box_recommend .box_book3 {
+  width: 230px;
+  background: palegreen;
+  height: 320px;
+}
+.boxcover4 .box_recommend .box_book4 {
+  width: 230px;
+  background: palegreen;
+  height: 320px;
+}
+
+.textbox {
+  padding-top: 20px;
+}
+.textbox .h3 {
+  font-size: 1.17rem;
+}
+.textbox p {
+  font-size: 0.9em;
 }

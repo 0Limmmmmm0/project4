@@ -3,7 +3,6 @@
 /*slider*/
 #slider {
     width: $wid;
-    background: olive;
     height: 800px;
     margin: 0 auto;
     display: flex;
@@ -19,41 +18,67 @@
     flex-direction: column;
     // align-items: center;
     justify-content: center;
-
-    h1 {
-        line-height: 50px;
-        font-weight: 800;
-    }
-
     button {
-        width: 180px;
-        height: 45px;
-        background: rgb(202, 202, 202);
-        border-radius: 30px;
-        @include button-style;
+            width: 230px;
+            height: 45px;
+            background: rgb(202, 202, 202);
+            border-radius: 30px;
+            @include button-style;
+            position: relative;
+            bottom: 5%;
+            font-size: 1.5em;
+        }
+
+    .textbox {
+        margin-bottom: 20%;
+
+        h1 {
+            line-height: 50px;
+            font-weight: 800;
+        }
+
+        p {
+            line-height: 30px;
+            font-size: 0.9em;
+        }
+
+        
     }
-}
 
-.colorbox {
-    width: 230px;
-    height: 10px;
-    background: $mainColor;
-}
-
-.slider_book {
-    width: 501px;
-    height: 698px;
-    background: palegoldenrod;
-    position: relative;
-    left: 20%;
-
-    .slider_book_cover {
-        width: 440px;
-        height: 630px;
-        background: $mainColor;
+    .sub_textbox {
+        width: 480px;
+        height: 200px;
         position: absolute;
-        right: 23%;
-        top: 5%;
+        left: 25%;
+        bottom: 12%;
+        color: rgb(87, 87, 87);
+        white-space: nowrap;
 
     }
+
+    .colorbox {
+        width: 230px;
+        height: 10px;
+        background: black;
+    }
+
+    .slider_book {
+        width: 501px;
+        height: 698px;
+        background: $mainColor;
+        position: relative;
+        left: 20%;
+
+        .slider_book_cover {
+            width: 440px;
+            height: 630px;
+            position: absolute;
+            right: 23%;
+            top: 5%;
+            background-image: url(../img/slider_img.png);
+            background-size: cover;
+        }
+    }
 }
+
+    

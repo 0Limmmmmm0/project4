@@ -16,11 +16,10 @@
 @mixin box-style{
     width: $wid;
     margin: 0 auto;
-    background: rgb(209, 209, 209);
 }
 @mixin full-box-style{
     width: 100%;
-    background: rgb(126, 255, 165);
+    background: rgb(238, 238, 238);
 }
 
 

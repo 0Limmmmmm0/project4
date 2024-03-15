@@ -1,12 +1,11 @@
 @charset "utf-8";
 
-@import 'variable', 'common', 'slider', 'mixin', 'advertisement', 'page8';
+@import 'variable', 'common', 'slider', 'mixin', 'advertisement', 'page8','swiper';
 
 
 
 #wrap {
     width: 100%;
-    background: pink;
     height: auto;
 }
 
@@ -14,7 +13,6 @@
     width: 100%;
     @include sub-text-style;
     height: 100px;
-    background: teal;
     margin-top: 30px;
 
     .bartull {
@@ -39,18 +37,34 @@
 #box {
     width: 465px;
     height: 350px;
-    background: palevioletred;
     margin: 1%;
     position: relative;
+    background: $subColor;
     border-radius: 0px 0px 20px 20px;
-
+    color: white;
     .subbox {
         width: 100%;
         height: 250px;
-        background: rgb(255, 255, 255);
-        position: absolute;
         bottom: 0;
         border-radius: 20px;
+        position: absolute;
+        .tbox{
+            position: relative;
+            top: 15%;
+            left: 3%;
+        }
+        h5{
+            line-height: 25px;
+        }
+        h3{
+            font-size: 1.4em;
+        }
+    }
+    .bookbox{
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        right: 0;
     }
 }
 
@@ -63,6 +77,10 @@
 
 h1 {
     @include text-style;
+}
+
+p {
+    font-size: 0.9em
 }
 
 #best {
@@ -82,7 +100,6 @@ h1 {
         @include button-style;
     }
 }
-
 .best_box {
     display: flex;
     flex-wrap: wrap;
@@ -91,43 +108,54 @@ h1 {
     width: 100%;
     height: auto;
     margin-top: 50px;
+
     .box {
-        width: 290px;
-        background: wheat;
-        height: 450px;
-        margin: 1%;
-        padding: 10px;
+        width:23.6%;
+        height: 520px;
+        margin: 10px;
+        padding: 0px 30px;
         line-height: 30px;
         text-align: center;
+        white-space: nowrap;
+        cursor: pointer;
     }
-    .box img{
-        box-shadow: 3px 3px 3px 3px rgb(0,0,0,0.3);
+    .box img {
+        box-shadow: 4px 4px 4px 4px rgb(0, 0, 0, 0.3);
+    }
+    h3{
+        padding-top: 20px;
     }
 }
 
 /*page4*/
 #new {
     @include box-style;
-    height: 600px;
+    height: 700px;
     display: flex;
     flex-direction: column;
-
 }
-
-
 
 .boxcover {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 60px;
     text-align: center;
 
     .box {
         width: 250px;
-        background: red;
         height: 400px;
         margin: 15px;
+    }
+    img{
+        box-shadow: gray 5px 5px 5px;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+    h3{
+        padding-top: 30px
     }
 
 }
@@ -151,7 +179,8 @@ h1 {
         margin: 10px;
         border-radius: 50px;
     }
-    .box img{
+
+    .box img {
         width: 100%;
         height: 100%;
         border-radius: 50px;
@@ -175,11 +204,85 @@ h1 {
         width: 429px;
         height: 325px;
     }
-    img{
+
+    img {
         width: 100%;
         height: 100%;
         border-radius: 30px;
     }
 }
 
+/*page7*/
+#recommend {
+    @include box-style;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+}
+
+.boxcover4 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    text-align: center;
+
+    .box_recommend {
+        width: 350px;
+        height: 500px;
+
+        .box_book_tull {
+            width: 350px;
+            height: 420px;
+            background: $subColor;
+            display: flex;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: center;
+            border-radius: 30px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                box-shadow: 5px 5px 5px gray;
+            }
+        }
+
+        .box_book1 {
+            width: 230px;
+            background: palegreen;
+            height: 320px;
+        }
+
+        .box_book2 {
+            width: 230px;
+            background: palegreen;
+            height: 320px;
+        }
+
+        .box_book3 {
+            width: 230px;
+            background: palegreen;
+            height: 320px;
+        }
+
+        .box_book4 {
+            width: 230px;
+            background: palegreen;
+            height: 320px;
+        }
+
+    }
+}
+
+.textbox {
+    padding-top: 20px;
+
+    .h3 {
+        font-size: 1.17rem;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+}
 

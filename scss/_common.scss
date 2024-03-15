@@ -7,7 +7,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Gothic A1", sans-serif;
-    font-weight: 500;
 }
 
 ul,
@@ -33,7 +32,6 @@ header {
     width: $wid;
     height: 100px;
     margin: 0 auto;
-    background: paleturquoise;
     display: flex;
     justify-content: space-between;
 }
@@ -41,7 +39,6 @@ header {
 .logo {
     width: 100px;
     height: auto;
-    background: red;
 }
 
 .logo img {
@@ -78,7 +75,6 @@ footer{
     width: 100%;
     height: auto;
     margin: 1%;
-    background: lightslategrey;
     display: flex;
     flex-direction: column;
 }
