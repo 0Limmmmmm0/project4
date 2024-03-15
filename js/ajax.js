@@ -6,7 +6,7 @@ $.ajax({
     headers: { Authorization: "KakaoAK 380246aa8cbc20e48b9e8000995f2c3c" }
 })
     .done(function (msg) {
-        var box = document.getElementsByClassName("box");
+        var box = $(".best_box>.box");
         for (var g = 0; g < box.length; g++) {
             $(".best_box>.box").eq(g).append("<img src ='" + msg.documents[g].thumbnail + "'/>");
             $(".best_box>.box").eq(g).append("<h3>" + msg.documents[g].title + "</h3>");
