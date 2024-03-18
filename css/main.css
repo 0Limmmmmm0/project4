@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*width*/
 /*width*/
 /*text*/
@@ -42,21 +43,86 @@ header {
 }
 
 .logo img {
-  width: 100%;
-  height: 100%;
+  margin-top: 5px;
+  width: 90%;
+  height: 90%;
 }
 
 header ul {
-  width: 800px;
+  width: 1%;
   display: flex;
-  background: palegoldenrod;
   align-items: center;
 }
 header ul li {
   font-size: 1.3rem;
-  margin: 2%;
+  margin: 10px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+header ul img {
+  width: 29px;
+  height: 29px;
+  margin-top: 5px;
 }
 
+li a:hover {
+  color: #09255d;
+}
+
+/*햄버거 아이콘*/
+.menu_icon {
+  position: relative;
+  width: 42px;
+  height: 35px;
+  margin-top: 32px;
+}
+
+.menu_icon span {
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  height: 7px;
+  background: #333;
+  border-radius: 4px;
+  transform: translate(-50%, 0) rotate(0deg);
+  transition: 0.2s ease-in-out;
+}
+
+.menu_icon span:nth-child(1) {
+  top: 0px;
+}
+
+.menu_icon span:nth-child(2),
+.menu_icon span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu_icon span:nth-child(4) {
+  bottom: 0;
+}
+
+.menu_icon.active span:nth-child(1) {
+  top: 50%;
+  width: 0;
+  transform: translate(-50%, -50%);
+}
+
+.menu_icon.active span:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.menu_icon.active span:nth-child(3) {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.menu_icon.active span:nth-child(4) {
+  bottom: 50%;
+  width: 0;
+  transform: translate(-50%, 50%);
+}
+
+/*메뉴바*/
 /*footer*/
 footer {
   height: auto;
@@ -69,7 +135,7 @@ footer {
 #bottom {
   width: 1450px;
   margin: 0 auto;
-  height: 400px;
+  height: auto;
   display: flex;
   justify-content: space-between;
 }
@@ -86,14 +152,30 @@ footer {
   width: 252px;
 }
 
-h2 {
+.bottombox h2 {
   font-size: 2rem;
   font-weight: 800;
 }
 
-p {
+.bottombox p {
   font-size: 1.2rem;
   line-height: 50px;
+}
+
+.p_hover span:hover {
+  color: gray;
+}
+
+.iconbox {
+  cursor: pointer;
+}
+
+.iconbox img {
+  margin: 2%;
+}
+
+.iconbox img:hover {
+  opacity: 0.8;
 }
 
 /*slider*/
@@ -115,13 +197,16 @@ p {
 }
 .box button {
   width: 230px;
-  height: 45px;
+  height: 50px;
   background: rgb(202, 202, 202);
   border-radius: 30px;
   border: none;
   position: relative;
   bottom: 5%;
   font-size: 1.5em;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
 .box .textbox {
   margin-bottom: 20%;
@@ -138,7 +223,7 @@ p {
   width: 480px;
   height: 200px;
   position: absolute;
-  left: 25%;
+  left: 30%;
   bottom: 12%;
   color: rgb(87, 87, 87);
   white-space: nowrap;
@@ -219,18 +304,16 @@ p {
 #twobox {
   width: 1450px;
   margin: 0 auto;
-  height: 1000px;
+  height: 880px;
   display: flex;
   justify-content: space-between;
 }
 #twobox .box:nth-of-type(1) {
   width: 100%;
-  background: palevioletred;
   margin: 0;
 }
 #twobox .box:nth-of-type(2) {
   width: 100%;
-  background: rgb(119, 6, 44);
   margin: 0;
 }
 #twobox .minibanner {
@@ -249,21 +332,23 @@ p {
 
 .minicover {
   display: flex;
+  height: 800px;
   flex-wrap: wrap;
   justify-content: center;
+  border-right: 3px solid #09255d;
 }
 .minicover button {
   width: 150px;
   height: 50px;
-  background: rgb(255, 197, 255);
-  margin: 5%;
+  color: black;
+  background: rgb(240, 240, 240);
   border: none;
+  margin-top: 15%;
 }
 
 .minibox {
   width: 345px;
   height: 575px;
-  background: yellow;
   margin: 5px;
   border-radius: 30px;
   margin-top: 10%;
@@ -273,31 +358,50 @@ p {
 .minicover2 {
   display: flex;
   flex-wrap: wrap;
+  height: 800px;
   justify-content: center;
 }
 .minicover2 button {
+  position: relative;
   width: 150px;
   height: 50px;
-  background: rgb(255, 197, 255);
-  margin: 8%;
+  margin-top: 17%;
+  color: black;
+  background: rgb(240, 240, 240);
   border: none;
 }
 
 .minibox2 {
   width: 345px;
-  height: 264px;
-  margin: -32px 5px;
+  height: 256px;
+  margin: -12px 5px;
   margin-top: 10%;
   float: left;
 }
+.minibox2 h4 {
+  padding: 10px;
+  text-align: center;
+}
+
+button:hover {
+  background: #09255d;
+  color: white;
+}
+
+.swiper-box {
+  position: relative;
+  cursor: pointer;
+}
 
 .swiper {
-  width: 1450px;
+  width: 92%;
   margin: 0 auto;
   height: 450px;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: static;
+  margin-top: 60px;
 }
 
 .swiper-slide {
@@ -321,9 +425,17 @@ h3 {
   margin-top: 30px;
 }
 
-.swiper-button-prev {
-  position: relative;
-  right: 90px;
+.swiper-button-prev,
+.swiper-button-next {
+  color: rgb(0, 0, 0) !important;
+  position: absolute;
+  padding-bottom: 20px;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 2.5rem !important;
+  font-weight: 900 !important;
 }
 
 #wrap {
@@ -345,6 +457,7 @@ h3 {
   top: 15%;
   font-size: 1.58rem;
   line-height: 90px;
+  font-weight: bold;
 }
 
 /*page1*/
@@ -355,6 +468,11 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#slide {
+  display: flex;
+  width: 100%;
 }
 
 #box {
@@ -420,11 +538,19 @@ p {
   align-items: center;
 }
 #best button {
-  width: 150px;
+  width: 170px;
   height: 50px;
-  background: rgb(255, 197, 255);
+  background: rgb(240, 240, 240);
   margin: 1%;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 30px;
+  cursor: pointer;
   border: none;
+}
+#best button:hover {
+  background: #09255d;
+  color: white;
 }
 
 .best_box {
@@ -460,6 +586,7 @@ p {
   height: 700px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 50px;
 }
 
 .boxcover {
@@ -488,9 +615,25 @@ p {
 #month {
   width: 1450px;
   margin: 0 auto;
-  height: 800px;
+  height: 900px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+#month button {
+  width: 170px;
+  height: 50px;
+  background: rgb(240, 240, 240);
+  margin: 1%;
+  margin-top: 40px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+#month button:hover {
+  background: #09255d;
+  color: white;
 }
 
 .boxcover2 {
@@ -513,20 +656,55 @@ p {
 /*page6*/
 #comment {
   width: 100%;
-  background: rgb(238, 238, 238);
+  background: rgb(228, 228, 228);
   height: 600px;
   display: flex;
   flex-direction: column;
+}
+#comment button {
+  width: 170px;
+  height: 40px;
+  background: #09255d;
+  color: white;
+  margin-left: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+#comment button:hover {
+  background: white;
+  color: rgb(0, 0, 0);
+}
+
+.bar_full {
+  width: 1903px;
+  font-size: 1.3rem;
+  text-align: center;
+  height: 100px;
+  margin-top: 30px;
+}
+.bar_full .bar_full_bar {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 15%;
+  font-size: 1.58rem;
+  line-height: 90px;
+  font-weight: bold;
 }
 
 #boxcover3 {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
 }
 #boxcover3 .box {
   width: 429px;
   height: 325px;
+  border-radius: 30px;
+  box-shadow: 5px 5px 5px gray;
 }
 #boxcover3 img {
   width: 100%;

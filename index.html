@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="icon/logo_.png">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
     <title>종로서적</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -20,13 +23,22 @@
                     <img src="icon/logo.png" alt="로고">
                 </div>
                 <ul>
-                    <li><a href="#">베스트셀러</a></li>
-                    <li><a href="#">신간</a></li>
-                    <li><a href="#">특집</a></li>
-                    <li><a href="#">매장안내</a></li>
-                    <li><a href="#">커뮤니티</a></li>
-                </ul>
+                    <li><a href="#">베스트셀러&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="#">신간&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="#">특집&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="#">매장안내&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="#">커뮤니티&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="#"><img src="icon/glass.png" alt="돋보기"></a></li>
+                    <li><a href="#"><img src="icon/user.png" alt="돋보기"></a></li>
 
+                </ul>
+                <a class="menu_icon" href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                
             </div>
 
         </header>
@@ -34,7 +46,7 @@
         <div id="slider">
             <div class="box">
                 <div class="textbox">
-                    <h3>경제학이 필요한 이유</h3>
+                    <h3 style="margin-bottom: 5px; color: rgb(71, 71, 71);">경제학이 필요한 이유</h3>
                     <div class="colorbox"></div><br>
                     <h1 style="color: black; text-align: left;">
                         사람을 살리는 정책을 <br>
@@ -42,13 +54,13 @@
                         의사이자 경제학자가 전하는 <br>
                         삶을 진단하고 치료하는 법</h1>
                     <div class="sub_textbox">
-                        <p>엄마 배 속에서 무덤까지, 생애주기에 필요한 모든 정책을 <br>아우르는 생활밀착형 경제학.
-                            의사가 질병을 정밀하게 진단하고 <br>의학적 근거에 따라 처방·치료하는 것처럼, 실험과 데이터로 정책의 문제점을 <br>
-                            진단하고 조언하며, 가난과 불행의 덫에 걸린 국민의 생존과 행복을 위해 <br>경제학이 무엇을 할 수 있는지 의사이자 경제학자의 시선으로 묻고 답한다.</p>
+                        <p>엄마 배 속에서 무덤까지, 생애주기에 필요한 모든 정책을 아우르는 <br>생활밀착형 경제학.
+                            의사가 질병을 정밀하게 진단하고 의학적 근거에 <br>따라 처방·치료하는 것처럼, 실험과 데이터로 정책의 문제점을
+                            진단하고<br> 조언하며, 가난과 불행의 덫에 걸린 국민의 생존과 행복을위해 경제학이 <br> 무엇을 할 수 있는지 의사이자 경제학자의 시선으로 묻고 답한다.</p>
                     </div>
 
                 </div>
-                <button>MORE</button>
+                <button>MORE !</button>
             </div>
             <div class="box">
                 <div class="slider_book">
@@ -61,6 +73,7 @@
         </div>
         <!--page1-->
         <div id="one">
+            <div id="slide">
             <div id="box">
                 <div class="subbox" style="background: rgb(88, 119, 88);">
                     <div class="tbox">
@@ -128,6 +141,7 @@
                     <img src="img/book5.png" alt="book">
                 </div>
             </div> -->
+        </div>
 
         </div>
         <!--page2 베스트셀러-->
@@ -179,21 +193,7 @@
 
             </div>
         </div>
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"></div>
-              <div class="swiper-slide"></div>
-              <div class="swiper-slide"></div>
-              <div class="swiper-slide"></div>
-              <div class="swiper-slide"></div>
-              <div class="swiper-slide"></div>
-              <div class="swiper-slide"></div>
-              <div class="swiper-slide"></div>
-              <div class="swiper-slide"></div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-          </div>
+        
         <!--page4 새로 들어온 책-->
         <div id="new">
             <div class="bar">
@@ -202,18 +202,27 @@
                     책&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="icon/bar6.png" alt="꾸밈바">
                 </div>
             </div>
-            <div class="boxcover">
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <!-- <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div> -->
+            <div class="swiper-box">
+            <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
             </div>
+            
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+        
+            
         </div>
         <!--page5 이달의 책-->
         <div id="banner">
@@ -235,15 +244,17 @@
                 </div>
                 <div class="box"><img src="img/month_book3.jpg" alt="3월"></div>
             </div>
+            <button>MORE</button>
         </div>
         <!--page6 책 속의 한 줄-->
         <div id="comment">
-            <div class="bar">
-                <div class="bartull">
+            <div class="bar_full">
+                <div class="bar_full_bar">
                     <img src="icon/full_bar.png" alt="꾸밈바">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;책 속의 한
                     줄&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="icon/full_bar2.png" alt="꾸밈바">
                 </div>
             </div>
+            <button>MORE</button>
             <div id="boxcover3">
                 <div class="box"><img src="img/comment1.png" alt=" 책 속의 한 줄"></div>
                 <div class="box"><img src="img/comment2.png" alt=" 책 속의 한 줄"></div>
@@ -304,7 +315,7 @@
                 </div>
             </div>
         </div>
-        <!--page8 광고배너-->
+        <!--광고배너-->
         <div id="advertisement">
             <div class="box" style="background: rgb(163, 163, 231);">
                 <div class="banner_text_box">
@@ -315,9 +326,9 @@
 
             </div>
         </div>
-        <!--page9 특집, 매장안내-->
+        <!--page8 특집, 매장안내-->
         <div id="twobox">
-            <div class="box" style="border-right: 3px solid #09255d;">
+            <div class="box">
                 <div class="minibanner" style="border-right: 3px solid white;">
                     <h1>특집</h1>
                 </div>
@@ -328,7 +339,7 @@
                     <div class="minibox">
                         <img src="img/new2.PNG" alt="이달의 혜택전">
                     </div>
-                    <button>MORE</button>
+                    <button style="font-size: 1.3rem;">MORE</button>
                 </div>
             </div>
             <div class="box">
@@ -352,7 +363,7 @@
                         <img src="img/store4.png" alt="대구">
                         <h4>대구라온센터점</h4>
                     </div>
-                    <button>MORE</button>
+                    <button style="font-size: 1.3rem;">MORE</button>
                 </div>
             </div>
         </div>
@@ -366,38 +377,33 @@
                     <p>대표이사 : 서분도</p>
                     <p>사업자 등록번호 : 713-87-00617</p>
                     <p>서울특별시 종로구 종로 51, 지하 2층 (종로 2가, 종로타워)</p>
-                    <p style="font-size: 1rem;">Copyright ⓒ 2016 JONGNOBOOKS All rights reserved.</p>
+                    <p style="font-size: 1rem; white-space: nowrap; line-height: 30px; margin-top: 10px;">Copyright ⓒ
+                        2016 JONGNOBOOKS All rights reserved. <br>We would like to inform you that all icon images
+                        included in the production are from the use of the
+                        Platicon site.</p>
                 </div>
                 <div class="bottombox" style="text-align: right; margin-top: 3%;">
-                    <p>회사 소개 | 이용약관 | 개인정보처리방침<br> | 회원혜택 | 채용정보</p><br>
+                    <p style="cursor: pointer; font-weight: bold;" class="p_hover"><span>회사 소개</span> |
+                        <span>이용약관</span> | <span>개인정보처리방침</span><br> | <span>회원혜택</span> | <span>채용정보</span>
+                    </p><br>
                     <p>CALL : 02-739-2331</p>
                     <p>FAX : 02-739-2332</p>
                     <p>CONTACT : md@jongnobooks.net</p>
-                    <div class="iconbox"><img src="icon/blog.png" alt="블로그"
-                            style="width: 60px; height: 60px; margin-right: 1%;"><img src="icon/instagram.png" alt="인스타"
-                            style="width: 60px; height: 60px; margin-right: 1%;"></div>
+                    <div class="iconbox"><a href="https://blog.naver.com/jongnobooks"><img src="icon/blog.png" alt="블로그"
+                                style="width: 60px; height: 60px;"></a><a
+                            href="https://www.instagram.com/jongnobooks_official/"><img src="icon/instagram.png"
+                                alt="인스타" style="width: 60px; height: 60px;"></a><a
+                            href="https://www.aladin.co.kr/home/welcome.aspx?partner=jongno"><img src="icon/den.png"
+                                alt="알라딘" style="width: 60px; height: 60px;"></a></div>
                 </div>
             </div>
         </footer>
     </div>
     <script src="js/ajax.js"></script>
+    <script src="js/hambuger.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-       var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 5,
-      spaceBetween: 25,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-
-    </script>
+    <script src="js/swiper.js"></script>
+    <script src="js/slide.js"></script>
 </body>
 
 </html>

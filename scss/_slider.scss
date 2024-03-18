@@ -20,13 +20,16 @@
     justify-content: center;
     button {
             width: 230px;
-            height: 45px;
+            height: 50px;
             background: rgb(202, 202, 202);
             border-radius: 30px;
             @include button-style;
             position: relative;
             bottom: 5%;
             font-size: 1.5em;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
         }
 
     .textbox {
@@ -49,7 +52,7 @@
         width: 480px;
         height: 200px;
         position: absolute;
-        left: 25%;
+        left: 30%;
         bottom: 12%;
         color: rgb(87, 87, 87);
         white-space: nowrap;
@@ -81,4 +84,3 @@
     }
 }
 
-    
