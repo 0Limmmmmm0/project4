@@ -123,6 +123,13 @@ li a:hover {
 }
 
 /*메뉴바*/
+.bg {
+  width: 100%;
+  height: 300px;
+  background: rgb(121, 113, 29);
+  display: none;
+}
+
 /*footer*/
 footer {
   height: auto;
@@ -210,6 +217,7 @@ footer {
 }
 .box .textbox {
   margin-bottom: 20%;
+  position: relative;
 }
 .box .textbox h1 {
   line-height: 50px;
@@ -220,11 +228,10 @@ footer {
   font-size: 0.9em;
 }
 .box .sub_textbox {
-  width: 480px;
-  height: 200px;
+  width: 380px;
   position: absolute;
-  left: 30%;
-  bottom: 12%;
+  right: 0;
+  bottom: -56%;
   color: rgb(87, 87, 87);
   white-space: nowrap;
 }
@@ -393,8 +400,8 @@ button:hover {
   cursor: pointer;
 }
 
-.swiper {
-  width: 92%;
+.first {
+  width: 94%;
   margin: 0 auto;
   height: 450px;
   display: flex;
@@ -414,11 +421,28 @@ button:hover {
 
 .swiper-slide img {
   display: block;
-  width: 100%;
+  width: 92%;
+  margin-left: 10px;
+  margin-right: 10px;
   height: 80%;
   -o-object-fit: cover;
      object-fit: cover;
-  box-shadow: gray 5px 5px 5px;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.9);
+  border-radius: 5px;
+}
+
+.swiper-slide:after {
+  content: "";
+  box-sizing: border-box;
+  display: block;
+  width: 282px;
+  height: 365px;
+  position: absolute;
+  left: 10px;
+  top: 0;
+  border-radius: 5px;
+  overflow: hidden;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3) 0, rgba(0, 0, 0, 0) 4%, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0) 100%);
 }
 
 h3 {
@@ -568,23 +592,90 @@ p {
   height: auto;
   margin-top: 50px;
 }
+.best_box h3 {
+  padding-top: 20px;
+}
+
 .best_box .box {
   width: 23.6%;
-  height: 520px;
+  height: 530px;
   margin: 10px;
   padding: 0px 30px;
   line-height: 30px;
   text-align: center;
   white-space: nowrap;
   cursor: pointer;
-}
-.best_box .box img {
-  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.3);
-}
-.best_box h3 {
-  padding-top: 20px;
+  position: relative;
 }
 
+.light {
+  height: 77.1%;
+  width: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  left: 39px;
+  top: 1px;
+}
+
+.best_box .box img {
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+}
+
+.best_box .box:after {
+  content: "";
+  box-sizing: border-box;
+  display: block;
+  width: 282px;
+  height: 409px;
+  position: absolute;
+  left: 30px;
+  top: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3) 0, rgba(0, 0, 0, 0) 4%, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0) 100%);
+}
+
+.hoverbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 430px;
+  background: rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 5;
+}
+.hoverbox img {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  margin: 5%;
+}
+.hoverbox img:hover {
+  filter: invert(14%) sepia(64%) saturate(1873%) hue-rotate(199deg) brightness(84%) contrast(100%);
+}
+
+.best_box .box:hover .hoverbox {
+  opacity: 1;
+  animation: fadeInDown 0.8s;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
 /*page4*/
 #new {
   width: 1450px;
@@ -666,6 +757,7 @@ p {
   height: 600px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 #comment button {
   width: 170px;
@@ -705,6 +797,7 @@ p {
   align-items: center;
   justify-content: center;
   margin-top: 20px;
+  position: relative;
 }
 #boxcover3 .box {
   width: 429px;
@@ -716,6 +809,20 @@ p {
   width: 100%;
   height: 100%;
   border-radius: 30px;
+}
+
+.btn_left {
+  position: absolute;
+  top: 57%;
+  left: 10px;
+  cursor: pointer;
+}
+
+.btn_right {
+  position: absolute;
+  top: 57%;
+  right: 10px;
+  cursor: pointer;
 }
 
 /*page7*/

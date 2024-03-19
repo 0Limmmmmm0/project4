@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@import 'variable', 'common', 'slider', 'mixin', 'advertisement', 'page8','swiper';
+@import 'variable', 'common', 'slider', 'mixin', 'advertisement', 'page8', 'swiper','slick';
 
 
 
@@ -34,7 +34,8 @@
     justify-content: center;
     align-items: center;
 }
-#slide{
+
+#slide {
     display: flex;
     width: 100%;
 }
@@ -47,25 +48,30 @@
     background: $subColor;
     border-radius: 0px 0px 20px 20px;
     color: white;
+
     .subbox {
         width: 100%;
         height: 250px;
         bottom: 0;
         border-radius: 20px;
         position: absolute;
-        .tbox{
+
+        .tbox {
             position: relative;
             top: 15%;
             left: 3%;
         }
-        h5{
+
+        h5 {
             line-height: 25px;
         }
-        h3{
+
+        h3 {
             font-size: 1.4em;
         }
     }
-    .bookbox{
+
+    .bookbox {
         width: 50%;
         height: 100%;
         position: absolute;
@@ -107,11 +113,13 @@ p {
         cursor: pointer;
         @include button-style;
     }
-    button:hover{
+
+    button:hover {
         background: $mainColor;
         color: white;
     }
 }
+
 .best_box {
     display: flex;
     flex-wrap: wrap;
@@ -121,21 +129,89 @@ p {
     height: auto;
     margin-top: 50px;
 
-    .box {
-        width:23.6%;
-        height: 520px;
-        margin: 10px;
-        padding: 0px 30px;
-        line-height: 30px;
-        text-align: center;
-        white-space: nowrap;
-        cursor: pointer;
-    }
-    .box img {
-        box-shadow: 4px 4px 4px 4px rgb(0, 0, 0, 0.3);
-    }
-    h3{
+
+    h3 {
         padding-top: 20px;
+    }
+}
+
+.best_box .box {
+    width: 23.6%;
+    height: 530px;
+    margin: 10px;
+    padding: 0px 30px;
+    line-height: 30px;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    position: relative;
+}
+.light {
+    height: 77.1%;
+    width: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    left: 39px;
+    top: 1px;
+}
+.best_box .box img {
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+}
+.best_box .box:after {
+    content: '';
+    box-sizing: border-box;
+    display: block;
+    width: 282px;
+    height: 409px;
+    position: absolute;
+    left: 30px;
+    top: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background: linear-gradient(to right, rgba(0, 0, 0, .3) 0, rgba(0, 0, 0, 0) 4%, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0) 100%);
+}
+.hoverbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 430px;
+    background: rgba(255, 255, 255, 0.7);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 5;
+
+    img {
+        width: 70px;
+        height: 70px;
+        position: relative;
+        margin: 5%;
+    }
+
+    img:hover {
+        filter: invert(14%) sepia(64%) saturate(1873%) hue-rotate(199deg) brightness(84%) contrast(100%);
+    }
+}
+
+.best_box .box:hover .hoverbox {
+    opacity: 1;
+    animation: fadeInDown 0.8s;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateZ(0);
     }
 }
 
@@ -160,14 +236,16 @@ p {
         height: 400px;
         margin: 15px;
     }
-    img{
+
+    img {
         box-shadow: gray 5px 5px 5px;
     }
 
     p {
         font-size: 0.9em;
     }
-    h3{
+
+    h3 {
         padding-top: 30px
     }
 
@@ -180,6 +258,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     button {
         width: 170px;
         height: 50px;
@@ -191,11 +270,12 @@ p {
         cursor: pointer;
         @include button-style;
     }
-    button:hover{
+
+    button:hover {
         background: $mainColor;
         color: white;
     }
-    
+
 }
 
 .boxcover2 {
@@ -224,6 +304,8 @@ p {
     height: 600px;
     display: flex;
     flex-direction: column;
+    position: relative;
+
     button {
         width: 170px;
         height: 40px;
@@ -235,11 +317,13 @@ p {
         cursor: pointer;
         @include button-style;
     }
-    button:hover{
+
+    button:hover {
         background: white;
         color: rgb(0, 0, 0);
     }
 }
+
 .bar_full {
     width: 1903px;
     @include sub-text-style;
@@ -262,6 +346,7 @@ p {
     align-items: center;
     justify-content: center;
     margin-top: 20px;
+    position: relative;
 
     .box {
         width: 429px;
@@ -275,6 +360,18 @@ p {
         height: 100%;
         border-radius: 30px;
     }
+}
+.btn_left{
+    position: absolute;
+    top: 57%;
+    left: 10px;
+    cursor: pointer;
+}
+.btn_right{
+    position: absolute;
+    top: 57%;
+    right: 10px;
+    cursor: pointer;
 }
 
 /*page7*/
@@ -348,4 +445,3 @@ p {
         font-size: 0.9em;
     }
 }
-

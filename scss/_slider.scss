@@ -34,6 +34,7 @@
 
     .textbox {
         margin-bottom: 20%;
+        position: relative;
 
         h1 {
             line-height: 50px;
@@ -49,11 +50,10 @@
     }
 
     .sub_textbox {
-        width: 480px;
-        height: 200px;
+        width: 380px;
         position: absolute;
-        left: 30%;
-        bottom: 12%;
+        right: 0;
+        bottom: -56%;
         color: rgb(87, 87, 87);
         white-space: nowrap;
 
