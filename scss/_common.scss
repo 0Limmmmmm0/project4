@@ -26,6 +26,10 @@ header {
     width: 100%;
     height: auto;
     background: $subColor;
+    position: sticky;
+    top: 0;
+    z-index: 6;
+    
 }
 
 #top {
@@ -34,6 +38,7 @@ header {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    transition: all 300ms ease;
 }
 
 .logo {
@@ -70,6 +75,10 @@ header ul {
 li a:hover {
     color: #09255d;
 }
+#top .active {
+    background: transparent;
+    color: yellow;
+  }
 
 /*햄버거 아이콘*/
 .menu_icon {

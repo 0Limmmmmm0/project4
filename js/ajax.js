@@ -51,6 +51,33 @@ $.ajax({
     .done(function (msg) {
         $(".box_book_tull>.box_book4").append("<img src ='" + msg.documents[0].thumbnail + "'/>");
     });
+    $.ajax({
+        method: "GET",
+        url: "https://dapi.kakao.com/v3/search/book?target=title",
+        data: { query: "바르트를 읽는 밤" },
+        headers: { Authorization: "KakaoAK 380246aa8cbc20e48b9e8000995f2c3c" }
+    })
+        .done(function (msg) {
+            $(".box_book_tull>.box_book5").append("<img src ='" + msg.documents[0].thumbnail + "'/>");
+        });
+        $.ajax({
+            method: "GET",
+            url: "https://dapi.kakao.com/v3/search/book?target=title",
+            data: { query: "왜 전쟁인가" },
+            headers: { Authorization: "KakaoAK 380246aa8cbc20e48b9e8000995f2c3c" }
+        })
+            .done(function (msg) {
+                $(".box_book_tull>.box_book6").append("<img src ='" + msg.documents[0].thumbnail + "'/>");
+            });
+            $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: "고잉 홈" },
+                headers: { Authorization: "KakaoAK 380246aa8cbc20e48b9e8000995f2c3c" }
+            })
+                .done(function (msg) {
+                    $(".box_book_tull>.box_book7").append("<img src ='" + msg.documents[0].thumbnail + "'/>");
+                });
 
 /*새로 들어온 책*/
 $.ajax({

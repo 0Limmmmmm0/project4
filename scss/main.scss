@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@import 'variable', 'common', 'slider', 'mixin', 'advertisement', 'page8', 'swiper','slick';
+@import 'variable', 'common', 'slider', 'mixin', 'advertisement', 'page8', 'swiper', 'slick';
 
 
 
@@ -102,7 +102,7 @@ p {
     justify-content: center;
     align-items: center;
 
-    button {
+    .btn {
         width: 170px;
         height: 50px;
         background: $subColor;
@@ -114,7 +114,7 @@ p {
         @include button-style;
     }
 
-    button:hover {
+    .btn:hover {
         background: $mainColor;
         color: white;
     }
@@ -128,6 +128,7 @@ p {
     width: 100%;
     height: auto;
     margin-top: 50px;
+    overflow: hidden;
 
 
     h3 {
@@ -145,7 +146,9 @@ p {
     white-space: nowrap;
     cursor: pointer;
     position: relative;
+    overflow: hidden;
 }
+
 .light {
     height: 77.1%;
     width: 4px;
@@ -154,10 +157,12 @@ p {
     left: 39px;
     top: 1px;
 }
+
 .best_box .box img {
     box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.9);
     border-radius: 10px;
 }
+
 .best_box .box:after {
     content: '';
     box-sizing: border-box;
@@ -171,6 +176,8 @@ p {
     overflow: hidden;
     background: linear-gradient(to right, rgba(0, 0, 0, .3) 0, rgba(0, 0, 0, 0) 4%, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0) 100%);
 }
+/*책 호버박스*/
+
 .hoverbox {
     position: absolute;
     top: 0;
@@ -282,33 +289,62 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+}
 
-    .box {
-        width: 100%;
-        height: 600px;
-        margin: 10px;
-        border-radius: 50px;
-    }
+.boxcover2 .box {
+    width: 100%;
+    height: 600px;
+    margin: 10px;
+    border-radius: 50px;
+    position: relative;
+}
 
-    .box img {
-        width: 100%;
-        height: 100%;
-        border-radius: 50px;
-    }
+.boxcover2 .box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+.hhbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 50px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 5;
+}
+.boxcover2 .box:hover .hhbox {
+    opacity: 1;
+}
+
+.boxcover2 .box:hover {
+    transform: translateZ(18px);
 }
 
 /*page6*/
 #comment {
     width: 100%;
     background: rgb(228, 228, 228);
-    height: 600px;
+    height: 650px;
     display: flex;
     flex-direction: column;
     position: relative;
-
-    button {
+}
+#comment .btn {
         width: 170px;
         height: 40px;
+        position: relative;
+        top: 2%;
+        z-index: 5;
         background: $mainColor;
         color: white;
         margin-left: 30px;
@@ -318,12 +354,10 @@ p {
         @include button-style;
     }
 
-    button:hover {
+    #comment .btn:hover {
         background: white;
         color: rgb(0, 0, 0);
     }
-}
-
 .bar_full {
     width: 1903px;
     @include sub-text-style;
@@ -361,19 +395,6 @@ p {
         border-radius: 30px;
     }
 }
-.btn_left{
-    position: absolute;
-    top: 57%;
-    left: 10px;
-    cursor: pointer;
-}
-.btn_right{
-    position: absolute;
-    top: 57%;
-    right: 10px;
-    cursor: pointer;
-}
-
 /*page7*/
 #recommend {
     @include box-style;
@@ -390,7 +411,7 @@ p {
 
     .box_recommend {
         width: 350px;
-        height: 500px;
+        height: 700px;
 
         .box_book_tull {
             width: 350px;
@@ -401,41 +422,157 @@ p {
             align-items: center;
             justify-content: center;
             border-radius: 30px;
+            position: relative;
 
             img {
                 width: 100%;
                 height: 100%;
-                box-shadow: 5px 5px 5px gray;
+                box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.9);
+                border-radius: 5px;
             }
         }
 
         .box_book1 {
             width: 230px;
-            background: palegreen;
             height: 320px;
+            position: relative;
         }
 
         .box_book2 {
             width: 230px;
-            background: palegreen;
             height: 320px;
+            position: relative;
         }
 
         .box_book3 {
             width: 230px;
-            background: palegreen;
             height: 320px;
+            position: relative;
         }
 
         .box_book4 {
             width: 230px;
-            background: palegreen;
             height: 320px;
+            position: relative;
+        }
+        .box_book5 {
+            width: 230px;
+            height: 320px;
+            position: relative;
+        }
+        .box_book6 {
+            width: 230px;
+            height: 320px;
+            position: relative;
+        }
+        .box_book7 {
+            width: 230px;
+            height: 320px;
+            position: relative;
         }
 
     }
 }
-
+.box_book1:after {
+    content: '';
+    box-sizing: border-box;
+    display: block;
+    width: 282px;
+    height: 320px;
+    position: absolute;
+    // left: 10px;
+    top: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    background: linear-gradient(to right, rgba(0, 0, 0, .3) 0, rgba(0, 0, 0, 0) 4%, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0) 100%);
+}
+.box_book2:after {
+    content: '';
+    box-sizing: border-box;
+    display: block;
+    width: 282px;
+    height: 320px;
+    position: absolute;
+    // left: 10px;
+    top: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    background: linear-gradient(to right, rgba(0, 0, 0, .3) 0, rgba(0, 0, 0, 0) 4%, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0) 100%);
+}
+.box_book3:after {
+    content: '';
+    box-sizing: border-box;
+    display: block;
+    width: 282px;
+    height: 320px;
+    position: absolute;
+    // left: 10px;
+    top: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    background: linear-gradient(to right, rgba(0, 0, 0, .3) 0, rgba(0, 0, 0, 0) 4%, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0) 100%);
+}
+.box_book4:after {
+    content: '';
+    box-sizing: border-box;
+    display: block;
+    width: 282px;
+    height: 320px;
+    position: absolute;
+    // left: 10px;
+    top: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    background: linear-gradient(to right, rgba(0, 0, 0, .3) 0, rgba(0, 0, 0, 0) 4%, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0) 100%);
+}
+.box_book5:after {
+    content: '';
+    box-sizing: border-box;
+    display: block;
+    width: 282px;
+    height: 320px;
+    position: absolute;
+    // left: 10px;
+    top: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    background: linear-gradient(to right, rgba(0, 0, 0, .3) 0, rgba(0, 0, 0, 0) 4%, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0) 100%);
+}
+.box_book6:after {
+    content: '';
+    box-sizing: border-box;
+    display: block;
+    width: 282px;
+    height: 320px;
+    position: absolute;
+    // left: 10px;
+    top: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    background: linear-gradient(to right, rgba(0, 0, 0, .3) 0, rgba(0, 0, 0, 0) 4%, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0) 100%);
+}
+.box_book7:after {
+    content: '';
+    box-sizing: border-box;
+    display: block;
+    width: 282px;
+    height: 320px;
+    position: absolute;
+    // left: 10px;
+    top: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    background: linear-gradient(to right, rgba(0, 0, 0, .3) 0, rgba(0, 0, 0, 0) 4%, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0) 100%);
+}
+.box_book_tull .light {
+    height: 320px;
+    width: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    left: 65px;
+    top: 50px;
+    z-index: 5;
+}
 .textbox {
     .h3 {
         font-size: 1.17rem;
@@ -445,3 +582,4 @@ p {
         font-size: 0.9em;
     }
 }
+

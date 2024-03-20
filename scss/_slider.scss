@@ -71,6 +71,7 @@
         background: $mainColor;
         position: relative;
         left: 20%;
+        transform: translateX(100px); transition: all 3s; opacity: 0;
 
         .slider_book_cover {
             width: 440px;
@@ -83,4 +84,5 @@
         }
     }
 }
+
 
