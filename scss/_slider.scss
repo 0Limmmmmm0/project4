@@ -18,10 +18,10 @@
     flex-direction: column;
     // align-items: center;
     justify-content: center;
-    button {
+    .btn1 {
             width: 230px;
             height: 50px;
-            background: rgb(202, 202, 202);
+            background: #465980;
             border-radius: 30px;
             @include button-style;
             position: relative;
@@ -31,7 +31,11 @@
             font-weight: bold;
             cursor: pointer;
         }
-
+    
+        .btn1:hover {
+            background: $subColor;
+            color: rgb(24, 24, 24);
+        }
     .textbox {
         margin-bottom: 20%;
         position: relative;
@@ -62,7 +66,7 @@
     .colorbox {
         width: 230px;
         height: 10px;
-        background: black;
+        background: #e93d6f;
     }
 
     .slider_book {
@@ -71,7 +75,7 @@
         background: $mainColor;
         position: relative;
         left: 20%;
-        transform: translateX(100px); transition: all 3s; opacity: 0;
+        transform: translateX(100px); transition: all 5s; opacity: 0;
 
         .slider_book_cover {
             width: 440px;

@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@import 'variable', 'common', 'slider', 'mixin', 'advertisement', 'page8', 'swiper', 'slick';
+@import 'variable', 'common', 'slider', 'mixin', 'advertisement', 'page8', 'swiper', 'slick','page1';
 
 
 
@@ -23,59 +23,6 @@
         font-size: 1.58rem;
         line-height: 90px;
         font-weight: bold
-    }
-}
-
-/*page1*/
-#one {
-    @include box-style;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#slide {
-    display: flex;
-    width: 100%;
-}
-
-#box {
-    width: 465px;
-    height: 350px;
-    margin: 1%;
-    position: relative;
-    background: $subColor;
-    border-radius: 0px 0px 20px 20px;
-    color: white;
-
-    .subbox {
-        width: 100%;
-        height: 250px;
-        bottom: 0;
-        border-radius: 20px;
-        position: absolute;
-
-        .tbox {
-            position: relative;
-            top: 15%;
-            left: 3%;
-        }
-
-        h5 {
-            line-height: 25px;
-        }
-
-        h3 {
-            font-size: 1.4em;
-        }
-    }
-
-    .bookbox {
-        width: 50%;
-        height: 100%;
-        position: absolute;
-        right: 0;
     }
 }
 
@@ -261,17 +208,19 @@ p {
 /*page5*/
 #month {
     @include box-style;
-    height: 900px;
+    height: 1000px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
+    position: relative;
 
     button {
         width: 170px;
         height: 50px;
         background: $subColor;
         margin: 1%;
-        margin-top: 40px;
+        margin-top: 85px;
         font-size: 1.3rem;
         font-weight: bold;
         cursor: pointer;
@@ -282,30 +231,53 @@ p {
         background: $mainColor;
         color: white;
     }
-
 }
-
+.boxcove{
+    width: 1350px;
+    margin-right: 7.3%;
+    // display: flex;
+    margin-top: 50px;
+}
 .boxcover2 {
     display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
+    position: relative;
+    width: 3000px;
+    // width: 300%;
 }
-
 .boxcover2 .box {
-    width: 100%;
+    width: 430px;
     height: 600px;
-    margin: 10px;
+    margin: 0 0 0 41px;
     border-radius: 50px;
     position: relative;
 }
-
 .boxcover2 .box img {
     width: 100%;
     height: 100%;
     border-radius: 50px;
 }
-
+/*방향 버튼*/
+.boxcove span{
+    position: absolute;
+    top: 47.5%;
+    z-index: 7;
+}
+.boxcove .prev{
+    position: absolute;
+    left: 0;
+    font-size: 3.8rem;
+    cursor: pointer;
+}
+.boxcove .next{
+    right: 0;
+    font-size: 3.8rem;
+    cursor: pointer;
+}
+.boxcove span:hover{
+    opacity: 0.5;
+}
+/*호버박스*/
 .hhbox {
     position: absolute;
     top: 0;
@@ -329,6 +301,7 @@ p {
 .boxcover2 .box:hover {
     transform: translateZ(18px);
 }
+
 
 /*page6*/
 #comment {

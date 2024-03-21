@@ -26,10 +26,8 @@ a {
 header {
   width: 100%;
   height: auto;
-  background: rgb(240, 240, 240);
-  position: sticky;
-  top: 0;
-  z-index: 6;
+  background: #e6e6e6;
+  transition: 1s ease-in-out;
 }
 
 #top {
@@ -38,7 +36,22 @@ header {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  transition: all 300ms ease;
+}
+
+header.fixed {
+  position: fixed;
+  background: rgb(0, 0, 0);
+  z-index: 100;
+}
+
+header ul a.txtCh {
+  color: white;
+}
+
+header > ul > li > a {
+  display: block;
+  font-size: 20px;
+  color: #666;
 }
 
 .logo {
@@ -211,10 +224,10 @@ footer {
   flex-direction: column;
   justify-content: center;
 }
-.box button {
+.box .btn1 {
   width: 230px;
   height: 50px;
-  background: rgb(202, 202, 202);
+  background: #465980;
   border-radius: 30px;
   border: none;
   position: relative;
@@ -223,6 +236,10 @@ footer {
   color: white;
   font-weight: bold;
   cursor: pointer;
+}
+.box .btn1:hover {
+  background: rgb(240, 240, 240);
+  color: rgb(24, 24, 24);
 }
 .box .textbox {
   margin-bottom: 20%;
@@ -247,7 +264,7 @@ footer {
 .box .colorbox {
   width: 230px;
   height: 10px;
-  background: black;
+  background: #e93d6f;
 }
 .box .slider_book {
   width: 501px;
@@ -256,7 +273,7 @@ footer {
   position: relative;
   left: 20%;
   transform: translateX(100px);
-  transition: all 3s;
+  transition: all 5s;
   opacity: 0;
 }
 .box .slider_book .slider_book_cover {
@@ -323,13 +340,14 @@ footer {
 #twobox {
   width: 1450px;
   margin: 0 auto;
-  height: 880px;
+  height: 1000px;
   display: flex;
   justify-content: space-between;
 }
 #twobox .box:nth-of-type(1) {
   width: 100%;
   margin: 0;
+  padding-top: 4.2%;
 }
 #twobox .box:nth-of-type(2) {
   width: 100%;
@@ -351,23 +369,23 @@ footer {
 
 .minicover {
   display: flex;
-  height: 800px;
+  height: 900px;
   flex-wrap: wrap;
   justify-content: center;
   border-right: 3px solid #09255d;
 }
-.minicover button {
+.minicover .btn {
   width: 150px;
   height: 50px;
   color: black;
   background: rgb(240, 240, 240);
   border: none;
-  margin-top: 15%;
+  font-weight: bold;
 }
 
 .minibox {
   width: 345px;
-  height: 575px;
+  height: 587px;
   margin: 5px;
   border-radius: 30px;
   margin-top: 10%;
@@ -381,14 +399,14 @@ footer {
   position: relative;
   justify-content: center;
 }
-.minicover2 button {
-  position: relative;
+.minicover2 .btn {
   width: 150px;
   height: 50px;
-  margin-top: 17%;
   color: black;
   background: rgb(240, 240, 240);
   border: none;
+  margin-top: 10%;
+  font-weight: bold;
 }
 
 .minibox2 {
@@ -417,7 +435,7 @@ footer {
   opacity: 0.7;
 }
 
-button:hover {
+#twobox .btn:hover {
   background: #09255d;
   color: white;
 }
@@ -427,7 +445,7 @@ button:hover {
   cursor: pointer;
 }
 
-.first {
+.swiper {
   width: 94%;
   margin: 0 auto;
   height: 450px;
@@ -499,6 +517,14 @@ h3 {
   color: rgb(0, 0, 0) !important;
   position: absolute;
   padding-bottom: 20px;
+}
+
+.swiper-button-next:hover {
+  opacity: 0.5;
+}
+
+.swiper-button-prev:hover {
+  opacity: 0.5;
 }
 
 .swiper-button-prev:after,
@@ -679,6 +705,55 @@ h3 {
   color: black;
 }
 
+/*page1*/
+#one {
+  width: 1450px;
+  margin: 0 auto;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+#slide {
+  display: flex;
+  width: 2417px;
+}
+
+#slider_box {
+  width: 483px;
+  height: 350px;
+  margin: 13px;
+  position: relative;
+  background: rgb(240, 240, 240);
+  border-radius: 0px 0px 20px 20px;
+  color: white;
+}
+#slider_box .subbox {
+  width: 100%;
+  height: 250px;
+  bottom: 0;
+  border-radius: 20px;
+  position: absolute;
+}
+#slider_box .subbox .tbox {
+  position: relative;
+  top: 15%;
+  left: 3%;
+}
+#slider_box .subbox h5 {
+  line-height: 25px;
+}
+#slider_box .subbox h3 {
+  font-size: 1.4em;
+}
+#slider_box .bookbox {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+
 #wrap {
   width: 100%;
   height: auto;
@@ -699,55 +774,6 @@ h3 {
   font-size: 1.58rem;
   line-height: 90px;
   font-weight: bold;
-}
-
-/*page1*/
-#one {
-  width: 1450px;
-  margin: 0 auto;
-  height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#slide {
-  display: flex;
-  width: 100%;
-}
-
-#box {
-  width: 465px;
-  height: 350px;
-  margin: 1%;
-  position: relative;
-  background: rgb(240, 240, 240);
-  border-radius: 0px 0px 20px 20px;
-  color: white;
-}
-#box .subbox {
-  width: 100%;
-  height: 250px;
-  bottom: 0;
-  border-radius: 20px;
-  position: absolute;
-}
-#box .subbox .tbox {
-  position: relative;
-  top: 15%;
-  left: 3%;
-}
-#box .subbox h5 {
-  line-height: 25px;
-}
-#box .subbox h3 {
-  font-size: 1.4em;
-}
-#box .bookbox {
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  right: 0;
 }
 
 /*page2*/
@@ -926,17 +952,19 @@ p {
 #month {
   width: 1450px;
   margin: 0 auto;
-  height: 900px;
+  height: 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
+  position: relative;
 }
 #month button {
   width: 170px;
   height: 50px;
   background: rgb(240, 240, 240);
   margin: 1%;
-  margin-top: 40px;
+  margin-top: 85px;
   font-size: 1.3rem;
   font-weight: bold;
   cursor: pointer;
@@ -947,17 +975,23 @@ p {
   color: white;
 }
 
+.boxcove {
+  width: 1350px;
+  margin-right: 7.3%;
+  margin-top: 50px;
+}
+
 .boxcover2 {
   display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
+  position: relative;
+  width: 3000px;
 }
 
 .boxcover2 .box {
-  width: 100%;
+  width: 430px;
   height: 600px;
-  margin: 10px;
+  margin: 0 0 0 41px;
   border-radius: 50px;
   position: relative;
 }
@@ -968,6 +1002,31 @@ p {
   border-radius: 50px;
 }
 
+/*방향 버튼*/
+.boxcove span {
+  position: absolute;
+  top: 47.5%;
+  z-index: 7;
+}
+
+.boxcove .prev {
+  position: absolute;
+  left: 0;
+  font-size: 3.8rem;
+  cursor: pointer;
+}
+
+.boxcove .next {
+  right: 0;
+  font-size: 3.8rem;
+  cursor: pointer;
+}
+
+.boxcove span:hover {
+  opacity: 0.5;
+}
+
+/*호버박스*/
 .hhbox {
   position: absolute;
   top: 0;

@@ -1,10 +1,14 @@
-const menu = document.querySelector('#top');
-const menuHeight = menu.getBoundingClientRect().height;
-
-document.addEventListener('scroll', () => {
-  if (window.scrollY > menuHeight) {
-    menu.classList.add('active');
-  } else {
-    menu.classList.remove('active');
-  }
+$(document).ready(function(){
+  var currentScrollTop=0;
+  $(window).scroll(function(){
+    currentScrollTop=$(window).scrollTop();
+    if(currentScrollTop>100){
+      $("header").addClass("fixed");
+      $("header a").addClass("txtCh");
+    }else{
+      $("header").removeClass("fixed");
+      $("header a").removeClass("textCh");
+    }
+  });
 });
+

@@ -4,8 +4,7 @@
     position: relative;
     cursor: pointer;
 }
-
-.first {
+.swiper {
     width: 94%;
     margin: 0 auto;
     height: 450px;
@@ -70,6 +69,12 @@ h3{
   color: rgb(0, 0, 0) !important;
   position: absolute;
   padding-bottom: 20px;
+}
+.swiper-button-next:hover{
+    opacity: 0.5;
+}
+.swiper-button-prev:hover{
+    opacity: 0.5;
 }
 
 .swiper-button-prev:after,

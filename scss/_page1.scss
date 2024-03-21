@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+
+/*page1*/
+#one {
+    @include box-style;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+#slide {
+    display: flex;
+    width: 2417px;
+}
+
+#slider_box {
+    width: 483px;
+    height: 350px;
+    margin: 13px;
+    position: relative;
+    background: $subColor;
+    border-radius: 0px 0px 20px 20px;
+    color: white;
+
+    .subbox {
+        width: 100%;
+        height: 250px;
+        bottom: 0;
+        border-radius: 20px;
+        position: absolute;
+
+        .tbox {
+            position: relative;
+            top: 15%;
+            left: 3%;
+        }
+
+        h5 {
+            line-height: 25px;
+        }
+
+        h3 {
+            font-size: 1.4em;
+        }
+    }
+
+    .bookbox {
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+    }
+}
+
+

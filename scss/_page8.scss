@@ -5,13 +5,14 @@
 /*page8*/
 #twobox {
     @include box-style;
-    height: 880px;
+    height: 1000px;
     display: flex;
     justify-content: space-between;
 
     .box:nth-of-type(1) {
         width: 100%;
         margin: 0;
+        padding-top: 4.2%;
     }
 
     .box:nth-of-type(2) {
@@ -39,25 +40,26 @@
 
 .minicover {
     display: flex;
-    height: 800px;
+    height: 900px;
     flex-wrap: wrap;
     justify-content: center;
     border-right: 3px solid $mainColor;
 
-    button {
+    .btn {
         width: 150px;
         height: 50px;
         color: black;
         background: $subColor;
         @include button-style;
-        margin-top: 15%;
+        // margin-top: 7%;
+        font-weight: bold;
     }
 
 }
 
 .minibox {
     width: 345px;
-    height: 575px;
+    height: 587px;
     margin: 5px;
     border-radius: 30px;
     margin-top: 10%;
@@ -71,15 +73,14 @@
     height: 800px;
     position: relative;
     justify-content: center;
-
-    button {
-        position: relative;
+    .btn {
         width: 150px;
         height: 50px;
-        margin-top: 17%;
         color: black;
         background: $subColor;
         @include button-style;
+        margin-top: 10%;
+        font-weight: bold;
     }
 }
 .minibox2 {
@@ -108,7 +109,7 @@
     opacity: 0.7;
 }
 
-button:hover {
+#twobox .btn:hover {
     background: $mainColor;
     color: white;
 }
