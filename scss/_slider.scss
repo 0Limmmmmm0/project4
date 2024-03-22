@@ -7,7 +7,6 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-
 }
 
 .box {
@@ -44,15 +43,11 @@
             line-height: 50px;
             font-weight: 800;
         }
-
         p {
             line-height: 30px;
             font-size: 0.9em;
         }
-
-        
     }
-
     .sub_textbox {
         width: 380px;
         position: absolute;
@@ -60,7 +55,6 @@
         bottom: -56%;
         color: rgb(87, 87, 87);
         white-space: nowrap;
-
     }
 
     .colorbox {
@@ -75,7 +69,7 @@
         background: $mainColor;
         position: relative;
         left: 20%;
-        transform: translateX(100px); transition: all 5s; opacity: 0;
+        // transform: translateX(100px); transition: all 5s; opacity: 0;
 
         .slider_book_cover {
             width: 440px;
@@ -88,5 +82,4 @@
         }
     }
 }
-
 

@@ -1,3 +1,4 @@
+/*page6 책 속의 한 줄 slick slide*/
 $('#center').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -5,7 +6,7 @@ $('#center').slick({
     autoplaySpeed: 2000,
     dots: true,
 });
-
+/*page7 미디어 추천 도서 slick slide*/
 $('.boxcover4').slick({
     slidesToShow: 4,
     slidesToScroll: 1,

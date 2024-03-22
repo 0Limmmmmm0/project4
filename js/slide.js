@@ -3,7 +3,7 @@ function slide(){
 
     $('#slide').stop().animate({marginLeft:"-33.3%"}, 800, function(){
 
-       $('#slider_box:first').appendTo('#slide');
+       $('.slider_box:first').appendTo('#slide');
 
        $('#slide').css({marginLeft:0});
 
@@ -14,7 +14,7 @@ function slide(){
 
  setInterval(slide, 3000);
 
- /*page5 클릭 슬라이드*/
+ /*page5 이달의 책 클릭 슬라이드*/
  $('.prev').click(function(){
     $('.boxcover2 .box:last').prependTo('.boxcover2');
     $('.boxcover2').css('margin-left','-34.9%'); /*'margin-Left',-1000*/
@@ -26,5 +26,3 @@ function slide(){
         $('.boxcover2').css({marginLeft:0});
     });
  });
-
-

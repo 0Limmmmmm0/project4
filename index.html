@@ -5,35 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/common.css">
     <link rel="icon" href="icon/logo_.png">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
     <title>종로서적</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 </head>
 
 <body>
     <div id="wrap">
+        <!--팝업-->
+        <div id="popup">
+            <img src="img/popup.PNG" alt="팝업">
+            <div class="close">그만보기</div>
+        </div>
         <!--헤더-->
         <header>
             <div id="top">
                 <div class="logo">
-                    <img src="icon/logo.png" alt="로고">
+                    <img src="icon/logo.png" alt="로고" class="img_show">
+                    <h2 class="logo_hide"><img src="icon/logo2.png" alt="로고"></h2>
                 </div>
                 <ul>
+                    <li><a href="#">분야별&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
                     <li><a href="#">베스트셀러&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
                     <li><a href="#">신간&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-                    <li><a href="#">특집&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
                     <li><a href="#">매장안내&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
                     <li><a href="#">커뮤니티&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-                    <li><a href="#"><img src="icon/glass.png" alt="돋보기"></a></li>
-                    <li><a href="#"><img src="icon/user.png" alt="돋보기"></a></li>
-
+                    <li><a href="#"><img src="icon/glass.png" alt="돋보기" class="glass_show"></a></li>
+                    <li><a href="#"><img src="icon/user.png" alt="마이페이지" class="user_show"></a></li>
+                    <li><a href="#"><img src="icon/glass2.png" alt="돋보기" class="glass_hide"></a></li>
+                    <li><a href="#"><img src="icon/user2.png" alt="마이페이지" class="user_hide"></a></li>
                 </ul>
                 <a class="menu_icon" href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                <a class="menu_icon_hide" href="#">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -58,7 +72,6 @@
                             의사가 질병을 정밀하게 진단하고 의학적 근거에 <br>따라 처방·치료하는 것처럼, 실험과 데이터로 정책의 문제점을
                             진단하고<br> 조언하며, 가난과 불행의 덫에 걸린 국민의 생존과 행복을위해 경제학이 <br> 무엇을 할 수 있는지 의사이자 경제학자의 시선으로 묻고 답한다.</p>
                     </div>
-
                 </div>
                 <button class="btn1">MORE !</button>
             </div>
@@ -66,36 +79,31 @@
                 <div class="slider_book">
                     <div class="slider_book_cover"></div>
                 </div>
-
-
             </div>
-
         </div>
         <!--page1-->
         <div id="one">
             <div id="slide">
-                <div id="slider_box">
+                <div class="slider_box">
                     <div class="subbox" style="background: rgb(88, 119, 88);">
                         <div class="tbox">
                             <h3>시대와 국경을 넘나드는<br>
                                 종횡무진 한국어사<br></h3><br><br>
                             <h5>유튜브보다 쉽고, 깊은 <br>
                                 이야기를 담은 단 한권의 책</h5>
-                            </h2>
                         </div>
                     </div>
                     <div class="bookbox">
                         <img src="img/book1.png" alt="book">
                     </div>
                 </div>
-                <div id="slider_box">
+                <div class="slider_box">
                     <div class="subbox" style="background: rgb(156, 156, 108);">
                         <div class="tbox">
                             <h3>세상이 더 크게 보이는<br>
                                 리더십 세계사<br></h3><br><br>
                             <h5>혼란과 분열의 시대, <br>
                                 리더의 '조건'과 '격'을 묻는 책!</h5>
-                            </h2>
                         </div>
 
                     </div>
@@ -103,50 +111,49 @@
                         <img src="img/book2.png" alt="book">
                     </div>
                 </div>
-                <div id="slider_box">
+                <div class="slider_box">
                     <div class="subbox" style="background: rgb(129, 93, 93);">
                         <div class="tbox">
                             <h3>당신과 경험과 역량을<br>
                                 커넥팅하라<br></h3><br><br>
                             <h5>키특이며 읽다 보면 <br>
                                 내 인생도 양자 도약</h5>
-                            </h2>
                         </div>
                     </div>
                     <div class="bookbox">
                         <img src="img/book3.png" alt="book">
                     </div>
                 </div>
-                <div id="slider_box">
-                <div class="subbox" style="background: rgb(119, 75, 117);">
-                    <div class="tbox">
-                        <h3>오늘을 살아가는<br>
-                        우리를 위한 책<br></h3><br><br>
-                    <h5>나태주의<br>
-                    80년 인생 에세이 결정판</h5></h2></div>
+                <div class="slider_box">
+                    <div class="subbox" style="background: rgb(119, 75, 117);">
+                        <div class="tbox">
+                            <h3>오늘을 살아가는<br>
+                                우리를 위한 책<br></h3><br><br>
+                            <h5>나태주의<br>
+                                80년 인생 에세이 결정판</h5>
+                        </div>
+                    </div>
+                    <div class="bookbox">
+                        <img src="img/book4.png" alt="book">
+                    </div>
                 </div>
-                <div class="bookbox">
-                    <img src="img/book4.png" alt="book">
+                <div class="slider_box">
+                    <div class="subbox" style="background: rgb(68, 74, 112);">
+                        <div class="tbox">
+                            <h3>창업 노하우를 3시간에<br>
+                                배울 수 있는 이야기<br></h3><br><br>
+                            <h5>간다 마사노리가 털어놓는,<br>
+                                이것이 나의 성공 스토리다!</h5>
+                        </div>
+                    </div>
+                    <div class="bookbox">
+                        <img src="img/book5.png" alt="book">
+                    </div>
                 </div>
             </div>
-            <div id="slider_box">
-                <div class="subbox" style="background: rgb(68, 74, 112);">
-                    <div class="tbox">
-                        <h3>창업 노하우를 3시간에<br>
-                        배울 수 있는 이야기<br></h3><br><br>
-                    <h5>간다 마사노리가 털어놓는,<br>
-                    이것이 나의 성공 스토리다!</h5></h2></div>
-                </div>
-                <div class="bookbox">
-                    <img src="img/book5.png" alt="book">
-                </div>
-            </div>
-            </div>
-
         </div>
-        
         <!--page2 베스트셀러-->
-        <div id="banner">
+        <div class="banner">
             <h1>인기서적 바로가기</h1>
         </div>
         <div id="best">
@@ -217,23 +224,20 @@
             <button class="btn">MORE</button>
         </div>
         <!--page3 광고배너-->
-        <div id="advertisement">
+        <div class="advertisement">
             <div class="box">
                 <div class="banner_text_box">
                     <h2>명상과 하나 되는 문학의 진보</h2><br>
                     <h3>'나'를 버리고 망각하는 존재, 그것과 하나가 되다.</h3>
                 </div>
                 <div class="bannerbox"><img src="img/banner_img1.png" alt="배너이미지"></div>
-
             </div>
         </div>
-
         <!--page4 새로 들어온 책-->
         <div id="new">
             <div class="bar">
                 <div class="bartull">
-                    <img src="icon/bar5.png" alt="꾸밈바">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;새로 들어온
-                    책&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="icon/bar6.png" alt="꾸밈바">
+                    <img src="icon/bar5.png" alt="꾸밈바">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;새로 들어온 책&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="icon/bar6.png" alt="꾸밈바">
                 </div>
             </div>
             <div class="swiper-box">
@@ -242,7 +246,8 @@
                         <div class="swiper-slide">
                             <div class="hovebox">
                                 <img src="icon/cart.png" alt="카트" style="box-shadow: none;">
-                                <img src="icon/zoom.png" alt="돋보기" style="box-shadow: none;"></div>
+                                <img src="icon/zoom.png" alt="돋보기" style="box-shadow: none;">
+                            </div>
                             <span class="light"></span>
                         </div>
                         <div class="swiper-slide">
@@ -309,16 +314,13 @@
                             <span class="light"></span>
                         </div>
                     </div>
-
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
-
-
         </div>
         <!--page5 이달의 책-->
-        <div id="banner">
+        <div class="banner">
             <h1>이 달의 꼭 만나볼 책</h1>
         </div>
         <div id="month">
@@ -329,63 +331,72 @@
                 </div>
             </div>
             <div class="boxcove">
-            <div class="boxcover2">
-                <div class="box">
-                    <img src="img/month_book1.jpg" alt="1월">
-                    <div class="hhbox"></div>
-                </div>
-                <div class="box">
-                    <img src="img/month_book2.jpg" alt="2월">
-                    <div class="hhbox"></div>
-                </div>
-                <div class="box"><img src="img/month_book3.jpg" alt="3월">
-                    <div class="hhbox"></div></div>
-                <div class="box"><img src="img/month_book4.jpg" alt="4월">
-                    <div class="hhbox"></div></div>
+                <div class="boxcover2">
+                    <div class="box">
+                        <img src="img/month_book1.jpg" alt="1월">
+                        <div class="hhbox"></div>
+                    </div>
+                    <div class="box">
+                        <img src="img/month_book2.jpg" alt="2월">
+                        <div class="hhbox"></div>
+                    </div>
+                    <div class="box"><img src="img/month_book3.jpg" alt="3월">
+                        <div class="hhbox"></div>
+                    </div>
+                    <div class="box"><img src="img/month_book4.jpg" alt="4월">
+                        <div class="hhbox"></div>
+                    </div>
                     <div class="box"><img src="img/month_book5.jpg" alt="5월">
-                        <div class="hhbox"></div></div>
-                        <div class="box"><img src="img/month_book6.jpg" alt="6월">
-                            <div class="hhbox"></div></div>
+                        <div class="hhbox"></div>
+                    </div>
+                    <div class="box"><img src="img/month_book6.jpg" alt="6월">
+                        <div class="hhbox"></div>
+                    </div>
+                </div>
+                <span class="prev">&lt;</span>
+                <span class="next">&gt;</span>
             </div>
-            <span class="prev">&lt;</span>
-            <span class="next">&gt;</span>
-        </div>
-            
             <button class="btn">MORE</button>
         </div>
         <!--page6 책 속의 한 줄-->
         <div id="comment">
             <div class="bar_full">
                 <div class="bar_full_bar">
-                    <img src="icon/full_bar.png" alt="꾸밈바">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;책 속의 한
-                    줄&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="icon/full_bar2.png" alt="꾸밈바">
+                    <img src="icon/full_bar.png" alt="꾸밈바"><span>책 속의 한 줄</span><img src="icon/full_bar2.png" alt="꾸밈바">
                 </div>
             </div>
             <button class="btn">MORE</button>
             <div id="center">
                 <div class="bbox">
-                    <img src="img/comment1.png" alt=" 책 속의 한 줄"><div class="hove_box"></div></div>
+                    <img src="img/comment1.png" alt=" 책 속의 한 줄">
+                    <div class="hove_box"></div>
+                </div>
                 <div class="bbox"><img src="img/comment2.png" alt=" 책 속의 한 줄">
-                <div class="hove_box"></div></div>
+                    <div class="hove_box"></div>
+                </div>
                 <div class="bbox"><img src="img/comment4.png" alt=" 책 속의 한 줄">
-                <div class="hove_box"></div></div>
+                    <div class="hove_box"></div>
+                </div>
                 <div class="bbox"><img src="img/comment3.png" alt=" 책 속의 한 줄">
-                <div class="hove_box"></div></div>
+                    <div class="hove_box"></div>
+                </div>
                 <div class="bbox"><img src="img/comment5.png" alt="책 속의 한 줄">
-                <div class="hove_box"></div></div>
+                    <div class="hove_box"></div>
+                </div>
                 <div class="bbox"><img src="img/comment6.png" alt="책 속의 한 줄">
-                <div class="hove_box"></div></div>
+                    <div class="hove_box"></div>
+                </div>
                 <div class="bbox"><img src="img/comment7.png" alt="책 속의 한 줄">
-                <div class="hove_box"></div></div>
+                    <div class="hove_box"></div>
+                </div>
                 <div class="bbox"><img src="img/comment8.png" alt="책 속의 한 줄">
-                <div class="hove_box"></div></div>
+                    <div class="hove_box"></div>
+                </div>
                 <div class="bbox"><img src="img/comment9.png" alt="책 속의 한 줄">
-                <div class="hove_box"></div></div>
+                    <div class="hove_box"></div>
+                </div>
             </div>
-            
         </div>
-        
-                  
         <!--page7 미디어 추천 도서-->
         <div id="recommend">
             <div class="bar">
@@ -401,7 +412,7 @@
                         </div>
                         <span class="light"></span>
                     </div>
-                    
+
                     <div class="textbox">
                         <h3>중독의 역사</h3>
                         <p>칼 에릭 피셔</p>
@@ -476,18 +487,18 @@
             </div>
         </div>
         <!--광고배너-->
-        <div id="advertisement">
+        <div class="advertisement">
             <div class="box" style="background: rgb(163, 163, 231);">
                 <div class="banner_text_box">
                     <h2>힐링 곰과 함께 나를 응원하는 연습!</h2><br>
                     <h3>소듕한 나에게 보내는 100일의 토닥임</h3>
                 </div>
                 <div class="bannerbox"><img src="img/banner_img2.png" alt="배너이미지"></div>
-
             </div>
         </div>
         <!--page8 특집, 매장안내-->
         <div id="twobox">
+            <!--특집-->
             <div class="box">
                 <div class="minibanner" style="border-right: 3px solid white;">
                     <h1>특집</h1>
@@ -502,6 +513,7 @@
                     <button style="font-size: 1.3rem;" class="btn">MORE</button>
                 </div>
             </div>
+            <!--매장안내-->
             <div class="box">
                 <div class="minibanner">
                     <h1>매장안내</h1>
@@ -527,7 +539,6 @@
                 </div>
             </div>
         </div>
-
         <!--푸터-->
         <footer>
             <div id="bottom">
@@ -549,24 +560,21 @@
                     <p>CALL : 02-739-2331</p>
                     <p>FAX : 02-739-2332</p>
                     <p>CONTACT : md@jongnobooks.net</p>
-                    <div class="iconbox"><a href="https://blog.naver.com/jongnobooks"><img src="icon/blog.png" alt="블로그"
-                                style="width: 60px; height: 60px;"></a><a
-                            href="https://www.instagram.com/jongnobooks_official/"><img src="icon/instagram.png"
-                                alt="인스타" style="width: 60px; height: 60px;"></a><a
-                            href="https://www.aladin.co.kr/home/welcome.aspx?partner=jongno"><img src="icon/den.png"
-                                alt="알라딘" style="width: 60px; height: 60px;"></a></div>
+                    <div class="iconbox"><a href="https://blog.naver.com/jongnobooks"><img src="icon/blog.png" alt="블로그" style="width: 60px; height: 60px;"></a>
+                        <a href="https://www.instagram.com/jongnobooks_official/"><img src="icon/instagram.png" alt="인스타" style="width: 60px; height: 60px;"></a>
+                        <a href="https://www.aladin.co.kr/home/welcome.aspx?partner=jongno"><img src="icon/den.png" alt="알라딘" style="width: 60px; height: 60px;"></a>
+                    </div>
                 </div>
             </div>
         </footer>
     </div>
+    <!--js-->
     <script src="js/ajax.js"></script>
-    <script src="js/hambuger.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/swiper.js"></script>
     <script src="js/slide.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/slick.js"></script>
-    <script src="js/scroll.js"></script>
     <script src="js/header.js"></script>
 </body>
 

@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-
 /*page1*/
 #one {
     @include box-style;
@@ -15,7 +14,7 @@
     width: 2417px;
 }
 
-#slider_box {
+.slider_box {
     width: 483px;
     height: 350px;
     margin: 13px;
