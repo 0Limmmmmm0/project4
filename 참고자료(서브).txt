@@ -1,0 +1,20 @@
+메인사이트
+-종로서적-
+
+: https://www.jongnobooks.com/
+
+레이아웃 참고사이트
+
+: https://johyunjoo99.github.io/aladdin/purchase.html?#
+
+메인 책 구매
+
+: https://book.conects.com/product/bookDetail?goods_id=0100024001486
+
+: https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=335139091&start=wz&ptid=9&utm_source=aladin&utm_medium=wizard&utm_campaign=choice&utm_content=welcome
+
+: https://appcoding-ux.github.io/open-api/sub.html
+
+책 이미지 360도
+
+: https://nuunnunn.github.io/project_5/sub.html
