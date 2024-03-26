@@ -194,3 +194,4 @@ $.ajax({
         $(".swiper-wrapper>.swiper-slide:nth-of-type(10)").append("<h3>" + msg.documents[0].title + "</h3>");
         $(".swiper-wrapper>.swiper-slide:nth-of-type(10)").append("<p>" + msg.documents[0].authors + "</p>");
     });
+

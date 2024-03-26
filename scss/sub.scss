@@ -1,64 +1,441 @@
 @charset "utf-8";
-@import 'variable','mixin';
+@import 'variable', 'mixin';
 
 #wrap {
     width: 100%;
     height: auto;
 }
+
 /*카테고리 바*/
-#Kategorie{
+#Kategorie {
     width: 100%;
     height: 48px;
     background: $mainColor;
 }
-#Kategorie .text_tull{
+
+#Kategorie .text_tull {
     width: 1450px;
     height: 100%;
     margin: 0 auto;
     color: white;
-    h2{
+
+    h2 {
         font-size: 1.2rem;
         line-height: 50px;
     }
 }
+
 /*page1*/
-section{
+section {
     @include box-style;
-    height: 1000px;
+    height: 1100px;
     background: pink;
     display: flex;
 }
+
 /*page1 - book_box*/
-.book_box{
+.book_box {
     width: 615px;
-    height: auto;
+    height: 1100px;
     background: palegreen;
     display: flex;
     flex-direction: column;
     align-items: center;
     // justify-content: center;
 }
-.book_img{
+
+.book_img {
     width: 527px;
     height: 754px;
     background: lavenderblush;
     margin-top: 40px;
+    position: relative;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+
+    img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+.book_img::before{
+    content: "";
+    width: 30px;
+    height: 100%;
+    position: absolute;
+    background-image: url(../img/sub/book_side.jpg);
+    background-size: cover;
+    background-position: center;
+    transform-origin: left;
+    transform: rotateY(90deg);
+}
+.book_img::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(../img/sub/book_back.jpg);
+    background-size: cover;
+    background-position: center;
+    transform-origin: left;
+    transform: rotateY(180deg)
+    translateZ(30px);
+}
+
+
+.star {
+    width: 100%;
+    height: 300px;
+    background: rgb(160, 160, 28);
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .content{
+        width: 70%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 50px;
+    }
+    button{
+        width: 80px;
+        height: 30px;
+        background: #e93d6f;
+        color: white;
+        border: none;
+        border-radius: 30px;
+    }
+}
+
+/*page1 - book_box2*/
+.book_box2 {
+    width: 835px;
+    height: 100%;
+    background: rgb(205, 214, 205);
+}
+
+.book_name {
+    width: 100%;
+    height: 200px;
+    margin-top: 8%;
+    background: palegoldenrod;
+    line-height: 35px;
+    border-bottom: 1px solid gray;
+
+    h1 {
+        font-size: 2.3rem;
+    }
+}
+
+.book_name .btn button {
+    width: 150px;
+    height: 30px;
+    border: none;
+    border-radius: 30px;
+    background: $mainColor;
+    color: white;
+}
+
+.book_point {
+    width: 100%;
+    height: 150px;
+    // margin-top: 8%;
+    background: rgb(194, 193, 175);
+    line-height: 35px;
+    border-bottom: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .point_box:nth-of-type(1) {
+        width: 25%;
+        height: 100%;
+        background: palegoldenrod;
+    }
+
+    .point_box:nth-of-type(2) {
+        width: 75%;
+        height: 100%;
+        background: rgb(163, 153, 45);
+    }
+}
+
+.book_benefit {
+    width: 100%;
+    height: 150px;
+    // margin-top: 8%;
+    background: rgb(153, 149, 73);
+    line-height: 35px;
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+
+    .benefit_box:nth-of-type(1) {
+        width: 25%;
+        height: 100%;
+        background: palegoldenrod;
+    }
+
+    .benefit_box:nth-of-type(2) {
+        width: 75%;
+        height: 100%;
+        background: rgb(163, 153, 45);
+    }
+}
+
+.book_price {
+    width: 100%;
+    height: auto;
+    background: palegoldenrod;
+}
+
+.cart {
+    width: 100%;
+    height: 100px;
+    background: rgb(173, 144, 202);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+        width: 48%;
+        height: 50px;
+        @include button-style;
+        color: white;
+        font-size: 1.3rem;
+    }
+
+    button:nth-of-type(1) {
+        background: #001c7d;
+    }
+
+    button:nth-of-type(2) {
+        background: black;
+    }
+}
+
+/*page2 - series*/
+
+#series {
+    @include box-style;
+    height: 450px;
+    background: paleturquoise;
+    display: flex;
+    justify-content: center;
+}
+#series_box{
+    width: 90%;
+    height: 100%;
+    background: palegreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#series_box .content_box {
+    width: 200px;
+    height: 325px;
+    margin: 20px;
+    cursor: pointer;
+    background: palevioletred;
+    position: relative;
+    box-shadow: 5px 5px 5px gray;
+    box-shadow: 5px 5px 5px gray;
+}
+
+/*slick prev,next*/
+
+#series_box .slick-prev {
+    position: absolute;
+    // top: 45%;
+    left: -60px;
+    width: 60px;
+    border: none;
+    background: none;
+    height: 60px;
+    z-index: 5;
+    text-indent: -9999px;
+    background-color: transparent;
+    cursor: pointer;
+    background-image: url(../icon/left.png);
+    background-size: cover;
+
+}
+
+#series_box .slick-prev:hover {
+    background: none;
+    background-image: url(../icon/left2.png);
+    background-size: cover;
+    opacity: 0.7;
+
+}
+
+#series_box .slick-next {
+    position: absolute;
+    // top: 45%;
+    right: 0;
+    width: 60px;
+    border: none;
+    background: none;
+    height: 60px;
+    z-index: 5;
+    text-indent: -9999px;
+    background-color: transparent;
+    cursor: pointer;
+    background-image: url(../icon/right.png);
+    background-size: cover;
+
+}
+
+#series_box .slick-next:hover {
+    background: none;
+    background-image: url(../icon/right2.png);
+    background-size: cover;
+    opacity: 0.8;
+
+}
+
+/*slick dots*/
+#series_box .slick-dots {
+    bottom: 10px;
+    display: flex;
+    position: absolute;
+}
+
+#series_box .slick-dots li button {
+    text-indent: -9999px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    border-radius: 50px;
+    border: none;
+    background: rgb(179, 179, 179);
+}
+
+#series_box .slick-dots li button:hover {
+    background: $mainColor;
+}
+
+#series_box .slick-dots li {
+    margin: -15px 15px;
+
+}
+
+#series_box .slick-dots li button:before {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgb(15, 15, 15);
+    text-align: center;
+    content: '';
+}
+
+#series_box .slick-dots li.slick-active button:before {
+    opacity: 0.75;
+    color: black;
+}
+/*page3 - content*/
+#content{
+    @include box-style;
+    height: 1900px;
+    background: rgb(72, 92, 92);
+}
+/*page5 - go_book*/
+
+#go_book{
+    width: 100%;
+    height: 525px;
+    background: palegoldenrod;
+}
+#gbox{
+    @include box-style;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+        .box{
+            width: 263px;
+            height: 350px;
+            background: lavender;
+            margin: 3%;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        h4, p{
+            text-align: center;
+            line-height: 30px;
+        }
+        p{
+
+        }
+}
+#gbox .title{
+    position: absolute;
+    top: 5%;
+    left: 2%;
+}
+
+/*page6 - event*/
+
+#event{
+    @include box-style;
+    height: 800px;
+    background: lavenderblush;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.event{
+    position: absolute;
+    left: 2%;
+    top: 3%;
+}
+.event_box{
+    width: 45%;
+    height: 300px;
+    margin-right: 1%;
+    background: lawngreen;
+    display: flex;
+    align-items: center;
+    .imgbox{
+        width: 40%;
+        height: 50%;
+        background: red;
+    }
     img{
         width: 100%;
         height: 100%;
     }
+    .textbox{
+        width: 60%;
+        height: 100%;
+        line-height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 3%;
+        button{
+            width: 70px;
+            height: 25px;
+            margin-bottom: 10px;
+            background: rgb(209, 209, 209);
+            border: 1px solid gray;
+        }
+    }
 }
-.star{
-    width: 100%;
-    height: 300px;
-    background: yellow;
-    margin-top: 40px;
+.event_box:nth-of-type(1), .event_box:nth-of-type(2){
+    margin-top: 50px;
 }
-/*page1 - book_box2*/
-.book_box2{
-    width: 835px;
-    height: 100%;
-    background: rgb(63, 75, 63);
-}
-
 

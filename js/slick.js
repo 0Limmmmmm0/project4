@@ -15,3 +15,12 @@ $('.boxcover4').slick({
     arrows: false,
 });
 
+/*page2 - series*/
+$('#series_box').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 2000,
+    dots: false,
+});
+
