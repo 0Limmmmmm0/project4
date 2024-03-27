@@ -331,227 +331,30 @@ section {
   width: 1450px;
   margin: 0 auto;
   height: 1900px;
+  background: rgb(72, 92, 92);
 }
 
 .contentTitle {
   padding-top: 10px;
-  font-size: 15px;
-  width: 100%;
-  height: 1500px;
+  font-size: 0;
+  width: 500px;
+  height: 50px;
   background: palegoldenrod;
 }
 
-.contentTitle ul {
-  height: 60px;
-  background: #09255d;
-  width: 100%;
-  color: white;
-}
-
-.contentTitle li {
-  float: left;
-  width: 362.5px;
-  height: 100%;
-  text-align: center;
-  cursor: pointer;
-  font-size: 1.5rem;
-  font-weight: bold;
-  line-height: 60px;
-}
-
-.contentClick {
-  float: left;
-  width: 100%;
-  height: auto;
-  background: #d9d9d9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.contentClick img {
-  margin-top: 10%;
-  margin-bottom: 10%;
-}
-
-.booktxtBox {
-  width: 90%;
-  height: auto;
-  background: lavender;
-  margin-top: 5%;
-  margin-left: 5%;
-}
-.booktxtBox p {
-  font-size: 1rem;
-  margin-left: 5px;
-}
-.booktxtBox h3 {
-  font-size: 1.5rem;
-  margin-left: 5px;
-}
-.booktxtBox iframe {
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-.booktxtBox .booktxtBox_sub {
-  width: 100%;
-  height: auto;
-  border-top: 1px solid gray;
-  display: flex;
-  flex-direction: column;
-}
-.booktxtBox .booktxtBox_sub h3 {
-  margin-top: 35px;
-}
-.booktxtBox .coverbox {
-  width: 100%;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid gray;
-}
-.booktxtBox .coverbox img {
-  border-radius: 500px;
-  width: 250px;
-  height: 250px;
-  margin: 1%;
-}
-.booktxtBox .info {
-  line-height: 40px;
-  width: 1100px;
-}
-.booktxtBox .info h4 {
-  font-size: 1.2rem;
-}
-
-#cardWrap {
-  width: 1305px;
-  height: 600px;
-  background: #001c7d;
-  position: relative;
-  overflow: hidden;
-}
-
-#cardWrap .card_slide {
-  width: 500%;
-  height: 100%;
-}
-
-#cardWrap .card_slide img {
-  width: 100%;
-  height: 100%;
-}
-
-#cardWrap span {
-  position: absolute;
-  top: 50%;
-  display: block;
-  font-size: 38px;
+.contentTitle a.on {
+  background: #ddc1fb;
   color: #fff;
-  line-height: 40px;
-  background: rgba(0, 0, 0, 0.6);
-  cursor: pointer;
-  height: 50px;
-  transform: translateY(-50%);
 }
 
-#cardWrap span:hover {
-  background: rgba(255, 255, 255, 0.8);
-  color: #000;
-}
-
-.prev {
-  left: 0;
-  border-radius: 0 10px 10px 0px;
-  padding: 0 8px 0 2px;
-}
-
-.next {
-  right: 0;
-  border-radius: 10px 0px 0px 10px;
-  padding: 0 2px 0 8px;
-}
-
-.active {
-  background-color: #d9d9d9;
-  color: black;
-}
-
-/*page4 - 출판사 리뷰, 추천평*/
-#sub_review {
-  width: 1450px;
-  margin: 0 auto;
-  position: relative;
-  height: auto;
-  margin-top: 35px;
-  border-bottom: 1px solid gray;
-  overflow: hidden;
-}
-
-.tab_sub:not(:first-of-type) {
-  display: none;
-}
-
-/*출판사 리뷰*/
-#publisherWrap {
-  height: 390px;
-  overflow: hidden;
-  line-height: 30px;
-  text-align: justify;
-}
-#publisherWrap p {
-  font-size: 1rem;
-  margin-left: 5px;
-}
-#publisherWrap h3 {
-  font-size: 1.3rem;
-  margin-left: 5px;
-}
-
-.publisher_toggle > a {
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 55px 15px 9px 0;
-  line-height: 16px;
-  text-align: right;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #4d4d4d;
-  background: url("../img/sub/background_gr.png") repeat-x center top;
-  z-index: 100;
-}
-
-.publisher_toggle > a span:hover {
-  opacity: 0.7;
-  cursor: pointer;
-}
-
-.publisher_toggle_cl {
-  display: none;
-}
-
-#recommend {
-  width: 1450px;
-  margin: 0 auto;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.recommend_txt {
-  width: 100%;
-  height: 80%;
-  margin-left: 5px;
-  line-height: 40px;
-}
-.recommend_txt p {
-  font-size: 1rem;
-}
-.recommend_txt h3 {
-  font-size: 1.3rem;
+.contentTitle span {
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid #888;
+  border-bottom: 0;
+  font-size: 50px;
+  width: 200px;
+  height: 100px;
 }
 
 /*page5 - go_book*/
@@ -614,6 +417,7 @@ section {
   width: 45%;
   height: 300px;
   margin-right: 1%;
+  background: lawngreen;
   display: flex;
   align-items: center;
 }
@@ -646,4 +450,4 @@ section {
 .event_box:nth-of-type(1),
 .event_box:nth-of-type(2) {
   margin-top: 50px;
-}
+}/*# sourceMappingURL=sub.css.map */

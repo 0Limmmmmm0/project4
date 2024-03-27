@@ -74,7 +74,7 @@ header {
 header.fixed {
   position: fixed;
   background: rgb(0, 0, 0);
-  z-index: 200;
+  z-index: 15;
 }
 
 header ul a.txtCh {
@@ -334,4 +334,4 @@ footer {
 
 .iconbox img:hover {
   opacity: 0.8;
-}
+}/*# sourceMappingURL=common.css.map */
