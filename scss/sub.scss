@@ -151,25 +151,89 @@ section {
     height: 150px;
     // margin-top: 8%;
     background: rgb(194, 193, 175);
-    line-height: 35px;
+    // line-height: 35px;
     border-bottom: 1px solid gray;
     display: flex;
     align-items: center;
+    justify-content: center;
     justify-content: space-between;
-
+    padding: 20px;
+    h4{
+        font-size: 1.3rem;
+    }
+    p{
+        line-height: 40px;
+    }
+    .point_box{
+        display: flex;
+        align-items: center;
+    }
     .point_box:nth-of-type(1) {
         width: 25%;
-        height: 100%;
-        background: palegoldenrod;
     }
-
     .point_box:nth-of-type(2) {
         width: 75%;
-        height: 100%;
-        background: rgb(163, 153, 45);
+    }
+    .benefit_box{
+        display: flex;
+        align-items: center;
+    }
+    .benefit_box:nth-of-type(1) {
+        width: 25%;
+    }
+    .benefit_box:nth-of-type(2) {
+        width: 75%;
+    }
+    span{
+        width: 25px;
+        height: 25px;
+        border: 1px solid black;
+        margin: 2%;
+        cursor: pointer;
+        position: relative;
+    }
+    .bottom{
+        font-size: 1.1rem;
+        text-align: center;
+        font-weight: bold;
+        line-height: 28px;
     }
 }
-
+.popup{
+    position: absolute;
+    width: 370px;
+    bottom: -10px;
+    right: 11.9%;
+    height: auto;
+    border: 1px solid black;
+    background: $subColor;
+    text-align: center;
+    display: none;
+    h3{
+        margin: 5%;
+    }
+    p{
+        margin: 4%;
+        font-size: 0.9rem;
+        text-align: left;
+        line-height: 20px;
+        color: rgb(73, 73, 73);
+    }
+    .close{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: black;
+        color: white;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        line-height: 28px;
+    }
+}
+.close:hover{
+            opacity: 0.5;
+        }
 .book_benefit {
     width: 100%;
     height: 150px;
@@ -197,6 +261,15 @@ section {
     width: 100%;
     height: auto;
     background: palegoldenrod;
+}
+.payment{
+    width: 100%;
+    height: 320px;
+    background: lightblue;
+    span{
+        font-size: 20px;
+        color: red;
+    }
 }
 
 .cart {
@@ -253,6 +326,10 @@ section {
     position: relative;
     box-shadow: 5px 5px 5px gray;
     box-shadow: 5px 5px 5px gray;
+    img{
+        width: 100%;
+        height: 100%;
+    }
 }
 
 /*slick prev,next*/
@@ -350,33 +427,29 @@ section {
 /*page3 - content*/
 #content {
     @include box-style;
-    height: 1900px;
+    height: auto;
 }
 
 .contentTitle {
     padding-top: 10px;
     font-size: 15px;
     width: 100%;
-    height: 1500px;
-    background: palegoldenrod;
+    height: auto;
 }
 
-.contentTitle ul {
+#tab_menu {
     height: 60px;
     background: $mainColor;
     width: 100%;
     color: white;
-}
-
-.contentTitle li {
-    float: left;
-    width: 362.5px;
-    height: 100%;
     text-align: center;
     cursor: pointer;
     font-size: 1.5rem;
     font-weight: bold;
-    line-height: 60px;
+    display: flex;
+    .tab_menu{
+        width: 25%;
+    }
 }
 
 .contentClick {
@@ -393,12 +466,11 @@ section {
         margin-bottom: 10%;
     }
 }
-
-.booktxtBox {
+.booktxtBox{
     width: 90%;
     height: auto;
     background: lavender;
-    margin-top: 5%;
+    margin-top: 10%;
     margin-left: 5%;
 
     p {
@@ -453,7 +525,61 @@ section {
         }
     }
 }
+.booktxtBox2 {
+    width: 1305px;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 10%;
+    // margin-top: 10%;
+    // margin-left: 5%;
+    table{
+    width: 100%;
+    text-align: center;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    margin-bottom: 10%;
+    th{
+        font-size: 1.3rem;
+        width: 25%;
+        height: 100px;
+        padding: 20px;
+        color: white;
+        background: $mainColor;
+    }
+    td{
+        text-align: left;
+        border: 1px solid black;
+        font-size: 1rem;
+        padding: 20px;
+        line-height: 60px;
+        background: white;
+    }
+    ul{
+        background: none;
+    }
+    li{
+        font-size: 1rem;
+        text-align: left;
+        font-weight: lighter;
+        color: black;
+        width: 100%;
+        line-height: 60px;
+    }
+}
+}
 
+.full_tr{
+    width: 100%;
+    text-align: center;
+    height: 100px;
+    color: white;
+    background: $mainColor;
+    h4{
+        font-size: 1.4rem;
+        line-height: 60px;
+    }
+}
 #cardWrap {
     width: 1305px;
     height: 600px;

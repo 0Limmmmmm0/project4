@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/common.css">
     <!--파비콘-->
     <link rel="icon" href="icon/logo_.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
     <!--폰트-->
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
     <!--슬릭 css-->
@@ -88,23 +89,54 @@
                         <h4>종로포인트</h4>
                     </div>
                     <div class="point_box">
-                        <p>650원 (5% 적립)</p>
-                        <p>5만원 이상 추가 구매 시 2천원 추가 적립</p>
+                        <p>650원 (5% 적립)<br>
+                        5만원 이상 추가 구매 시 2천원 추가 적립</p>
                     </div>
                 </div>
-                <div class="book_benefit">
+                <div class="book_point">
                     <div class="benefit_box">
                         <h4>결제 혜택</h4>
                     </div>
                     <div class="benefit_box">
-                        <p>카드/간편결제 혜택을 확인하세요.</p>
+                        <p>카드/간편결제 혜택을 확인하세요.</p><span><p class="bottom">&#8744;</p></span>
                     </div>
                 </div>
+                <div class="popup">
+                    <h3>YES포인트 2천원 추가적립</h3>
+                    <hr style="margin-left: 2%; margin-right: 2%;">
+                        <p><b>도서(eBook), CD/LP, DVD/Blu-ray, 문구/GIFT, 중고상품 5만원 이상 구매 시 2천원 추가적립을 해드립니다.</b>
+                        <p>도서정가제에 따라, 국내도서(eBook포함)만 주문 시 제외,
+                        외국도서(eBook포함),잡지,CD/LP,DVD/Blu-ray,문구/GIFT,중고상품 2천원 이상 포함된 주문만 적용 가능합니다.</p>
+
+                        <p>업체배송 상품은 추가적립 대상에서 제외. <br>
+                        (상품상세의 ‘배송비’ 또는 카트에서 업체배송여부 확인 가능)</p></p>
+                        <div class="close">X</div>
+                </div>
                 <div class="book_price">
+                    <div class="payment">
+                        <table>
+                            <tr>
+                                <th>구매 수량</th>
+                                <td></td>
+                            <td>
+                                <button class="minus">-</button>
+                                <input type="text" name="pricePay" class="price_Pay" value="1">
+                                <button class="plus">+</button>
+                            </td>
+                        </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <th>판매가</th>
+                                <td class="price_All"></td>
+                            </tr>
+                        </table>
+
+                    </div>
 
                     <div class="cart">
-                        <button>장바구니</button>
-                        <button>바로구매</button>
+                        <button class="cartClick">장바구니</button>
+                        <button class="goClick">바로구매</button>
                     </div>
                 </div>
             </div>
@@ -112,41 +144,33 @@
         <!--page2 - 시리즈-->
         <div id="series">
             <div id="series_box">
-                <div class="content_box">
-                </div>
-                <div class="content_box">
-                </div>
-                <div class="content_box">
-                </div>
-                <div class="content_box">
-                </div>
-                <div class="content_box">
-                </div>
-                <div class="content_box">
-                </div>
-                <div class="content_box">
-                </div>
-                <div class="content_box">
-                </div>
+                <div class="content_box"></div>
+                <div class="content_box"></div>
+                <div class="content_box"></div>
+                <div class="content_box"></div>
+                <div class="content_box"></div>
+                <div class="content_box"></div>
+                <div class="content_box"></div>
+                <div class="content_box"></div>
                 <div class="content_box">
                 </div>
             </div>
-
         </div>
         <!--page3 - content-->
         <div id="content">
             <div class="contentTitle">
-                <ul>
-                    <li class="click_menu active">도서정보</li>
-                    <li class="click_menu">책 소개글</li>
-                    <li class="click_menu">고객리뷰</li>
-                    <li class="click_menu">배송/반품/교환</li>
-                </ul>
-
+                <div id="tab_menu">
+                    <div class="tab_menu active" style="line-height: 60px;">도서정보</div>
+                    <div class="tab_menu" style="line-height:60px;">책 소개글</div>
+                    <div class="tab_menu" style="line-height: 60px;">고객리뷰</div>
+                    <div class="tab_menu" style="line-height: 60px;">배송/반품/교환</div>
+                </div>
                 <div class="contentClick">
+                    <!--도서정보-->
                     <div class="tab_sub">
                         <img src="img/sub/도서정보.jpg" alt="도서정보">
                     </div>
+                    <!--책 소개글-->
                     <div class="tab_sub">
                         <div class="booktxtBox">
                             <h3>책 소개</h3>
@@ -156,22 +180,19 @@
                                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <div class="book_text" style="border-bottom: 1px solid gray;"></div>
                             <div class="card_slide">
-
                             </div>
                             <h3>카드뉴스로 보는 책</h3>
                             <div id="cardWrap">
-                            <ul class="card_slide">
-                                <li><img src="img/sub/card1.jpg" alt="card_book"></li>
-                                <li><img src="img/sub/card2.jpg" alt="card_book"></li>
-                                <li><img src="img/sub/card3.jpg" alt="card_book"></li>
-                                <li><img src="img/sub/card4.jpg" alt="card_book"></li>
-                                <li><img src="img/sub/card5.jpg" alt="card_book"></li>
-                            </ul>
-                            <span class="prev">&lt;</span>
-
-                            <span class="next">&gt;</span>
+                                <ul class="card_slide">
+                                    <li><img src="img/sub/card1.jpg" alt="card_book"></li>
+                                    <li><img src="img/sub/card2.jpg" alt="card_book"></li>
+                                    <li><img src="img/sub/card3.jpg" alt="card_book"></li>
+                                    <li><img src="img/sub/card4.jpg" alt="card_book"></li>
+                                    <li><img src="img/sub/card5.jpg" alt="card_book"></li>
+                                </ul>
+                                <span class="prev">&lt;</span>
+                                <span class="next">&gt;</span>
                             </div>
-                            
                             <h3 style="margin-top: 35px;">목차</h3><br>
                             <p>소설<br> 꿰맨 눈의 마을 <br> 히노의 파이<br> 램<br><br>
                                 에세이 <br> 빛나는 모형들<br><br>
@@ -184,145 +205,133 @@
                                         <h4>조예은 작가</h4>
                                         <p>제2회 황금가지 타임리프 공모전에서 『오버랩 나이프, 나이프』로 우수상을, 제4회 교보문고 스토리 공모전에서 『시프트』로 대상을 수상했으며
                                             <br> 최근작으로는 안전가옥의 첫 번째 장편소설 『뉴서울파크 젤리장수 대학살』, 『스노볼 드라이브』, 소설집 『칵테일, 러브, 좀비』가
-                                            있다. 좋은 이야기에 <br>대해 고민하며 작품 활동을 계속하는 중이다.</p>
+                                            있다. 좋은 이야기에 <br>대해 고민하며 작품 활동을 계속하는 중이다.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
-                            
-
                         </div>
-                        <div class="tab_sub">3</div>
-                        <div class="tab_sub">4</div>
-                        <!-- <div id="book_info"></div>
-            <div id="Introduction"></div>
-            <div id="review"></div>
-            <div id="Shipping"></div> -->
+                    </div>
+                    <!--고객 리뷰-->
+                    <div class="tab_sub">3</div>
+                    <!--배송/반품/교환-->
+                    <div class="tab_sub">
+                        <div class="booktxtBox2"></div>
                     </div>
                 </div>
             </div>
         </div>
-            <!--page4 출판사 리뷰, 추천평-->
-            <div id="sub_review">
-                <div id="publisherWrap"></div>
-                <div class="publisher_toggle">
-                    <a target="_self"><span class="publisher_toggle_op">펼쳐보기 &nbsp;<span
-                                style="font-size: 0.9rem;">&#8744;</span></span><span class="publisher_toggle_cl">접어보기
-                            &#8743;</span></a>
+        <!--page4 출판사 리뷰, 추천평-->
+        <div id="sub_review">
+            <div id="publisherWrap"></div>
+            <div class="publisher_toggle">
+                <a target="_self"><span class="publisher_toggle_op">펼쳐보기 &nbsp;<span
+                            style="font-size: 0.9rem;">&#8744;</span></span><span class="publisher_toggle_cl">접어보기
+                        &#8743;</span></a>
+            </div>
+        </div>
+        <div id="recommend">
+            <div class="recommend_txt"></div>
+        </div>
+        <!--page5 작가의 다른 작품-->
+        <div id="go_book">
+            <div id="gbox">
+                <h2 class="title">작가의 다른 작품 ></h2>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+        </div>
+        <!--page6 이벤트-->
+        <div id="event">
+            <h2 class="event">이 상품의 이벤트(6개)</h2>
+            <div class="event_box">
+                <div class="imgbox">
+                    <img src="img/sub/event1.jpg" alt="event">
+                </div>
+                <div class="textbox">
+                    <button>사은품</button>
+                    <h4 style="font-size: 1.2rem; margin-bottom: 10px;">조예은 작가『꿰맨 눈의 마을』출간 이벤트! <br>티백 증정</h4>
+                    <p style="font-size: 0.9rem;">이벤트 대상 도서 구매 시, 도서 속 특별한 문장을 더욱 <br>특별하게 감각하게 하는 '커스터마이징 Tea'를 드립니다.
+                        <br>(한정수량/포인트 차감)</p><br>
+                    <p style="font-size: 0.8rem;">2023년 12월 07일 ~ 한정 수량</p>
                 </div>
             </div>
-            <div id="recommend">
-                <div class="recommend_txt"></div>
-            </div>
-
-            <!--page5 작가의 다른 작품-->
-            <div id="go_book">
-
-                <div id="gbox">
-                    <h2 class="title">작가의 다른 작품 ></h2>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
+            <div class="event_box">
+                <div class="imgbox">
+                    <img src="img/sub/event2.jpg" alt="event">
+                </div>
+                <div class="textbox">
+                    <button>사은품</button>
+                    <h4 style="font-size: 1.2rem; margin-bottom: 10px;">조예은 작가 『꿰맨 눈의 마을』 사은품 이벤트 - 북마크 증정</h4>
+                    <p style="font-size: 0.9rem;">『꿰맨 눈의 마을』 구매 시 , 북마크 증정 (포인트 차감)</p><br>
+                    <p style="font-size: 0.8rem;">2023년 12월 07일 ~ 한정 수량</p>
                 </div>
             </div>
-            <!--page6 이벤트-->
-            <div id="event">
-                <h2 class="event">이 상품의 이벤트(6개)</h2>
-                <div class="event_box">
-                    <div class="imgbox">
-                        <img src="img/sub/event1.jpg" alt="event">
-                    </div>
-                    <div class="textbox">
-                        <button>사은품</button>
-                        <h4 style="font-size: 1.2rem; margin-bottom: 10px;">조예은 작가『꿰맨 눈의 마을』출간 이벤트! <br>티백 증정</h4>
-                        <p style="font-size: 0.9rem;">이벤트 대상 도서 구매 시, 도서 속 특별한 문장을 더욱 <br>특별하게 감각하게 하는 '커스터마이징 Tea'를
-                            드립니다.
-                            <br>(한정수량/포인트 차감)
-                        </p><br>
-                        <p style="font-size: 0.8rem;">2023년 12월 07일 ~ 한정 수량</p>
-                    </div>
+            <div class="event_box">
+                <div class="imgbox">
+                    <img src="img/sub/event3.jpg" alt="event">
                 </div>
-                <div class="event_box">
-                    <div class="imgbox">
-                        <img src="img/sub/event2.jpg" alt="event">
-                    </div>
-                    <div class="textbox">
-                        <button>사은품</button>
-                        <h4 style="font-size: 1.2rem; margin-bottom: 10px;">조예은 작가 『꿰맨 눈의 마을』 사은품 이벤트 - 북마크 증정</h4>
-                        <p style="font-size: 0.9rem;">『꿰맨 눈의 마을』 구매 시 , 북마크 증정 (포인트 차감)</p><br>
-                        <p style="font-size: 0.8rem;">2023년 12월 07일 ~ 한정 수량</p>
-                    </div>
+                <div class="textbox">
+                    <button>사은품</button>
+                    <h4 style="font-size: 1.2rem; margin-bottom: 10px;">얼리리더를 위한 3월의 책 : 태극기 & 무궁화 체인 배지 증정</h4>
+                    <p style="font-size: 0.9rem;">이달의 주목 신간 & 추천 도서 포함 국내도서 3만원 이상 구매 시 '태극기 & 무궁화 체인 배지' 선착순 증정(포인트 차감)
+                    </p><br>
+                    <p style="font-size: 0.8rem;">2023년 12월 07일 ~ 한정 수량</p>
                 </div>
-                <div class="event_box">
-                    <div class="imgbox">
-                        <img src="img/sub/event3.jpg" alt="event">
-                    </div>
-                    <div class="textbox">
-                        <button>사은품</button>
-                        <h4 style="font-size: 1.2rem; margin-bottom: 10px;">얼리리더를 위한 3월의 책 : 태극기 & 무궁화 체인 배지 증정</h4>
-                        <p style="font-size: 0.9rem;">이달의 주목 신간 & 추천 도서 포함 국내도서 3만원 이상 구매 시 '태극기 & 무궁화 체인 배지' 선착순 증정
-                            (포인트
-                            차감)</p><br>
-                        <p style="font-size: 0.8rem;">2023년 12월 07일 ~ 한정 수량</p>
-                    </div>
-                </div>
-                <div class="event_box">
-                    <div class="imgbox">
-                        <img src="img/sub/event4.jpg" alt="event">
-                    </div>
-                    <div class="textbox">
-                        <button>기획전</button>
-                        <h4 style="font-size: 1.2rem; margin-bottom: 10px;">공독쌤 최승필 작가 강력추천! 어린이 도서 기획전</h4>
-                        <p style="font-size: 0.9rem;">최승필작가 추천도서 1권 이상 구매 시 '공독서가 점착 메모잇'을 드립니다. (사은품 소진 시 까지)</p><br>
-                        <p style="font-size: 0.8rem;">2023년 12월 07일 ~ 한정 수량</p>
-                    </div>
-                </div>
-
             </div>
-            <!--푸터-->
-            <footer>
-                <div id="bottom">
-                    <div class="bottombox">
-                        <img src="icon/sublogo.png" alt="서브로고"><br>
-                        <h2>종로서적</h2><br>
-                        <p>대표이사 : 서분도</p>
-                        <p>사업자 등록번호 : 713-87-00617</p>
-                        <p>서울특별시 종로구 종로 51, 지하 2층 (종로 2가, 종로타워)</p>
-                        <p style="font-size: 1rem; white-space: nowrap; line-height: 30px; margin-top: 10px;">Copyright
-                            ⓒ
-                            2016 JONGNOBOOKS All rights reserved. <br>We would like to inform you that all icon images
-                            included in the production are from the use of the
-                            Platicon site.</p>
-                    </div>
-                    <div class="bottombox" style="text-align: right; margin-top: 3%;">
-                        <p style="cursor: pointer; font-weight: bold;" class="p_hover"><span>회사 소개</span> |
-                            <span>이용약관</span> | <span>개인정보처리방침</span><br> | <span>회원혜택</span> | <span>채용정보</span>
-                        </p><br>
-                        <p>CALL : 02-739-2331</p>
-                        <p>FAX : 02-739-2332</p>
-                        <p>CONTACT : md@jongnobooks.net</p>
-                        <div class="iconbox"><a href="https://blog.naver.com/jongnobooks"><img src="icon/blog.png"
-                                    alt="블로그" style="width: 60px; height: 60px;"></a>
-                            <a href="https://www.instagram.com/jongnobooks_official/"><img src="icon/instagram.png"
-                                    alt="인스타" style="width: 60px; height: 60px;"></a>
-                            <a href="https://www.aladin.co.kr/home/welcome.aspx?partner=jongno"><img src="icon/den.png"
-                                    alt="알라딘" style="width: 60px; height: 60px;"></a>
-                        </div>
+            <div class="event_box">
+                <div class="imgbox">
+                    <img src="img/sub/event4.jpg" alt="event">
+                </div>
+                <div class="textbox">
+                    <button>기획전</button>
+                    <h4 style="font-size: 1.2rem; margin-bottom: 10px;">공독쌤 최승필 작가 강력추천! 어린이 도서 기획전</h4>
+                    <p style="font-size: 0.9rem;">최승필작가 추천도서 1권 이상 구매 시 '공독서가 점착 메모잇'을 드립니다. (사은품 소진 시 까지)</p><br>
+                    <p style="font-size: 0.8rem;">2023년 12월 07일 ~ 한정 수량</p>
+                </div>
+            </div>
+        </div>
+        <!--푸터-->
+        <footer>
+            <div id="bottom">
+                <div class="bottombox">
+                    <img src="icon/sublogo.png" alt="서브로고"><br>
+                    <h2>종로서적</h2><br>
+                    <p>대표이사 : 서분도</p>
+                    <p>사업자 등록번호 : 713-87-00617</p>
+                    <p>서울특별시 종로구 종로 51, 지하 2층 (종로 2가, 종로타워)</p>
+                    <p style="font-size: 1rem; white-space: nowrap; line-height: 30px; margin-top: 10px;">Copyright ⓒ
+                        2016 JONGNOBOOKS All rights reserved. <br>We would like to inform you that all icon images
+                        included in the production are from the use of the Platicon site.</p>
+                </div>
+                <div class="bottombox" style="text-align: right; margin-top: 3%;">
+                    <p style="cursor: pointer; font-weight: bold;" class="p_hover"><span>회사 소개</span> |
+                        <span>이용약관</span> | <span>개인정보처리방침</span><br> | <span>회원혜택</span> | <span>채용정보</span>
+                    </p><br>
+                    <p>CALL : 02-739-2331</p>
+                    <p>FAX : 02-739-2332</p>
+                    <p>CONTACT : md@jongnobooks.net</p>
+                    <div class="iconbox"><a href="https://blog.naver.com/jongnobooks"><img src="icon/blog.png" alt="블로그"
+                                style="width: 60px; height: 60px;"></a>
+                        <a href="https://www.instagram.com/jongnobooks_official/"><img src="icon/instagram.png"
+                                alt="인스타" style="width: 60px; height: 60px;"></a>
+                        <a href="https://www.aladin.co.kr/home/welcome.aspx?partner=jongno"><img src="icon/den.png"
+                                alt="알라딘" style="width: 60px; height: 60px;"></a>
                     </div>
                 </div>
-            </footer>
-
-            <!--js-->
-            <script src="js/ajax_sub.js"></script>
-            <script src="js/header.js"></script>
-            <script type="text/javascript"
-                src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-            <script src="js/slick.js"></script>
-            <script src="js/txt_hide.js"></script>
-            <script src="js/click_button.js"></script>
-            <script src="js/card.js"></script>
-        
-
+            </div>
+        </footer>
+        <!--js-->
+        <script src="js/ajax_sub.js"></script>
+        <script src="js/header.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="js/slick.js"></script>
+        <script src="js/txt_hide.js"></script>
+        <script src="js/click_button.js"></script>
+        <script src="js/card.js"></script>
+        <script src="js/sub.js"></script>
 </body>
 
 </html>

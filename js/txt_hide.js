@@ -4,9 +4,14 @@ $(function () {
     $.get("./sub_txt/txt3.txt", function (data) {
         $(".book_text").html(data);
     })
+});
+/*배송/반품/교환 텍스트 가져오기*/
+$(function () {
+    $.get("./sub_txt/txt4.txt", function (data) {
+        $(".booktxtBox2").html(data);
+    })
 
 });
-
 /*page4 출판사리뷰 텍스트 가져오기*/
 $(function () {
     $.get("./sub_txt/txt2.txt", function (data) {
