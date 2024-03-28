@@ -69,11 +69,11 @@ $(function () {
         });
     });
 });
-
+/*장바구니 클릭 창*/
 $(".cartClick").click(function(){
     alert("상품을 장바구니에 담았습니다.");
 });
-
+/*바로구매 클릭 창*/
 $(".goClick").click(function(){
     alert("바로 구매하겠습니까?");
 });

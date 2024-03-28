@@ -262,9 +262,31 @@ section {
   height: 320px;
   background: lightblue;
 }
+.payment table {
+  margin: 2%;
+  height: 100px;
+}
 .payment span {
-  font-size: 20px;
-  color: red;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.payment th {
+  font-size: 1.5rem;
+}
+
+.paymentsub1 {
+  width: 100%;
+  height: 150px;
+  background: lawngreen;
+  padding-top: 30px;
+  margin: 2%;
+  line-height: 60px;
+}
+
+.paymentsub2 {
+  width: 100%;
+  height: 170px;
+  background: rgb(129, 138, 121);
 }
 
 .cart {
@@ -728,7 +750,6 @@ section {
   width: 1450px;
   margin: 0 auto;
   height: 800px;
-  background: lavenderblush;
   display: flex;
   flex-wrap: wrap;
   position: relative;

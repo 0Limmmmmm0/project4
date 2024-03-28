@@ -266,11 +266,32 @@ section {
     width: 100%;
     height: 320px;
     background: lightblue;
+    table{
+        margin: 2%;
+        height: 100px;
+    }
     span{
-        font-size: 20px;
-        color: red;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    th{
+        font-size: 1.5rem;
     }
 }
+.paymentsub1{
+    width: 100%;
+    height: 150px;
+    background: lawngreen;
+    padding-top: 30px;
+    margin: 2%;
+    line-height: 60px;
+}
+.paymentsub2{
+    width: 100%;
+    height: 170px;
+    background: rgb(129, 138, 121);
+}
+
 
 .cart {
     width: 100%;
@@ -763,7 +784,6 @@ section {
 #event {
     @include box-style;
     height: 800px;
-    background: lavenderblush;
     display: flex;
     flex-wrap: wrap;
     position: relative;
