@@ -61,14 +61,18 @@
         <!--page1-->
         <section>
             <div class="book_box">
-                <div class="book_img">
-                    <img src="img/sub/book_main.jpg" alt="꿰맨 눈의 마을">
+                <div class="book_cover">
+                    <div class="book_img"><img src="img/sub/book_main.jpg" alt="꿰맨 눈의 마을"></div>
                 </div>
+                <div class="tiptxt">클릭하여 상세이미지를 확인해보세요!</div>
                 <div class="star">
                     <div class="content">
                         <button>베스트</button>
-                        <h3>한국소설 TOP 100 9주</h3>
-                        <img src="img/sub/star.png" alt="star" width="250px" height="40px">
+                        <div class="in" style="display: flex; margin-right: 10px;"><img src="icon/star2.png" alt=""
+                                width="40px;" height="40px" style="margin-top: 10px; margin-right: 20px;">
+                            <h3>한국소설 TOP 100 9주</h3>
+                        </div>
+                        <img src="icon/star.png" alt="star" width="250px" height="40px">
                         <p>회원 리뷰 : 22건</p>
                     </div>
                 </div>
@@ -90,7 +94,7 @@
                     </div>
                     <div class="point_box">
                         <p>650원 (5% 적립)<br>
-                        5만원 이상 추가 구매 시 2천원 추가 적립</p>
+                            5만원 이상 추가 구매 시 2천원 추가 적립</p>
                     </div>
                 </div>
                 <div class="book_point">
@@ -98,35 +102,39 @@
                         <h4>결제 혜택</h4>
                     </div>
                     <div class="benefit_box">
-                        <p>카드/간편결제 혜택을 확인하세요.</p><span><p class="bottom">&#8744;</p></span>
+                        <p>카드/간편결제 혜택을 확인하세요.</p><span>
+                            <p class="bottom">&#8744;</p>
+                        </span>
                     </div>
                 </div>
                 <div class="popup">
                     <h3>YES포인트 2천원 추가적립</h3>
                     <hr style="margin-left: 2%; margin-right: 2%;">
-                        <p><b>도서(eBook), CD/LP, DVD/Blu-ray, 문구/GIFT, 중고상품 5만원 이상 구매 시 2천원 추가적립을 해드립니다.</b>
-                        <p>도서정가제에 따라, 국내도서(eBook포함)만 주문 시 제외,
+                    <p><b>도서(eBook), CD/LP, DVD/Blu-ray, 문구/GIFT, 중고상품 5만원 이상 구매 시 2천원 추가적립을 해드립니다.</b>
+                    <p>도서정가제에 따라, 국내도서(eBook포함)만 주문 시 제외,
                         외국도서(eBook포함),잡지,CD/LP,DVD/Blu-ray,문구/GIFT,중고상품 2천원 이상 포함된 주문만 적용 가능합니다.</p>
-
-                        <p>업체배송 상품은 추가적립 대상에서 제외. <br>
-                        (상품상세의 ‘배송비’ 또는 카트에서 업체배송여부 확인 가능)</p></p>
-                        <div class="close">X</div>
+                    <p>업체배송 상품은 추가적립 대상에서 제외. <br>
+                        (상품상세의 ‘배송비’ 또는 카트에서 업체배송여부 확인 가능)</p>
+                    </p>
+                    <div class="close">X</div>
                 </div>
                 <div class="book_price">
                     <div class="payment">
                         <div class="paymentsub1">
-                            <h2>구매 수량
-                            <button class="minus">-</button>
-                            <input type="text" name="pricePay" class="price_Pay" value="1">
-                            <button class="plus">+</button></h2>
-                            <p>배송비 : 유료(도서 15,000원 이상 무료)</p>
+                            <h2>구매 수량&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <button class="minus">-</button>
+                                <input type="text" name="pricePay" class="price_Pay" value="1">
+                                <button class="plus">+</button>
+                            </h2>
+                            <p style="color: rgb(139, 139, 139);">✱ 배송비 : 유료(도서 15,000원 이상 무료)</p>
                         </div>
                         <div class="paymentsub2">
-                            <p>정가 19,000원</p>
-                            <h1 class="price_All">판매가</h1>
+                            <h4 style="font-size: 1.1rem; color: rgb(80, 80, 80); margin-top: 30px;">정가&nbsp;&nbsp;<span
+                                    style="text-decoration: line-through; font-size: 1.1rem; color: rgb(80, 80, 80);">
+                                    19,000원</span></h4>
+                            <h3>판매가&nbsp;&nbsp;&nbsp;<span class="price_All"></span></h3>
                         </div>
                     </div>
-
                     <div class="cart">
                         <button class="cartClick">장바구니</button>
                         <button class="goClick">바로구매</button>
@@ -135,8 +143,9 @@
             </div>
         </section>
         <!--page2 - 시리즈-->
-        <div id="series">
-            <div id="series_box">
+        <div class="series">
+            <h3 class="seri_txt">시리즈</h3>
+            <div class="series_box">
                 <div class="content_box"></div>
                 <div class="content_box"></div>
                 <div class="content_box"></div>
@@ -145,9 +154,10 @@
                 <div class="content_box"></div>
                 <div class="content_box"></div>
                 <div class="content_box"></div>
-                <div class="content_box">
-                </div>
+                <div class="content_box"></div>
             </div>
+            <span class="left"><img src="icon/left_icon.png" alt="" style="width: 60px;"></span>
+            <span class="right"><img src="icon/right_icon.png" alt="" style="width: 60px;"></span>
         </div>
         <!--page3 - content-->
         <div id="content">
@@ -160,9 +170,7 @@
                 </div>
                 <div class="contentClick">
                     <!--도서정보-->
-                    <div class="tab_sub">
-                        <img src="img/sub/도서정보.jpg" alt="도서정보">
-                    </div>
+                    <div class="tab_sub"><img src="img/sub/도서정보.jpg" alt="도서정보"></div>
                     <!--책 소개글-->
                     <div class="tab_sub">
                         <div class="booktxtBox">
@@ -172,17 +180,16 @@
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <div class="book_text" style="border-bottom: 1px solid gray;"></div>
-                            <div class="card_slide">
-                            </div>
+                            <div class="card_slide"></div>
                             <h3>카드뉴스로 보는 책</h3>
                             <div id="cardWrap">
-                                <ul class="card_slide">
-                                    <li><img src="img/sub/card1.jpg" alt="card_book"></li>
-                                    <li><img src="img/sub/card2.jpg" alt="card_book"></li>
-                                    <li><img src="img/sub/card3.jpg" alt="card_book"></li>
-                                    <li><img src="img/sub/card4.jpg" alt="card_book"></li>
-                                    <li><img src="img/sub/card5.jpg" alt="card_book"></li>
-                                </ul>
+                                <div class="card_slide">
+                                    <div class="card_slide_box"><img src="img/sub/card1.jpg" alt="card_book"></div>
+                                    <div class="card_slide_box"><img src="img/sub/card2.jpg" alt="card_book"></div>
+                                    <div class="card_slide_box"><img src="img/sub/card3.jpg" alt="card_book"></div>
+                                    <div class="card_slide_box"><img src="img/sub/card4.jpg" alt="card_book"></div>
+                                    <div class="card_slide_box"><img src="img/sub/card5.jpg" alt="card_book"></div>
+                                </div>
                                 <span class="prev">&lt;</span>
                                 <span class="next">&gt;</span>
                             </div>
@@ -206,7 +213,258 @@
                         </div>
                     </div>
                     <!--고객 리뷰-->
-                    <div class="tab_sub">3</div>
+                    <div class="tab_sub">
+                        <!--그래프-->
+                        <div class="table">
+                            <div class="Buyer_Distribution">
+                                <h2>구매자 분포</h2>
+                                <div class="Buyer_cover">
+                                    <div class="Buyer_cover_left">
+                                        <div class="Gauge">
+                                            <i>4.9%</i>
+                                            <div class="bar">
+                                                <div class="bar_back" style="width: 13%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="Gauge">
+                                            <i>37.1%</i>
+                                            <div class="bar">
+                                                <div class="bar_back" style="width: 75%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="Gauge">
+                                            <i>25.7%</i>
+                                            <div class="bar">
+                                                <div class="bar_back" style="width: 50%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="Gauge">
+                                            <i>9.5%</i>
+                                            <div class="bar">
+                                                <div class="bar_back" style="width: 20%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="Gauge">
+                                            <i>4.6%</i>
+                                            <div class="bar">
+                                                <div class="bar_back" style="width: 13%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="Gauge">
+                                            <i>0.6%</i>
+                                            <div class="bar">
+                                                <div class="bar_back" style="width: 3%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="age">
+                                        <b>10대</b>
+                                        <b>20대</b>
+                                        <b>30대</b>
+                                        <b>40대</b>
+                                        <b>50대</b>
+                                        <b>60대</b>
+                                    </div>
+                                    <div class="Buyer_cover_right">
+                                        <div class="Gauge2">
+                                            <div class="bar2">
+                                                <div class="bar_back2" style="width: 2%;"></div>
+                                            </div>
+                                            <i>4.9%</i>
+                                        </div>
+                                        <div class="Gauge2">
+                                            <div class="bar2">
+                                                <div class="bar_back2" style="width: 13%;"></div>
+                                            </div>
+                                            <i>37.1%</i>
+                                        </div>
+                                        <div class="Gauge2">
+                                            <div class="bar2">
+                                                <div class="bar_back2" style="width: 20%;"></div>
+                                            </div>
+                                            <i>25.7%</i>
+                                        </div>
+                                        <div class="Gauge2">
+                                            <div class="bar2">
+                                                <div class="bar_back2" style="width: 8%;"></div>
+                                            </div>
+                                            <i>9.5%</i>
+                                        </div>
+                                        <div class="Gauge2">
+                                            <div class="bar2">
+                                                <div class="bar_back2" style="width: 8%;"></div>
+                                            </div>
+                                            <i>4.6%</i>
+                                        </div>
+                                        <div class="Gauge2">
+                                            <div class="bar2">
+                                                <div class="bar_back2" style="width: 3%;"></div>
+                                            </div>
+                                            <i>0.6%</i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mark">
+                                <h2>평점 분포</h2>
+                                <div class="mark_star">
+                                    <div class="starfull"><img src="icon/star_full.png" alt="star_full"></div>
+                                    <b>9.8</b>
+                                </div>
+                                <div class="mark_cover">
+                                    <div class="star_ege">
+                                        <img src="icon/star_full.png" alt="star">
+                                        <img src="icon/star_full4.png" alt="star">
+                                        <img src="icon/star_full3.png" alt="star">
+                                        <img src="icon/star_full2.png" alt="star">
+                                        <img src="icon/star_full1.png" alt="star">
+                                    </div>
+                                    <div class="mark_Gauge_cover">
+                                        <div class="mark_Gauge">
+                                            <div class="mark_bar">
+                                                <div class="bar_back3" style="width: 85%;"></div>
+                                            </div>
+                                            <i>0.6%</i>
+                                        </div>
+                                        <div class="mark_Gauge">
+                                            <div class="mark_bar">
+                                                <div class="bar_back3" style="width: 20%;"></div>
+                                            </div>
+                                            <i>0.6%</i>
+                                        </div>
+                                        <div class="mark_Gauge">
+                                            <div class="mark_bar">
+                                            </div>
+                                            <i>0.6%</i>
+                                        </div>
+                                        <div class="mark_Gauge">
+                                            <div class="mark_bar">
+                                            </div>
+                                            <i>0.6%</i>
+                                        </div>
+                                        <div class="mark_Gauge">
+                                            <div class="mark_bar">
+                                            </div>
+                                            <i>0.6%</i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--후기 작성-->
+                        <div class="reviewgo">
+                            <div class="side">
+                                <h2>리뷰 바로보기</h2>
+                            </div>
+                            <div class="re_text">
+                                <div class="re_tex_star">
+                                    <div class="re_tex_Star">
+                                        <div class="noneStar">
+                                            <img src="icon/none_star.png" alt="none_star">
+                                            <img src="icon/none_star.png" alt="none_star">
+                                            <img src="icon/none_star.png" alt="none_star">
+                                            <img src="icon/none_star.png" alt="none_star">
+                                            <img src="icon/none_star.png" alt="none_star">
+                                        </div>
+                                        <div class="fillStar">
+                                            <img src="icon/fill_star.png" alt="fill_star" style="opacity: 0;">
+                                            <img src="icon/fill_star.png" alt="fill_star" style="opacity: 0;">
+                                            <img src="icon/fill_star.png" alt="fill_star" style="opacity: 0;">
+                                            <img src="icon/fill_star.png" alt="fill_star" style="opacity: 0;">
+                                            <img src="icon/fill_star.png" alt="fill_star" style="opacity: 0;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="re_text_go">
+                                    <textarea name="ment" id="ment" cols="30" rows="10" required placeholder="리뷰 작성 시 광고 및 욕설, 비속어나 타인을 비방하는 문구를 사용하시면 비공개 될 수 있습니다." style="width: 90%; height: 90px;"></textarea>
+                                    <input type="" value="등록하기" id="review_click">
+                                    <!-- <div class="re_den">
+                                        <h3>글 작성 시 유의사항 </h3>
+                                    </div> -->
+                                </div>
+                                <div class="reviewBox">
+                                    <div class="reviewText">
+                                        <div class="star_left">
+                                            <img src="icon/star_full.png" alt="star_review">
+                                        </div>
+                                        <div class="Txt">
+                                            <div class="text_user">
+                                                <h3>조예은 작가의 책</h3>
+                                                <p>조예은 작가의 책, 꿰맨 눈의 마을이라는 책을 읽었다. 역시 현대문학의 차세대 주자처럼 일인칭으로 진행되는 소설의 내용이 매우 흥미로웠다. 스포일러가 될까봐 길게 못 쓰겠지만, 누가 나쁜 자(괴물)인지, 누가 괴물이 아닌지 몰입해서 추리해가며 읽어가는 책. 실제로 괴물은 괴물의 형태를 한 사람인지, 일반인인지 심오한 생각이 읽으며 들었다. </p>
+                                            </div>
+                                            <div class="user">
+                                            <div class="sub_user">
+                                                <p> h********0 | 2024-03-07 | 신고</p>
+                                            </div>
+                                            <div class="good_click"></div></div>
+                                        </div>
+                                    </div>
+                                    <div class="reviewText">
+                                        <div class="star_left">
+                                            <img src="icon/star_full4.png" alt="star_review">
+                                        </div>
+                                        <div class="Txt">
+                                            <div class="text_user">
+                                                <h3>작품 굿. 오류 제보!</h3>
+                                                <p>- 표제작 중간쯤, "그에 인영도 바닥을 더듬으며 상체를 일으켜 세웠다"라는 문장 (인영이 누구? 람?) <br>
+                                                    - 목차에 "리튬," "다이윗미"는 멍미? </p>
+                                            </div>
+                                            <div class="user">
+                                            <div class="sub_user">
+                                                <p> j*****h | 2023-12-17 | 신고</p>
+                                            </div>
+                                            <div class="good_click"></div></div>
+                                        </div>
+                                    </div>
+                                    <div class="reviewText">
+                                        <div class="star_left">
+                                            <img src="icon/star_full.png" alt="star_review">
+                                        </div>
+                                        <div class="Txt">
+                                            <div class="text_user">
+                                                <h3>흥미진진한 전개</h3>
+                                                <p>단편이라서 단숨에 읽어내려가기 좋고 재미있습니다. 소설의 배경 자체는 무거운데 그 속에서도 새로운 희망과 가능성이 인물들에게 피어나서 너무 절망적이지만은 않아요. 다 읽고나면 마음이 개운해지는 느낌이 드는게 너무 좋아요.</p>
+                                            </div>
+                                            <div class="user">
+                                            <div class="sub_user">
+                                                <p> p****! | 2024-01-19 | 신고</p>
+                                            </div>
+                                            <div class="good_click"></div></div>
+                                        </div>
+                                    </div>
+                                    <div class="reviewText">
+                                        <div class="star_left">
+                                            <img src="icon/star_full.png" alt="star_review">
+                                        </div>
+                                        <div class="Txt">
+                                            <div class="text_user">
+                                               <h3>스포일러가 포함된 글입니다!</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="reviewText">
+                                        <div class="star_left">
+                                            <img src="icon/star_full.png" alt="star_review">
+                                        </div>
+                                        <div class="Txt">
+                                            <div class="text_user">
+                                                <h3>꿰맨 눈의 마을</h3>
+                                                <p>너무 판타지 같은 소설을 별로 좋아하지 않는데 이 책은 주제와 내용이 너무 신선하고 재미있었다.
+                                                    바이러스로 뒤덮인 세계를 다루는 내용이다. 타운은 살아남은 자들의 보호막이 되어주었는데 저주병으로 인하여 타운 사람들과 다름이 생기게 되면 추방당하게 된다.
+                                                    추방을 당하면 괴물에게 물어뜯기거나 독이 든 파이를 먹고 죽는다고 알려졌었는데 마지막 쳅터의 램을 통해서 그 사실들이 모두 거짓이었음이 밝혀졌고 그들의 타운이 아닌 또 다른 타운으로 갈 수 있음도 알게되었다.
+                                                    이 책을 읽는내내 다름에 대해 생각했다. 나와 다르다고 해서 수용되지 못하고 바로 추방당하는 사실이 너무 안타까웠다. </p>
+                                            </div>
+                                            <div class="user">
+                                            <div class="sub_user">
+                                                <p>  k*****3  | 2024-02-27 | 신고</p>
+                                            </div>
+                                            <div class="good_click"></div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!--배송/반품/교환-->
                     <div class="tab_sub">
                         <div class="booktxtBox2"></div>
@@ -229,7 +487,7 @@
         <!--page5 작가의 다른 작품-->
         <div id="go_book">
             <div id="gbox">
-                <h2 class="title">작가의 다른 작품 ></h2>
+                <h2 class="title">작가의 다른 작품&nbsp;&nbsp;&nbsp;></h2>
                 <div class="box"></div>
                 <div class="box"></div>
                 <div class="box"></div>
@@ -240,47 +498,40 @@
         <div id="event">
             <h2 class="event">이 상품의 이벤트(6개)</h2>
             <div class="event_box">
-                <div class="imgbox">
-                    <img src="img/sub/event1.jpg" alt="event">
-                </div>
+                <div class="imgbox"><img src="img/sub/event1.jpg" alt="event"></div>
                 <div class="textbox">
                     <button>사은품</button>
                     <h4 style="font-size: 1.2rem; margin-bottom: 10px;">조예은 작가『꿰맨 눈의 마을』출간 이벤트! <br>티백 증정</h4>
                     <p style="font-size: 0.9rem;">이벤트 대상 도서 구매 시, 도서 속 특별한 문장을 더욱 <br>특별하게 감각하게 하는 '커스터마이징 Tea'를 드립니다.
-                        <br>(한정수량/포인트 차감)</p><br>
+                        <br>(한정수량/포인트 차감)
+                    </p><br>
                     <p style="font-size: 0.8rem;">2023년 12월 07일 ~ 한정 수량</p>
                 </div>
             </div>
             <div class="event_box">
-                <div class="imgbox">
-                    <img src="img/sub/event2.jpg" alt="event">
-                </div>
+                <div class="imgbox"><img src="img/sub/event2.jpg" alt="event"></div>
                 <div class="textbox">
                     <button>사은품</button>
-                    <h4 style="font-size: 1.2rem; margin-bottom: 10px;">조예은 작가 『꿰맨 눈의 마을』 사은품 이벤트 - 북마크 증정</h4>
+                    <h4 style="font-size: 1.2rem; margin-bottom: 10px;">조예은 작가 『꿰맨 눈의 마을』 <br> 사은품 이벤트 - 북마크 증정</h4>
                     <p style="font-size: 0.9rem;">『꿰맨 눈의 마을』 구매 시 , 북마크 증정 (포인트 차감)</p><br>
                     <p style="font-size: 0.8rem;">2023년 12월 07일 ~ 한정 수량</p>
                 </div>
             </div>
             <div class="event_box">
-                <div class="imgbox">
-                    <img src="img/sub/event3.jpg" alt="event">
-                </div>
+                <div class="imgbox"><img src="img/sub/event3.jpg" alt="event"></div>
                 <div class="textbox">
                     <button>사은품</button>
-                    <h4 style="font-size: 1.2rem; margin-bottom: 10px;">얼리리더를 위한 3월의 책 : 태극기 & 무궁화 체인 배지 증정</h4>
+                    <h4 style="font-size: 1.2rem; margin-bottom: 10px;">얼리리더를 위한 3월의 책 : <br>태극기 & 무궁화 체인 배지 증정</h4>
                     <p style="font-size: 0.9rem;">이달의 주목 신간 & 추천 도서 포함 국내도서 3만원 이상 구매 시 '태극기 & 무궁화 체인 배지' 선착순 증정(포인트 차감)
                     </p><br>
                     <p style="font-size: 0.8rem;">2023년 12월 07일 ~ 한정 수량</p>
                 </div>
             </div>
             <div class="event_box">
-                <div class="imgbox">
-                    <img src="img/sub/event4.jpg" alt="event">
-                </div>
+                <div class="imgbox"><img src="img/sub/event4.jpg" alt="event"></div>
                 <div class="textbox">
                     <button>기획전</button>
-                    <h4 style="font-size: 1.2rem; margin-bottom: 10px;">공독쌤 최승필 작가 강력추천! 어린이 도서 기획전</h4>
+                    <h4 style="font-size: 1.2rem; margin-bottom: 10px;">공독쌤 최승필 작가 강력추천! <br> 어린이 도서 기획전</h4>
                     <p style="font-size: 0.9rem;">최승필작가 추천도서 1권 이상 구매 시 '공독서가 점착 메모잇'을 드립니다. (사은품 소진 시 까지)</p><br>
                     <p style="font-size: 0.8rem;">2023년 12월 07일 ~ 한정 수량</p>
                 </div>
@@ -325,6 +576,5 @@
         <script src="js/click_button.js"></script>
         <script src="js/card.js"></script>
         <script src="js/sub.js"></script>
-</body>
 
 </html>

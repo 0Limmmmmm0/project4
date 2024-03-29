@@ -49,7 +49,6 @@ $(function(){
         $('.publisher_toggle > a').css({"padding":"55px 15px 9px 0","background":"url('./img/sub/background_gr.png')"});
     });
 });
-
 /*page4 추천평 텍스트 가져오기*/
 $(function () {
     $.get("./sub_txt/txt1.txt", function (data) {

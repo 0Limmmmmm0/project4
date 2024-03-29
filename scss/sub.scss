@@ -29,53 +29,49 @@
 section {
     @include box-style;
     height: 1100px;
-    background: pink;
     display: flex;
 }
-
 /*page1 - book_box*/
 .book_box {
     width: 615px;
     height: 1100px;
-    background: palegreen;
     display: flex;
     flex-direction: column;
     align-items: center;
-    // justify-content: center;
 }
-
-.book_img {
+section .book_box .book_cover {
+    width: 615px;
+    height: 100%;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+section .book_box .book_cover .book_img {
     width: 527px;
     height: 754px;
-    background: lavenderblush;
-    margin-top: 40px;
+    margin-top: 80px;
+    margin-left: 20px;
+    margin-bottom: 40px;
     position: relative;
     transition: 0.5s;
     transform-style: preserve-3d;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-
-    img {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
 }
-
-.book_img::before {
+section .book_box .book_cover .book_img:hover {
+    transform: rotateY(35deg);
+    cursor: url(../icon/3d.png), pointer !important;
+}
+section .book_box .book_cover .book_img::before {
     content: "";
-    width: 30px;
+    width: 55px;
     height: 100%;
     position: absolute;
-    background-image: url(../img/sub/book_side.jpg);
+    background-image: url(../img/sub/book_slide_img.png);
     background-size: cover;
     background-position: center;
     transform-origin: left;
     transform: rotateY(90deg);
 }
-
-.book_img::after {
+section .book_box .book_cover .book_img::after {
     content: "";
     width: 100%;
     height: 100%;
@@ -83,19 +79,26 @@ section {
     background-image: url(../img/sub/book_back.jpg);
     background-size: cover;
     background-position: center;
-    transform-origin: left;
-    transform: rotateY(180deg) translateZ(30px);
+    transform-origin: center;
+    transform: rotateY(180deg) translateZ(48px);
 }
-
-
+section .book_box .book_cover .book_img.rotate {
+    transform: rotateY(180deg);
+}
+section .book_box .book_cover .book_img img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 .star {
     width: 100%;
     height: 300px;
-    background: rgb(160, 160, 28);
-    margin-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 40px;
 
     .content {
         width: 70%;
@@ -104,7 +107,7 @@ section {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        line-height: 50px;
+        line-height: 60px;
     }
 
     button {
@@ -116,42 +119,56 @@ section {
         border-radius: 30px;
     }
 }
-
+/*page1 - book_box - tip*/
+.tiptxt{
+    width: 270px;
+    height: 35px;
+    border-radius: 20px;
+    background: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 0.9rem;    
+    font-weight: bold;
+    border: 2px solid rgb(0, 0, 0);
+}
+.tiptxt.on{            
+    opacity: 0.8;            
+}
 /*page1 - book_box2*/
 .book_box2 {
     width: 835px;
     height: 100%;
-    background: rgb(205, 214, 205);
+    position: relative;
 }
 
 .book_name {
     width: 100%;
-    height: 200px;
-    margin-top: 8%;
-    background: palegoldenrod;
+    height: 215px;
+    margin-top: 10%;
     line-height: 35px;
     border-bottom: 1px solid gray;
-
     h1 {
-        font-size: 2.3rem;
+        font-size: 2.5rem;
     }
 }
-
 .book_name .btn button {
-    width: 150px;
-    height: 30px;
+    width: 180px;
+    height: 32px;
     border: none;
     border-radius: 30px;
     background: $mainColor;
     color: white;
+    line-height: 30px;
+    margin: 15px 30px 0 0;
+    font-weight: bold;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 }
-
 .book_point {
     width: 100%;
-    height: 150px;
-    // margin-top: 8%;
-    background: rgb(194, 193, 175);
-    // line-height: 35px;
+    height: 140px;
     border-bottom: 1px solid gray;
     display: flex;
     align-items: center;
@@ -169,42 +186,46 @@ section {
         align-items: center;
     }
     .point_box:nth-of-type(1) {
-        width: 25%;
+        width: 20%;
     }
     .point_box:nth-of-type(2) {
-        width: 75%;
+        width: 80%;
     }
     .benefit_box{
         display: flex;
         align-items: center;
     }
     .benefit_box:nth-of-type(1) {
-        width: 25%;
+        width: 20%;
     }
     .benefit_box:nth-of-type(2) {
-        width: 75%;
+        width: 80%;
     }
     span{
         width: 25px;
         height: 25px;
-        border: 1px solid black;
-        margin: 2%;
+        margin-left: 2.5%;
+        margin-bottom: 3px;
         cursor: pointer;
-        position: relative;
+        background: rgb(0, 0, 0);
     }
     .bottom{
         font-size: 1.1rem;
         text-align: center;
         font-weight: bold;
         line-height: 28px;
+        color: white;
+    }
+    span:hover{
+        opacity: 0.7;
     }
 }
 .popup{
     position: absolute;
-    width: 370px;
-    bottom: -10px;
-    right: 11.9%;
+    width: 368px;
     height: auto;
+    right: 39px;
+    top: 47.5%;
     border: 1px solid black;
     background: $subColor;
     text-align: center;
@@ -237,35 +258,27 @@ section {
 .book_benefit {
     width: 100%;
     height: 150px;
-    // margin-top: 8%;
-    background: rgb(153, 149, 73);
     line-height: 35px;
     border-bottom: 1px solid gray;
     display: flex;
     justify-content: space-between;
-
     .benefit_box:nth-of-type(1) {
         width: 25%;
         height: 100%;
         background: palegoldenrod;
     }
-
     .benefit_box:nth-of-type(2) {
         width: 75%;
         height: 100%;
-        background: rgb(163, 153, 45);
     }
 }
-
 .book_price {
     width: 100%;
     height: auto;
-    background: palegoldenrod;
 }
 .payment{
     width: 100%;
     height: 320px;
-    background: lightblue;
     table{
         margin: 2%;
         height: 100px;
@@ -281,168 +294,164 @@ section {
 .paymentsub1{
     width: 100%;
     height: 150px;
-    background: lawngreen;
-    padding-top: 30px;
-    margin: 2%;
+    padding-top: 25px;
+    padding-left: 20px;
     line-height: 60px;
+    h2{
+        font-size: 1.5rem;
+        display: inline-block;
+        position: relative;
+    }
+    .minus{
+        width: 32px;
+        height: 32px;
+        background: rgb(80, 80, 80);
+        border: none;
+        color: white;
+        font-size: 2rem;
+        line-height: 36px;
+        position: absolute;
+        top: 12px;
+        left: 48%;
+    }
+    .plus{
+        width: 32px;
+        height: 32px;
+        background: rgb(80, 80, 80);
+        color: white;
+        font-size: 2rem;
+        line-height: 36px;
+        position: absolute;
+        top: 12px;
+        border: none;
+        right: -31px;
+    }
+    .price_Pay{
+        width: 100px;
+        text-align: center;
+        height: 32px;
+        padding-top: 5px;
+        font-size: 1.3rem;
+    }
 }
 .paymentsub2{
     width: 100%;
     height: 170px;
-    background: rgb(129, 138, 121);
+    text-align: right;
+    padding-right: 20px;
+    line-height: 80px;
 }
-
-
 .cart {
     width: 100%;
-    height: 100px;
-    background: rgb(173, 144, 202);
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
-
     button {
         width: 48%;
         height: 50px;
         @include button-style;
         color: white;
         font-size: 1.3rem;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 4px 4px 4px gray;
     }
-
     button:nth-of-type(1) {
         background: #001c7d;
     }
-
     button:nth-of-type(2) {
         background: black;
+    }
+    button:hover{
+        background: white;
+        border: 2px solid $mainColor;
+        color: black;
     }
 }
 
 /*page2 - series*/
-
-#series {
+.series {
     @include box-style;
-    height: 450px;
-    background: paleturquoise;
-    display: flex;
-    justify-content: center;
-}
-
-#series_box {
-    width: 90%;
-    height: 100%;
-    background: palegreen;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: auto;
+    overflow: hidden;
     position: relative;
+    border-top: 2px solid gray;
+    .seri_txt{
+        font-size: 2rem;
+        margin: 1.5%;
+    }
 }
 
-#series_box .content_box {
+.series_box {
+    height: 530px;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    width: 1000%;
+    bottom: 30px;
+}
+.series_box .content_box {
     width: 200px;
     height: 325px;
-    margin: 20px;
+    margin: 45px;
     cursor: pointer;
-    background: palevioletred;
     position: relative;
     box-shadow: 5px 5px 5px gray;
-    box-shadow: 5px 5px 5px gray;
+    text-align: center;
     img{
         width: 100%;
         height: 100%;
     }
+    h3{
+        margin-top: 30px;
+    font-size: 1.17rem;
+    line-height: 40px;
+    }
+    p{
+        font-size: 0.8em;
+        line-height: 25px;
+    }
+    p:nth-of-type(2){
+        font-weight: bold;
+        font-size: 0.9rem;
+        color: rgb(80, 80, 80);
+    }
+    button{
+        width: 150px;
+        height: 30px;
+        background: $subColor;
+        border: none;
+        border-radius: 30px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    button:hover{
+        background: $mainColor;
+        color: white;
+    }
 }
-
-/*slick prev,next*/
-
-#series_box .slick-prev {
+.series span{
     position: absolute;
-    // top: 45%;
-    left: -60px;
-    width: 60px;
-    border: none;
-    background: none;
-    height: 60px;
-    z-index: 5;
-    text-indent: -9999px;
-    background-color: transparent;
+    top: 0;
+    z-index: 10;
+    }
+.series .left{
+    position: absolute;
+    left: 0;
+    top: 46%;
+    bottom: 30%;
+    font-size: 3.8rem;
     cursor: pointer;
-    background-image: url(../icon/left.png);
-    background-size: cover;
-
 }
-
-#series_box .slick-prev:hover {
-    background: none;
-    background-image: url(../icon/left2.png);
-    background-size: cover;
-    opacity: 0.7;
-
-}
-
-#series_box .slick-next {
-    position: absolute;
-    // top: 45%;
+.series .right{
     right: 0;
-    width: 60px;
-    border: none;
-    background: none;
-    height: 60px;
-    z-index: 5;
-    text-indent: -9999px;
-    background-color: transparent;
+    font-size: 3.8rem;
     cursor: pointer;
-    background-image: url(../icon/right.png);
-    background-size: cover;
-
+    top: 46%;
 }
-
-#series_box .slick-next:hover {
-    background: none;
-    background-image: url(../icon/right2.png);
-    background-size: cover;
-    opacity: 0.8;
-
-}
-
-/*slick dots*/
-#series_box .slick-dots {
-    bottom: 10px;
-    display: flex;
-    position: absolute;
-}
-
-#series_box .slick-dots li button {
-    text-indent: -9999px;
-    width: 15px;
-    height: 15px;
-    cursor: pointer;
-    border-radius: 50px;
-    border: none;
-    background: rgb(179, 179, 179);
-}
-
-#series_box .slick-dots li button:hover {
-    background: $mainColor;
-}
-
-#series_box .slick-dots li {
-    margin: -15px 15px;
-
-}
-
-#series_box .slick-dots li button:before {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    background-color: rgb(15, 15, 15);
-    text-align: center;
-    content: '';
-}
-
-#series_box .slick-dots li.slick-active button:before {
-    opacity: 0.75;
-    color: black;
+.series span:hover{
+    opacity: 0.5;
 }
 
 /*page3 - content*/
@@ -450,14 +459,12 @@ section {
     @include box-style;
     height: auto;
 }
-
 .contentTitle {
     padding-top: 10px;
     font-size: 15px;
     width: 100%;
     height: auto;
 }
-
 #tab_menu {
     height: 60px;
     background: $mainColor;
@@ -472,7 +479,6 @@ section {
         width: 25%;
     }
 }
-
 .contentClick {
     float: left;
     width: 100%;
@@ -481,54 +487,47 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-
     img {
         margin-top: 10%;
         margin-bottom: 10%;
     }
 }
+/*책 소개글*/
 .booktxtBox{
     width: 90%;
     height: auto;
     background: lavender;
     margin-top: 10%;
     margin-left: 5%;
-
     p {
         font-size: 1rem;
         margin-left: 5px;
     }
-
     h3 {
         font-size: 1.5rem;
         margin-left: 5px;
     }
-
     iframe {
         margin-top: 5%;
         // margin-left: 15%;
         margin-bottom: 5%;
     }
-
     .booktxtBox_sub {
         width: 100%;
         height: auto;
         border-top: 1px solid gray;
         display: flex;
         flex-direction: column;
-
         h3 {
             margin-top: 35px;
         }
     }
-
     .coverbox {
         width: 100%;
         height: 300px;
         display: flex;
         align-items: center;
         border-bottom: 1px solid gray;
-
         img {
             border-radius: 500px;
             width: 250px;
@@ -536,7 +535,6 @@ section {
             margin: 1%;
         }
     }
-
     .info {
         line-height: 40px;
         width: 1100px;
@@ -546,13 +544,300 @@ section {
         }
     }
 }
+/*고객 리뷰*/
+.table{
+    @include box-style;
+    height: 500px;
+    background: palegreen;
+    display: flex;
+}
+/*구매자 분포*/
+.Buyer_Distribution{
+    width: 50%;
+    height: 100%;
+    background: lemonchiffon;
+}
+.Buyer_cover{
+    width: 100%;
+    height: 90%;
+    background: lightblue;
+    display: flex;
+}
+/*여성*/
+.Buyer_cover_left{
+    width: 42.5%;
+    height: 100%;
+    background: rgb(129, 128, 120);
+}
+.Gauge{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1rem;
+    width: 100%;
+    height: 17%;
+    align-items: center;
+}
+.Gauge .bar{
+        width: 75%;
+        height: 30px;
+        background: palevioletred;
+        position: relative;
+}
+.Gauge .bar_back {
+    transform: scaleX(1);
+    background: lavenderblush;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all 0.5s ease-in-out;
+}
+.Gauge i{
+        margin-right: 20px;
+}
+/*나이*/
+.age{
+    width: 15%;
+    height: 100%;
+    background: rgb(214, 191, 17);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.3rem;
+    justify-content: center;
+    b{
+        margin: 20%;
+    }
+}
+/*남성*/
+.Buyer_cover_right{
+    width: 42.5%;
+    height: 100%;
+    background: rgb(97, 90, 40);
+}
+.Gauge2{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1rem;
+    width: 100%;
+    height: 17%;
+    align-items: center;
+}
+.Gauge2 .bar2{
+    width: 75%;
+    height: 30px;
+    background: palevioletred;
+    position: relative;
+}
+.Gauge2 .bar2 .bar_back2 {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #728397;
+    transform-origin: 0 100%;
+    transform: scaleX(1);
+    transition: all 0.5s ease-in-out;
+}
+.Gauge2 i{
+    margin-left: 20px;
+}
+/*평점 분포*/
+.mark{
+    width: 50%;
+    height: 100%;
+    background: rgb(100, 97, 66);
+}
+.mark_cover{
+    width: 100%;
+    height: 70%;
+    background: rgb(102, 27, 52);
+    display: flex;
+}
+.mark_star{
+    width: 100%;
+    height: 20%;
+    background: lavenderblush;
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    .starfull{
+        width: 45%;
+    }
+    b{
+        font-size: 2rem;
+    }
+}
+.star_ege{
+    width: 40%;
+    height: 100%;
+    background: mediumaquamarine;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img{
+        width: 80%;
+        height: 35px;
+        margin: 6%;
+    }
+}
+.mark_Gauge_cover{
+    width: 60%;
+    height: 100%;
+    background: rgb(53, 58, 56);
+    i{
+    margin-left: 20px;
+}
+}
+.mark_Gauge{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1rem;
+    width: 100%;
+    height: 20%;
+    align-items: center;
+}
+.mark_Gauge .mark_bar{
+    width: 82%;
+    height: 30px;
+    background: palevioletred;
+    position: relative;
+}
+.mark_Gauge .mark_bar .bar_back3 {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #728397;
+    transform-origin: 0 100%;
+    transform: scaleX(1);
+    transition: all 0.5s ease-in-out;
+}
+/*후기 작성*/
+.reviewgo{
+    width: 100%;
+    height: auto; 
+    display: flex;
+}
+.side{
+    width: 20%;
+    height: 890px;
+    border-right: 2px solid gray;
+    text-align: center;
+    h2{
+        font-size: 1.5rem;
+        margin-top: 30px;
+    }
+}
+.re_text{
+    width: 80%;
+    height: 30%;
+    
+}
+.re_tex_star{
+    width: 100%;
+    height: 100px;
+    background: rgb(171, 182, 178);
+    position: relative;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    // position: relative;
+}
+.re_tex_star .re_tex_Star{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+}
+.re_tex_star .noneStar{
+    position: absolute;
+    bottom: 90%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.re_tex_star .fillStar{
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+z-index: -1;
+}
+
+.re_text_go{
+    width: 100%;
+    height: auto;
+    background: mediumaquamarine;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    input{
+        width: 100px;
+        height: 50px;
+        text-align: center;
+        cursor: pointer;
+    }
+}
+.re_text_go textarea{
+    font-size: 1.3rem;
+    padding: 5px;
+}
+.reviewBox{
+    width: 100%;
+    height: auto;
+}
+.reviewText{
+    width: 100%;
+    height: auto;
+    border-top: 2px solid gray;
+    display: flex;
+    .star_left{
+        width: 25%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: 232px;
+            height: 35px;
+        }
+    }
+    .Txt{
+        width: 75%;
+        height: 100%;
+        line-height: 30px;
+        .text_user{
+            width: 100%;
+            height: auto;
+            margin-top: 30px;
+        }
+        .user{
+            width: 100%;
+            height: auto;
+            display: flex;
+            .sub_user{
+            width: 50%;
+            height: 30%;
+            margin-bottom: 30px;
+        }
+        .good_click{
+            width: 50%;
+            height: 100%;
+            background: rgb(68, 59, 134);
+        }
+        }
+        
+    }
+}
 .booktxtBox2 {
     width: 1305px;
     height: auto;
     margin: 0 auto;
     padding-top: 10%;
-    // margin-top: 10%;
-    // margin-left: 5%;
     table{
     width: 100%;
     text-align: center;
@@ -603,18 +888,25 @@ section {
 }
 #cardWrap {
     width: 1305px;
-    height: 600px;
+    height: auto;
     background: #001c7d;
     position: relative;
     overflow: hidden;
 }
 #cardWrap .card_slide {
     width: 500%;
-    height: 100%;
+    height: 600px;
+    display: flex;
+    position: relative;
 }
-#cardWrap .card_slide img {
-    width: 100%;
-    height: 100%;
+#cardWrap .card_slide_box{
+    width: 1305px;
+    height: 600px;
+    position: relative;
+    img{
+        width: 100%;
+        height: 100%;
+    }
 }
 #cardWrap span {
     position: absolute;
@@ -629,13 +921,10 @@ section {
     height: 50px;
     transform: translateY(-50%);
 }
-
 #cardWrap span:hover {
     background: rgba(255, 255, 255, 0.8);
     color: #000;
 }
-
-
 .prev {
     left: 0;
     border-radius: 0 10px 10px 0px;
@@ -664,17 +953,16 @@ section {
     border-bottom: 1px solid gray;
     overflow: hidden;
 }
-
 .tab_sub:not(:first-of-type) {
     display: none;
 }
-
 /*출판사 리뷰*/
 #publisherWrap {
     height: 390px;
     overflow: hidden;
     line-height: 30px;
     text-align: justify;
+    margin-top: 30px;
 
     p {
         font-size: 1rem;
@@ -740,10 +1028,9 @@ section {
 
 #go_book {
     width: 100%;
-    height: 525px;
-    background: palegoldenrod;
+    height: 620px;
+    background: rgb(228, 228, 228);
 }
-
 #gbox {
     @include box-style;
     height: 100%;
@@ -751,26 +1038,33 @@ section {
     align-items: center;
     position: relative;
     justify-content: center;
-
+    text-align: center;
     .box {
         width: 263px;
-        height: 350px;
-        background: lavender;
+        height: 370px;
         margin: 3%;
+        box-shadow: 5px 5px 5px gray;
+        bottom: 25px;
+        position: relative;
     }
-
     img {
         width: 100%;
         height: 100%;
     }
-
-    h4,
-    p {
-        text-align: center;
-        line-height: 30px;
+    h3{
+        margin-top: 30px;
+        font-size: 1.17rem;
+        line-height: 40px;
     }
-
-    p {}
+    p{
+        font-size: 0.8em;
+        line-height: 25px;
+    }
+    p:nth-of-type(2){
+        font-weight: bold;
+    font-size: 0.9rem;
+    color: rgb(80, 80, 80);
+}
 }
 
 #gbox .title {
@@ -780,7 +1074,6 @@ section {
 }
 
 /*page6 - event*/
-
 #event {
     @include box-style;
     height: 800px;
@@ -789,32 +1082,27 @@ section {
     position: relative;
     justify-content: center;
     align-items: center;
+    margin-top: 30px;
 }
-
 .event {
     position: absolute;
     left: 2%;
     top: 3%;
 }
-
 .event_box {
     width: 45%;
     height: 300px;
     margin-right: 1%;
     display: flex;
     align-items: center;
-
     .imgbox {
         width: 40%;
         height: 50%;
-        background: red;
     }
-
     img {
         width: 100%;
         height: 100%;
     }
-
     .textbox {
         width: 60%;
         height: 100%;
@@ -823,19 +1111,19 @@ section {
         flex-direction: column;
         justify-content: center;
         margin-left: 3%;
-
         button {
             width: 70px;
             height: 25px;
             margin-bottom: 10px;
-            background: rgb(209, 209, 209);
-            border: 1px solid gray;
+            background: $subColor;
+            border: 1px solid rgb(161, 161, 161);
+            font-weight: bold;
+            color: rgb(80, 80, 80);;
+            line-height: 25px;
         }
     }
 }
-
 .event_box:nth-of-type(1),
 .event_box:nth-of-type(2) {
     margin-top: 50px;
 }
-
