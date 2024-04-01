@@ -119,11 +119,9 @@ header>ul>li>a {
 }
 
 header ul {
-    width: 1%;
+    width: 14%;
     display: flex;
     align-items: center;
-    // margin-left: 100px;
-    
 
     li {
         font-size: 1.3rem;
@@ -132,7 +130,6 @@ header ul {
         white-space: nowrap;
         position: relative;
     }
-
     img {
         width: 29px;
         height: 29px;

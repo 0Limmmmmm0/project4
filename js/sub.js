@@ -66,7 +66,7 @@ $('.book_img').click(function(){
 });
 /*마우스커서 tip*/
 $(document).ready(function() {
-    $(".book_cover").mousemove(function(event) {
+    $(".book_img").mousemove(function(event) {
         var x = event.pageX;
         var y = event.pageY;
         $(".tiptxt").css({left: x +40 , top: y + 60}).addClass("on");
@@ -75,46 +75,39 @@ $(document).ready(function() {
     });
 });
  /*page2 시리즈 클릭 슬라이드*/
-//  $('.left').click(function(){
-//     $('.series_box .content_box:last').prependTo('.series_box');
-//     $('.series_box').css('margin-left','-19.89%'); /*'margin-Left',-1000*/
-//     $('.series_box').stop().animate({marginLeft:0},800);
-//  });
-//  $('.right').click(function(){
-//     $('.series_box').stop().animate({marginLeft:'-19.89%'},800,function(){
-//         $('.series_box .content_box:first').appendTo('.series_box');
-//         $('.series_box').css({marginLeft:0});
-//     });
-//  });
-//  /*별점 가져오기*/
-//  const noneStar = document.getElementsByClassName("noneStar")[0];
-//         img1.setAttribute("src", noneStar.childNodes[1].src);
-//         img2.setAttribute("src", noneStar.childNodes[2].src);
-//         img3.setAttribute("src", noneStar.childNodes[5].src);
-//         img4.setAttribute("src", noneStar.childNodes[7].src);
-//         img5.setAttribute("src", noneStar.childNodes[9].src);
-
-//     //댓글 별 선택
-//     $(".noneStar img").click(function(){
-//         $(this).attr("src", "icon/fill_star.png");
-//         $(this).prevAll().attr("src", "icon/fill_star.png");
-//         $(this).nextAll().attr("src", "icon/none_starfillStar");
-//     })
-
-//     $(".noneStar img").hover(function(){
-
-//         var starIndex = $(this).index();
-
-//         $(".fillStar img").eq(starIndex).css("opacity", 1);
-//         $(".fillStar img").eq(starIndex).prevAll().css("opacity", 1);
-//         $(".fillStar img").eq(starIndex).nextAll().css("opacity", 0);
-
-//     }, function(){
-//         var starIndex = $(this).index();
-
-//         $(".fillStar img").eq(starIndex).css("opacity", 0);
-//         $(".fillStar img").eq(starIndex).prevAll().css("opacity", 0);
-//         $(".fillStar img").eq(starIndex).nextAll().css("opacity", 0);
-//     });
-
- 
+ $('.left').click(function(){
+    $('.series_box .content_box:last').prependTo('.series_box');
+    $('.series_box').css('margin-left','-19.89%'); /*'margin-Left',-1000*/
+    $('.series_box').stop().animate({marginLeft:0},800);
+ });
+ $('.right').click(function(){
+    $('.series_box').stop().animate({marginLeft:'-19.89%'},800,function(){
+        $('.series_box .content_box:first').appendTo('.series_box');
+        $('.series_box').css({marginLeft:0});
+    });
+ });
+ /*page3 - cpntent*/
+/*글 작성 시 유의사항 popup*/
+$(".re_txt_bottom").click(function () {
+    $(".popup2").fadeIn("fast");
+});
+$(".close_two").click(function () {
+    $(".popup2").fadeOut();
+});
+/*글 등록 창*/
+$("#review_click").click(function(){
+    alert("로그인 후 가능합니다.");
+});
+ /*별점 가져오기*/
+$(function(){
+    $('.noneStar > img').hover(function () {
+        $('.noneStar > img').attr('src', './icon/none_star.png');
+        $(this).attr('src', './icon/fill_star.png');
+        $(this).prevUntil().attr('src', './icon/fill_star.png');
+    });
+    $('.noneStar > img').click(function () {
+        $('.noneStar > img').attr('src', './icon/none_star.png');
+        $(this).attr('src', './icon/fill_star.png');
+        $(this).prevUntil().attr('src', './icon/fill_star.png');
+    });
+});

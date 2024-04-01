@@ -63,7 +63,7 @@ section .book_box .book_cover .book_img {
 }
 
 section .book_box .book_cover .book_img:hover {
-  transform: rotateY(35deg);
+  transform: rotateY(42deg);
   cursor: url(../icon/3d.png), pointer !important;
 }
 
@@ -72,6 +72,8 @@ section .book_box .book_cover .book_img::before {
   width: 55px;
   height: 100%;
   position: absolute;
+  top: 0;
+  left: 0;
   background-image: url(../img/sub/book_slide_img.png);
   background-size: cover;
   background-position: center;
@@ -465,7 +467,7 @@ section .book_box .book_cover .book_img img {
 .series .left {
   position: absolute;
   left: 0;
-  top: 46%;
+  top: 40%;
   bottom: 30%;
   font-size: 3.8rem;
   cursor: pointer;
@@ -475,7 +477,7 @@ section .book_box .book_cover .book_img img {
   right: 0;
   font-size: 3.8rem;
   cursor: pointer;
-  top: 46%;
+  top: 40%;
 }
 
 .series span:hover {
@@ -515,30 +517,25 @@ section .book_box .book_cover .book_img img {
   float: left;
   width: 100%;
   height: auto;
-  background: #d9d9d9;
+  background: #ebebeb;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.contentClick img {
-  margin-top: 10%;
-  margin-bottom: 10%;
 }
 
 /*책 소개글*/
 .booktxtBox {
   width: 90%;
   height: auto;
-  background: lavender;
-  margin-top: 10%;
+  margin-top: 5%;
   margin-left: 5%;
 }
 .booktxtBox p {
   font-size: 1rem;
   margin-left: 5px;
 }
-.booktxtBox h3 {
-  font-size: 1.5rem;
+.booktxtBox h2 {
+  font-size: 1.8rem;
   margin-left: 5px;
 }
 .booktxtBox iframe {
@@ -552,15 +549,18 @@ section .book_box .book_cover .book_img img {
   display: flex;
   flex-direction: column;
 }
-.booktxtBox .booktxtBox_sub h3 {
+.booktxtBox .booktxtBox_sub h2 {
   margin-top: 35px;
+}
+.booktxtBox .book_text {
+  line-height: 30px;
 }
 .booktxtBox .coverbox {
   width: 100%;
   height: 300px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid gray;
+  margin-bottom: 3%;
 }
 .booktxtBox .coverbox img {
   border-radius: 500px;
@@ -581,21 +581,20 @@ section .book_box .book_cover .book_img img {
   width: 1450px;
   margin: 0 auto;
   height: 500px;
-  background: palegreen;
   display: flex;
 }
 
 /*구매자 분포*/
 .Buyer_Distribution {
   width: 50%;
-  height: 100%;
-  background: lemonchiffon;
+  height: auto;
+  text-align: center;
+  font-size: 1.3rem;
 }
 
 .Buyer_cover {
   width: 100%;
   height: 90%;
-  background: lightblue;
   display: flex;
 }
 
@@ -603,7 +602,6 @@ section .book_box .book_cover .book_img img {
 .Buyer_cover_left {
   width: 42.5%;
   height: 100%;
-  background: rgb(129, 128, 120);
 }
 
 .Gauge {
@@ -611,25 +609,24 @@ section .book_box .book_cover .book_img img {
   justify-content: flex-end;
   font-size: 1rem;
   width: 100%;
-  height: 17%;
+  height: 16.7%;
   align-items: center;
 }
 
 .Gauge .bar {
   width: 75%;
   height: 30px;
-  background: palevioletred;
+  border: 2px solid #e93d6f;
+  background: gray;
   position: relative;
 }
 
 .Gauge .bar_back {
-  transform: scaleX(1);
-  background: lavenderblush;
+  background: #e93d6f;
   height: 100%;
   position: absolute;
   top: 0;
   right: 0;
-  transition: all 0.5s ease-in-out;
 }
 
 .Gauge i {
@@ -640,7 +637,6 @@ section .book_box .book_cover .book_img img {
 .age {
   width: 15%;
   height: 100%;
-  background: rgb(214, 191, 17);
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -648,14 +644,13 @@ section .book_box .book_cover .book_img img {
   justify-content: center;
 }
 .age b {
-  margin: 20%;
+  margin: 23%;
 }
 
 /*남성*/
 .Buyer_cover_right {
   width: 42.5%;
   height: 100%;
-  background: rgb(97, 90, 40);
 }
 
 .Gauge2 {
@@ -663,14 +658,15 @@ section .book_box .book_cover .book_img img {
   justify-content: flex-start;
   font-size: 1rem;
   width: 100%;
-  height: 17%;
+  height: 16.7%;
   align-items: center;
 }
 
 .Gauge2 .bar2 {
   width: 75%;
   height: 30px;
-  background: palevioletred;
+  border: 2px solid #e93d6f;
+  background: gray;
   position: relative;
 }
 
@@ -679,7 +675,7 @@ section .book_box .book_cover .book_img img {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #728397;
+  background-color: #e93d6f;
   transform-origin: 0 100%;
   transform: scaleX(1);
   transition: all 0.5s ease-in-out;
@@ -693,20 +689,19 @@ section .book_box .book_cover .book_img img {
 .mark {
   width: 50%;
   height: 100%;
-  background: rgb(100, 97, 66);
+  text-align: center;
+  font-size: 1.3rem;
 }
 
 .mark_cover {
   width: 100%;
   height: 70%;
-  background: rgb(102, 27, 52);
   display: flex;
 }
 
 .mark_star {
   width: 100%;
   height: 20%;
-  background: lavenderblush;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -721,7 +716,6 @@ section .book_box .book_cover .book_img img {
 .star_ege {
   width: 40%;
   height: 100%;
-  background: mediumaquamarine;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -736,7 +730,6 @@ section .book_box .book_cover .book_img img {
 .mark_Gauge_cover {
   width: 60%;
   height: 100%;
-  background: rgb(53, 58, 56);
 }
 .mark_Gauge_cover i {
   margin-left: 20px;
@@ -754,7 +747,8 @@ section .book_box .book_cover .book_img img {
 .mark_Gauge .mark_bar {
   width: 82%;
   height: 30px;
-  background: palevioletred;
+  border: 2px solid rgb(233, 61, 111);
+  background: gray;
   position: relative;
 }
 
@@ -763,7 +757,7 @@ section .book_box .book_cover .book_img img {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #728397;
+  background-color: rgb(233, 61, 111);
   transform-origin: 0 100%;
   transform: scaleX(1);
   transition: all 0.5s ease-in-out;
@@ -774,28 +768,30 @@ section .book_box .book_cover .book_img img {
   width: 100%;
   height: auto;
   display: flex;
+  border-top: 2px solid gray;
+  margin-top: 20px;
 }
 
 .side {
   width: 20%;
-  height: 890px;
+  height: 1328px;
   border-right: 2px solid gray;
   text-align: center;
 }
 .side h2 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   margin-top: 30px;
 }
 
 .re_text {
   width: 80%;
   height: 30%;
+  position: relative;
 }
 
 .re_tex_star {
   width: 100%;
   height: 100px;
-  background: rgb(171, 182, 178);
   position: relative;
 }
 
@@ -806,11 +802,12 @@ section .book_box .book_cover .book_img img {
 }
 
 .re_tex_star .noneStar {
-  position: absolute;
-  bottom: 90%;
-  left: 0;
+  top: 25px;
+  left: 60px;
+  position: relative;
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 
 .re_tex_star .fillStar {
@@ -818,28 +815,108 @@ section .book_box .book_cover .book_img img {
   height: 100%;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 60px;
   z-index: -1;
+  display: none;
 }
 
 .re_text_go {
   width: 100%;
   height: auto;
-  background: mediumaquamarine;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.re_text_go input {
-  width: 100px;
+
+.index {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+}
+
+.txt_six {
+  line-height: 30px;
+}
+
+.input_tull {
+  width: 92%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.input_tull input {
+  width: 120px;
   height: 50px;
   text-align: center;
   cursor: pointer;
+  background: #09255d;
+  color: white;
+  margin: 1%;
+  border: none;
+  font-weight: bold;
+}
+.input_tull span {
+  width: 25px;
+  height: 25px;
+  margin-left: 1%;
+  margin-right: 2%;
+  margin-bottom: 3px;
+  cursor: pointer;
+  background: rgb(0, 0, 0);
+}
+.input_tull .re_txt_bottom {
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: bold;
+  line-height: 28px;
+  color: white;
+}
+.input_tull span:hover {
+  opacity: 0.7;
+}
+
+.popup2 {
+  position: absolute;
+  width: 450px;
+  height: auto;
+  right: 18%;
+  top: 18%;
+  border: 1px solid black;
+  background: white;
+  text-align: center;
+  display: none;
+}
+.popup2 h3 {
+  margin: 5%;
+}
+.popup2 p {
+  margin: 4%;
+  font-size: 0.9rem;
+  line-height: 20px;
+  color: rgb(73, 73, 73);
+}
+
+.close_two {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: black;
+  color: white;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  line-height: 28px;
+  z-index: 10;
+}
+
+.close_two:hover {
+  opacity: 0.5;
 }
 
 .re_text_go textarea {
-  font-size: 1.3rem;
-  padding: 5px;
+  font-size: 1.1rem;
+  padding: 10px;
 }
 
 .reviewBox {
@@ -867,12 +944,15 @@ section .book_box .book_cover .book_img img {
 .reviewText .Txt {
   width: 75%;
   height: 100%;
-  line-height: 30px;
+  line-height: 35px;
 }
 .reviewText .Txt .text_user {
-  width: 100%;
+  width: 90%;
   height: auto;
   margin-top: 30px;
+}
+.reviewText .Txt .text_user p {
+  text-align: justify;
 }
 .reviewText .Txt .user {
   width: 100%;
@@ -888,6 +968,21 @@ section .book_box .book_cover .book_img img {
   width: 50%;
   height: 100%;
   background: rgb(68, 59, 134);
+}
+
+.text_user2 {
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  margin: 1% 1% 1% 0;
+  cursor: pointer;
+}
+
+.text_user2:hover {
+  text-decoration: underline;
+  opacity: 0.8;
 }
 
 .booktxtBox2 {
@@ -950,6 +1045,7 @@ section .book_box .book_cover .book_img img {
   background: #001c7d;
   position: relative;
   overflow: hidden;
+  margin-bottom: 50px;
 }
 
 #cardWrap .card_slide {
@@ -959,38 +1055,36 @@ section .book_box .book_cover .book_img img {
   position: relative;
 }
 
-#cardWrap .card_slide_box {
+#cardWrap .card_slide .card_slide_box {
   width: 1305px;
   height: 600px;
   position: relative;
 }
-#cardWrap .card_slide_box img {
+#cardWrap .card_slide .card_slide_box img {
   width: 100%;
   height: 100%;
 }
 
 #cardWrap span {
   position: absolute;
-  top: 50%;
+  top: 45%;
   display: block;
-  font-size: 38px;
-  color: #fff;
-  line-height: 40px;
-  background: rgba(0, 0, 0, 0.6);
+  font-size: 45px;
+  line-height: 70px;
+  background: rgba(255, 255, 255, 0.8);
   cursor: pointer;
-  height: 50px;
-  transform: translateY(-50%);
+  height: 70px;
 }
 
 #cardWrap span:hover {
-  background: rgba(255, 255, 255, 0.8);
-  color: #000;
+  background: rgba(0, 0, 0, 0.8);
+  color: #f7f7f7;
 }
 
 .prev {
   left: 0;
   border-radius: 0 10px 10px 0px;
-  padding: 0 8px 0 2px;
+  padding: 0 10px 0 2px;
 }
 
 .next {
@@ -1000,7 +1094,7 @@ section .book_box .book_cover .book_img img {
 }
 
 .active {
-  background-color: #d9d9d9;
+  background-color: rgb(235, 235, 235);
   color: black;
 }
 

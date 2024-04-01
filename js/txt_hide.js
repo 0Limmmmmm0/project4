@@ -5,6 +5,25 @@ $(function () {
         $(".book_text").html(data);
     })
 });
+/*편집장의 선택 텍스트 가져오기*/
+$(function () {
+    $.get("./sub_txt/txt6.txt", function (data) {
+        $(".txt_six").html(data);
+    })
+});
+/*후기 작성 가져오기*/
+$(function () {
+    $.get("./sub_txt/txt5.txt", function (data) {
+        $(".txtbox5").html(data);
+    })
+});
+/*page4 출판사리뷰 텍스트 가져오기*/
+$(function () {
+    $.get("./sub_txt/txt2.txt", function (data) {
+        $("#publisherWrap").html(data);
+    })
+
+});
 /*배송/반품/교환 텍스트 가져오기*/
 $(function () {
     $.get("./sub_txt/txt4.txt", function (data) {
@@ -56,4 +75,3 @@ $(function () {
     })
 
 });
-
