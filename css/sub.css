@@ -227,11 +227,11 @@ section .book_box .book_cover .book_img img {
   background: rgb(0, 0, 0);
 }
 .book_point .bottom {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   text-align: center;
-  font-weight: bold;
   line-height: 28px;
   color: white;
+  margin-left: 6px;
 }
 .book_point span:hover {
   opacity: 0.7;
@@ -251,7 +251,7 @@ section .book_box .book_cover .book_img img {
 .popup h3 {
   margin: 5%;
 }
-.popup p {
+.popup p, .popup b {
   margin: 4%;
   font-size: 0.9rem;
   text-align: left;
@@ -541,6 +541,9 @@ section .book_box .book_cover .book_img img {
 .booktxtBox iframe {
   margin-top: 5%;
   margin-bottom: 5%;
+  width: 100%;
+  height: 700px;
+  border: none;
 }
 .booktxtBox .booktxtBox_sub {
   width: 100%;
@@ -868,7 +871,7 @@ section .book_box .book_cover .book_img img {
 .input_tull .re_txt_bottom {
   font-size: 1.1rem;
   text-align: center;
-  font-weight: bold;
+  margin-left: 6px;
   line-height: 28px;
   color: white;
 }

@@ -237,11 +237,11 @@ section .book_box .book_cover .book_img img {
     }
 
     .bottom {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         text-align: center;
-        font-weight: bold;
         line-height: 28px;
         color: white;
+        margin-left: 6px;
     }
 
     span:hover {
@@ -264,14 +264,13 @@ section .book_box .book_cover .book_img img {
         margin: 5%;
     }
 
-    p {
+    p, b {
         margin: 4%;
         font-size: 0.9rem;
         text-align: left;
         line-height: 20px;
         color: rgb(73, 73, 73);
     }
-
     .close {
         position: absolute;
         top: 10px;
@@ -571,8 +570,10 @@ section .book_box .book_cover .book_img img {
     }
     iframe {
         margin-top: 5%;
-        // margin-left: 15%;
         margin-bottom: 5%;
+        width: 100%;
+        height: 700px;
+        border: none;
     }
 
     .booktxtBox_sub {
@@ -897,7 +898,7 @@ section .book_box .book_cover .book_img img {
     .re_txt_bottom {
         font-size: 1.1rem;
         text-align: center;
-        font-weight: bold;
+        margin-left: 6px;
         line-height: 28px;
         color: white;
     }

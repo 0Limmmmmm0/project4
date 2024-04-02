@@ -64,10 +64,10 @@
                     <div class="content">
                         <button>베스트</button>
                         <div class="in" style="display: flex; margin-right: 10px;"><img src="icon/star2.png" alt="star2"
-                                width="40px;" height="40px" style="margin-top: 10px; margin-right: 20px;">
+                                width="40" height="40" style="margin-top: 10px; margin-right: 20px;">
                             <h3>한국소설 TOP 100 9주</h3>
                         </div>
-                        <img src="icon/star.png" alt="star" width="250px" height="40px">
+                        <img src="icon/star.png" alt="star" width="250" height="40">
                         <p>회원 리뷰 : 22건</p>
                     </div>
                 </div>
@@ -94,18 +94,17 @@
                     <div class="benefit_box"><h4>결제 혜택</h4></div>
                     <div class="benefit_box">
                         <p>카드/간편결제 혜택을 확인하세요.</p>
-                        <span><p class="bottom">&#8744;</p></span>
+                        <span><b class="bottom">&#8744;</b></span>
                     </div>
                 </div>
                 <div class="popup">
                     <h3>YES포인트 2천원 추가적립</h3>
                     <hr style="margin-left: 2%; margin-right: 2%;">
-                    <p><b>도서(eBook), CD/LP, DVD/Blu-ray, 문구/GIFT, 중고상품 5만원 이상 구매 시 2천원 추가적립을 해드립니다.</b>
+                    <b>도서(eBook), CD/LP, DVD/Blu-ray, 문구/GIFT, 중고상품 5만원 이상 구매 시 2천원 추가적립을 해드립니다.</b>
                     <p>도서정가제에 따라, 국내도서(eBook포함)만 주문 시 제외,
                         외국도서(eBook포함),잡지,CD/LP,DVD/Blu-ray,문구/GIFT,중고상품 2천원 이상 포함된 주문만 적용 가능합니다.</p>
                     <p>업체배송 상품은 추가적립 대상에서 제외. <br>
                         (상품상세의 ‘배송비’ 또는 카트에서 업체배송여부 확인 가능)</p>
-                    </p>
                     <div class="close">X</div>
                 </div>
                 <div class="book_price">
@@ -121,7 +120,7 @@
                         <div class="paymentsub2">
                             <h4 style="font-size: 1.1rem; color: rgb(80, 80, 80); margin-top: 30px;">정가&nbsp;&nbsp;
                                 <span style="text-decoration: line-through; font-size: 1.1rem; color: rgb(80, 80, 80);">19,000원</span></h4>
-                            <h3>판매가&nbsp;&nbsp;&nbsp;<span class="price_All"></h3>
+                            <h3>판매가&nbsp;&nbsp;&nbsp;<span class="price_All"></span></h3>
                         </div>
                     </div>
                     <div class="cart">
@@ -164,10 +163,9 @@
                     <div class="tab_sub">
                         <div class="booktxtBox">
                             <h2>책 소개</h2>
-                            <iframe width="100%" height="700" src="https://www.youtube.com/embed/3ZYzkZjiiZU"
-                                frameborder="0"
+                            <iframe src="https://www.youtube.com/embed/3ZYzkZjiiZU"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                allowfullscreen></iframe>
                             <div class="book_text" style="border-bottom: 1px solid gray;"></div>
                             <h2 style="margin-top: 35px; margin-bottom: 30px;">카드뉴스로 보는 책</h2>
                             <div id="cardWrap">
@@ -191,7 +189,7 @@
                             <div class="booktxtBox_sub">
                                 <h2>작가 소개</h2>
                                 <div class="coverbox">
-                                    <img src="img/sub/작가 프로필.jpg" alt="작가 프로필">
+                                    <img src="img/sub/작가_프로필.jpg" alt="작가 프로필">
                                     <div class="info">
                                         <h4>조예은 작가</h4>
                                         <p>제2회 황금가지 타임리프 공모전에서 『오버랩 나이프, 나이프』로 우수상을, 제4회 교보문고 스토리 공모전에서 『시프트』로 대상을 수상했으며
@@ -337,8 +335,8 @@
                                     <textarea name="ment" id="ment" cols="30" rows="10" required placeholder="리뷰 작성 시 광고 및 욕설, 비속어나 타인을 비방하는 문구를 사용하시면 비공개 될 수 있습니다." style="width: 90%; height: 90px;"></textarea>
                                     <div class="input_tull">
                                         <p>글 작성 시 유의사항</p>
-                                    <span><p class="re_txt_bottom">&#8744;</p></span>
-                                    <input type="review_click" value="등록하기" id="review_click">
+                                    <span><b class="re_txt_bottom">&#8744;</b></span>
+                                    <input type="text" value="등록하기" id="review_click">
                                     </div>
                                 </div>
                                 <div class="popup2">
@@ -439,7 +437,7 @@
         <div id="sub_review">
             <div id="publisherWrap"></div>
             <div class="publisher_toggle">
-                <a target="_self"><span class="publisher_toggle_op">펼쳐보기 &nbsp;<span
+                <a target="_self" href="#"><span class="publisher_toggle_op">펼쳐보기 &nbsp;<span
                             style="font-size: 0.9rem;">&#8744;</span></span><span class="publisher_toggle_cl">접어보기
                         &#8743;</span></a>
             </div>
@@ -530,6 +528,7 @@
                 </div>
             </div>
         </footer>
+    </div>
         <!--js-->
         <script src="js/ajax_sub.js"></script>
         <script src="js/header.js"></script>
@@ -539,5 +538,5 @@
         <script src="js/click_button.js"></script>
         <script src="js/card.js"></script>
         <script src="js/sub.js"></script>
-
+</body>
 </html>
